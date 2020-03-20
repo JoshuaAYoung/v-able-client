@@ -3,18 +3,21 @@ import React, { Component } from 'react'
 const QualinteerContext = React.createContext({
   jobs: [],
   error: null,
+  userType: '',
   setError: () => { },
   clearError: () => { },
   addJob: () => { },
-  setJobs: () => { }
+  setJobs: () => { },
+  setUser: () => { },
 })
 
-export default ArticleContext
+export default QualinteerContext
 
-export class ArticleProvider extends Component {
+export class QualinteerProvider extends Component {
   state = {
-    article: nullArticle,
+    jobs: [],
     error: null,
+    userType: 'company'
   };
 
   setError = error => {
@@ -26,10 +29,6 @@ export class ArticleProvider extends Component {
     this.setState({ error: null })
   }
 
-  setJobs = jobs => {
-    this.setState({ jobs })
-  }
-
   addJob = job => {
     this.setJobs([
       ...this.state.jobs,
@@ -37,17 +36,28 @@ export class ArticleProvider extends Component {
     ])
   }
 
+  setJobs = jobs => {
+    this.setState({
+      jobs
+    })
+  }
+
+  setUser = userType => {
+    this.setState({
+      userType
+    })
+  }
+
   render() {
     const value = {
-      article: this.state.article,
-      comments: this.state.comments,
+      jobs: this.state.jobs,
       error: this.state.error,
+      userType: this.state.userType,
       setError: this.setError,
       clearError: this.clearError,
-      setArticle: this.setArticle,
-      setComments: this.setComments,
-      clearArticle: this.clearArticle,
-      addComment: this.addComment,
+      addJob: this.addJob,
+      setJobs: this.setJobs,
+      setUser: this.setUser
     }
     return (
       <QualinteerContext.Provider value={value}>

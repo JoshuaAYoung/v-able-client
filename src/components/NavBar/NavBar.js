@@ -1,61 +1,60 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-import { FontAwesomeIcon } from '../JobPostForm/node_modules/@fortawesome/react-fontawesome'
-import { Hyph } from '../Utils/Utils'
-import TokenService from '../../services/token-service'
-import IdleService from '../../services/idle-service'
-import './NavBar.css'
+import QualinteerContext from '../../context/QualinteerContext'
 
+//Implement the logic from header.js in blogful once this isn't static anymore
 export default class NavBar extends Component {
-  handleLogoutClick = () => {
-    TokenService.clearAuthToken()
-    /* when logging out, clear the callbacks to the refresh api and idle auto logout */
-    TokenService.clearCallbackBeforeExpiry()
-    IdleService.unRegisterIdleResets()
+  static contextType = QualinteerContext;
+
+  demoLogout = () => {
+    this.context.setUser('');
   }
 
-  renderLogoutLink() {
-    return (
-      <div className='Header__logged-in'>
-        <Link
-          onClick={this.handleLogoutClick}
-          to='/'>
-          Logout
-        </Link>
-      </div>
-    )
-  }
-
-  renderLoginLink() {
-    return (
-      <div className='Header__not-logged-in'>
-        <Link
-          to='/register'>
-          Register
-        </Link>
-        <Hyph />
-        <Link
-          to='/login'>
-          Log in
-        </Link>
-      </div>
-    )
+  //Can probably keep this logic but update with my auth service to see if we're logged in.
+  userLinks = () => {
+    if (this.context.userType === '') {
+      return (
+        <>
+          <Link to='/login' className='navLink'>
+            Log In
+          </Link>
+          <span className='linkBullet'>&#9900;</span>
+          <Link to='/register' className='navLink'>
+            Sign Up
+          </Link>
+        </>
+      )
+    }
+    else {
+      return (
+        <Link to='/' onClick={() => this.demoLogout()}>Logout</Link>
+        // {
+        // this.context.userType['company'] &&
+        //   <span className='linkBullet'>&#9900;</span>
+        //   <Link to='/jobpost' className='navLink'>
+        //     Post Job
+        //   </Link>
+        // }
+      )
+    }
   }
 
   render() {
     return (
-      <nav className='Header'>
-        <h1>
+      <div className='navContainer'>
+        <div className='logoContainer'>
           <Link to='/'>
-            <FontAwesomeIcon className='green' icon='frog' />
-            {' '}
-            Blogful Client
+            <h1 className='navName'>Qualinteer</h1>
           </Link>
-        </h1>
-        {TokenService.hasAuthToken()
-          ? this.renderLogoutLink()
-          : this.renderLoginLink()}
-      </nav>
-    )
+        </div>
+        <div className='navLinks'>
+          {this.userLinks()}
+          <span className='linkBullet'>&#9900;</span>
+          <Link to='/jobboard' className='navLink'>
+            Job Board
+          </Link>
+        </div>
+      </div >
+    );
   }
 }

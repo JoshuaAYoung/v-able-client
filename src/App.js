@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import './App.css'
-import PrivateRoute from '../Utils/PrivateRoute'
-import PublicOnlyRoute from '../Utils/PublicOnlyRoute'
-import NavBar from './components/NavBar/NavBar'
+// import PrivateRoute from './components/Utilities/PrivateRoute'
+// import PublicOnlyRoute from './components/Utilities/PublicOnlyRoute'
+import Footer from './components/Footer/Footer'
 import JobBoardPage from './routes/JobBoardPage/JobBoardPage'
 import JobPostPage from './routes/JobPostPage/JobPostPage'
 import LandingPage from './routes/LandingPage/LandingPage'
 import LoginPage from './routes/LoginPage/LoginPage'
+import NavBar from './components/NavBar/NavBar'
 import NotFoundPage from './routes/NotFoundPage/NotFoundPage'
+import RegistrationCheckpoint from './routes/RegistrationCheckpoint/RegistrationCheckpoint'
 import RegistrationPage from './routes/RegistrationPage/RegistrationPage'
 
 
@@ -35,18 +37,43 @@ class App extends Component {
               path={'/'}
               component={LandingPage}
             />
-            <PublicOnlyRoute
+            <Route
+              path={'/login'}
+              render={({ history }) => <LoginPage history={history} />}
+            />
+            <Route
+              exact
+              path={'/register'}
+              component={RegistrationCheckpoint}
+            />
+            <Route
+              path={'/register/company'}
+              render={({ history }) => <RegistrationPage history={history} userType={'company'} />}
+            />
+            <Route
+              path={'/register/volunteer'}
+              render={({ history }) => <RegistrationPage history={history} userType={'volunteer'} />}
+            />
+            {/* <Route
+              path={'/register/:name'}
+              render={({ match, history }) => <RegistrationPage history={history} userType={match.params.name} />}
+            /> */}
+            <Route
+              path={'/jobpost'}
+              render={({ history }) => <JobPostPage history={history} />}
+            />
+            {/* <PublicOnlyRoute
               path={'/login'}
               component={LoginPage}
             />
             <PublicOnlyRoute
               path={'/register'}
-              component={RegistrationPage}
+              render={({ history }) => <RegistrationPage history={history} />}
             />
             <PrivateRoute
               path={'/jobpost'}
               component={JobPostPage}
-            />
+            /> */}
             <Route
               path={'/jobboard'}
               component={JobBoardPage}
@@ -56,6 +83,9 @@ class App extends Component {
             />
           </Switch>
         </main>
+        <footer>
+          <Footer />
+        </footer>
       </div>
     )
   }

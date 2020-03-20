@@ -1,68 +1,40 @@
-import React, { Component } from 'react'
-import AuthApiService from '../../services/auth-api-service'
-import { Button, Input } from '../Utils/Utils'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import QualinteerContext from '../../context/QualinteerContext'
 
 export default class LoginForm extends Component {
-  static defaultProps = {
-    onLoginSuccess: () => {}
-  }
+  static contextType = QualinteerContext;
 
-  state = { error: null }
-
-  handleSubmitJwtAuth = ev => {
-    ev.preventDefault()
-    this.setState({ error: null })
-    const { user_name, password } = ev.target
-
-    AuthApiService.postLogin({
-      user_name: user_name.value,
-      password: password.value,
-    })
-      .then(res => {
-        user_name.value = ''
-        password.value = ''
-        this.props.onLoginSuccess()
-      })
-      .catch(res => {
-        this.setState({ error: res.error })
-      })
+  demoLogin = (userType) => {
+    this.context.setUser(userType);
+    userType === 'company'
+      ? this.props.history.push('/')
+      : this.props.history.push('/jobboard')
   }
 
   render() {
-    const { error } = this.state
     return (
-      <form
-        className='LoginForm'
-        onSubmit={this.handleSubmitJwtAuth}
-      >
-        <div role='alert'>
-          {error && <p className='red'>{error}</p>}
-        </div>
-        <div className='user_name'>
-          <label htmlFor='LoginForm__user_name'>
-            User name
-          </label>
-          <Input
-            required
-            name='user_name'
-            id='LoginForm__user_name'>
-          </Input>
-        </div>
-        <div className='password'>
-          <label htmlFor='LoginForm__password'>
-            Password
-          </label>
-          <Input
-            required
-            name='password'
-            type='password'
-            id='LoginForm__password'>
-          </Input>
-        </div>
-        <Button type='submit'>
-          Login
-        </Button>
-      </form>
+      //MAKE SURE TO CHANGE THE BUTTON TYPE BACK TO SUBMIT AND ADD AN EVENT HANDLER TO THE FORM
+      <div>
+        <h2 className='formHeader'>Log In</h2>
+        <h3>TO LOG IN AS A TEST USER:</h3>
+        <p>Either click on the "Sign In Company" or "Sign In Volunteer" buttons below to login as one of the user types.</p>
+        <p>User registration is disabled for now, though I could use some feedback on the form if you wouldn't mind checking out the "Sign Up" page if you have a moment.</p>
+        <p>If you've tested one user type and want to try out the other one, click on the logout link in the navigation bar and come back to this page to sign is as the other user type.</p>
+        <form className='signin-form'>
+          <div>
+            <label htmlFor="email">Email Address</label>
+            <input placeholder='Email' type="text" name='email' id='email' />
+          </div>
+          <div>
+            <label htmlFor="password">Password</label>
+            <input placeholder='Password' type="text" name='password' id='password' />
+          </div>
+          <button type='button' onClick={() => this.demoLogin('company')}>Sign In Company</button>
+          <button type='button' onClick={() => this.demoLogin('volunteer')}>Sign In Volunteer</button>
+          <p>Don't have an account? <Link to='/register'>Click Here</Link> to create one</p>
+        </form>
+      </div>
     )
   }
 }

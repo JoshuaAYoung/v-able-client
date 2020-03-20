@@ -1,72 +1,87 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { NiceDate, Hyph } from '../Utils/Utils'
-import StyleIcon from '../StyleIcon/StyleIcon'
-import './ArticleListItem.css'
+import React, { Component } from 'react';
+// import { Link } from 'react-router-dom';
+import QualinteerContext from '../../context/QualinteerContext'
 
-export default class JobPost extends Component {
+export default class JobPostForm extends Component {
+  static contextType = QualinteerContext;
+
   render() {
-    const { article } = this.props
     return (
-      <Link to={`/article/${article.id}`} className='ArticleListItem'>
-        <header className='ArticleListItem__header'>
-          <h2 className='ArticleListItem__heading'>
-            {article.title}
-          </h2>
-          <ArticleDate article={article} />
-        </header>
-        <footer className='ArticleListItem__footer'>
-          <ArticleStyle article={article} />
-          {article.author.id && <>
-            <Hyph />
-            <ArticleAuthor article={article} />
-          </>}
-          <ArticleCommentCount article={article} />
-        </footer>
-      </Link>
+      <div>
+        <form className='post-htmlForm'>
+          <div>
+            <label htmlFor='title'>Job Title</label>
+            <br />
+            <input placeholder='Job Title' type='text' name='title' id='title' />
+          </div>
+          <br />
+          <div>
+            <label htmlFor='description'>Job Description</label>
+            <br />
+            <input placeholder='Job Description' type='description' name='description' id='description' />
+          </div>
+          <br />
+          <div>
+            <label htmlFor='start'>Start Date</label>
+            <br />
+            <input placeholder='Start Date' type='text' name='start' id='start' />
+          </div>
+          <br />
+          <div>
+            <label htmlFor='end'>End Date</label>
+            <br />
+            <input placeholder='End Date' type='text' name='end' id='end' />
+          </div>
+          <br />
+          <div>
+            <label htmlFor='committment'>Estimated Time Committment Each Week</label>
+            <br />
+            <input placeholder='Number of Hours Per Week' type='text' name='committment' id='committment' />
+          </div>
+          <br />
+          <div>
+            <label htmlFor='ed-level'>Education Level (optional)</label>
+            <br />
+            <select id='ed-level' name='ed-level'>
+              <option value='none'>None</option>
+              <option value='highschool'>High School</option>
+              <option value='associates'>Associates Degree</option>
+              <option value='bachelors'>Bachelors Degree</option>
+              <option value='masters'>Masters Degree</option>
+              <option value='phd'>Ph. D.</option>
+            </select>
+          </div>
+          <br />
+          <div>
+            <label htmlFor='experience'>Experience</label>
+            <br />
+            <input type='radio' id='no-exp' name='no-exp' value='no-exp' />
+            <label htmlFor='no-exp'>No experience required</label>
+            <br />
+            <input placeholder='Example: Architect' type='text' name='experience' id='experience' />
+          </div>
+          <br />
+          <div>
+            <label htmlFor='license'>License Required (optional)</label>
+            <br />
+            <input placeholder="Example: Architect's License" type='text' name='license' id='license' />
+          </div>
+          <br />
+          <div>
+            <label htmlFor='physical'>Need someone in-person?</label>
+            <br />
+            <select id='physical' name='physical'>
+              <option value=''>...</option>
+              <option value='remote'>Option to Volunteer Remotely</option>
+              <option value='in-person'>In-Person Volunteer Needed</option>
+            </select>
+          </div>
+          <br />
+          <button type='submit'>Submit</button>
+        </form>
+      </div>
     )
   }
 }
 
-function ArticleStyle({ article }) {
-  return (
-    <span className='ArticleListItem__style'>
-      <StyleIcon style={article.style} />
-      {' '}
-      {article.style}
-    </span>
-  )
-}
 
-function ArticleDate({ article }) {
-  return (
-    <span className='ArticleListItem__date'>
-      <NiceDate
-        date={article.date_created}
-      />
-    </span>
-  )
-}
-
-function ArticleAuthor({ article }) {
-  return (
-    <span className='ArticleListItem__author'>
-      {article.author.full_name}
-    </span>
-  )
-}
-
-function ArticleCommentCount({ article }) {
-  return (
-    <span
-      className='ArticleListItem__comment-count fa-layers fa-fw'
-    >
-      <FontAwesomeIcon size='lg' icon='comment' />
-      <span
-        className='fa-layers-text fa-inverse'>
-        {article.number_of_comments}
-      </span>
-    </span>
-  )
-}
