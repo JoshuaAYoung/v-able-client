@@ -5,7 +5,7 @@ export default class CompanyRegistration extends Component {
   render() {
     return (
       <div>
-        <h2 className='formHeader'>Sign up to get help</h2>
+        <h2 className='pageHeader'>Sign up to get help</h2>
         <div>
           <label htmlFor='email'>Email Address</label>
           <input placeholder='Email' type='text' name='email' id='email' />
@@ -15,8 +15,8 @@ export default class CompanyRegistration extends Component {
           <input placeholder='Password' type='password' name='password' id='password' />
         </div>
         <div>
-          <label htmlFor='full-name'>Full name</label>
-          <input placeholder='Full Name' type='text' name='full-name' id='full-name' />
+          <label htmlFor='fullName'>Full name</label>
+          <input placeholder='Full Name' type='text' name='fullName' id='fullName' />
         </div>
         <div>
           <label htmlFor='company-name'>Company Name (optional)</label>

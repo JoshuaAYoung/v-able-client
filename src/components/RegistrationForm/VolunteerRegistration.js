@@ -4,7 +4,7 @@ export default class VolunteerRegistration extends Component {
   render() {
     return (
       <div>
-        <h2 className='formHeader'>Sign up to offer help</h2>
+        <h2 className='pageHeader'>Sign up to offer help</h2>
         <div>
           <label htmlFor='email'>Email Address</label>
           <input placeholder='Email' type='text' name='email' id='email' />

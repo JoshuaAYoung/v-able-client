@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import STORE from '../STORE'
 
 const QualinteerContext = React.createContext({
   jobs: [],
@@ -15,7 +16,7 @@ export default QualinteerContext
 
 export class QualinteerProvider extends Component {
   state = {
-    jobs: [],
+    jobs: STORE.jobs,
     error: null,
     userType: 'company'
   };

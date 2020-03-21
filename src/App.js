@@ -5,6 +5,7 @@ import './App.css'
 // import PublicOnlyRoute from './components/Utilities/PublicOnlyRoute'
 import Footer from './components/Footer/Footer'
 import JobBoardPage from './routes/JobBoardPage/JobBoardPage'
+import JobDetailsPage from './routes/JobDetailsPage/JobDetailsPage'
 import JobPostPage from './routes/JobPostPage/JobPostPage'
 import LandingPage from './routes/LandingPage/LandingPage'
 import LoginPage from './routes/LoginPage/LoginPage'
@@ -12,16 +13,17 @@ import NavBar from './components/NavBar/NavBar'
 import NotFoundPage from './routes/NotFoundPage/NotFoundPage'
 import RegistrationCheckpoint from './routes/RegistrationCheckpoint/RegistrationCheckpoint'
 import RegistrationPage from './routes/RegistrationPage/RegistrationPage'
+import QualinteerContext from './context/QualinteerContext'
 
+export default class App extends Component {
+  static contextType = QualinteerContext;
+  // state = { hasError: false }
 
-class App extends Component {
-  state = { hasError: false }
-
-  //INVESTIGATE ERROR BOUNDARIES!!! PROBABLY NEED TO ADD ERROR BOUNDARIES AROUND OUR ROUTES...
-  static getDerivedStateFromError(error) {
-    console.error(error)
-    return { hasError: true }
-  }
+  // INVESTIGATE ERROR BOUNDARIES!!! PROBABLY NEED TO ADD ERROR BOUNDARIES AROUND OUR ROUTES...
+  // static getDerivedStateFromError(error) {
+  //   console.error(error)
+  //   return { hasError: true }
+  // }
 
   render() {
     return (
@@ -30,7 +32,7 @@ class App extends Component {
           <NavBar />
         </header>
         <main className='appMain'>
-          {this.state.hasError && <p className='error'>Error. Something went wrong.</p>}
+          {/* {this.state.hasError && <p className='error'>Error. Something went wrong.</p>} */}
           <Switch>
             <Route
               exact
@@ -47,21 +49,17 @@ class App extends Component {
               component={RegistrationCheckpoint}
             />
             <Route
-              path={'/register/company'}
-              render={({ history }) => <RegistrationPage history={history} userType={'company'} />}
-            />
-            <Route
-              path={'/register/volunteer'}
-              render={({ history }) => <RegistrationPage history={history} userType={'volunteer'} />}
-            />
-            {/* <Route
               path={'/register/:name'}
               render={({ match, history }) => <RegistrationPage history={history} userType={match.params.name} />}
-            /> */}
+            />
             <Route
               path={'/jobpost'}
               render={({ history }) => <JobPostPage history={history} />}
             />
+            <Route
+              exact
+              path='/job/:id'
+              render={({ match }) => <JobDetailsPage job={this.context.jobs.find(job => job.id === parseInt(match.params.id))} />} />
             {/* <PublicOnlyRoute
               path={'/login'}
               component={LoginPage}
@@ -90,5 +88,3 @@ class App extends Component {
     )
   }
 }
-
-export default App

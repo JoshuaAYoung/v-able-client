@@ -27,14 +27,19 @@ export default class NavBar extends Component {
     }
     else {
       return (
-        <Link to='/' onClick={() => this.demoLogout()}>Logout</Link>
-        // {
-        // this.context.userType['company'] &&
-        //   <span className='linkBullet'>&#9900;</span>
-        //   <Link to='/jobpost' className='navLink'>
-        //     Post Job
-        //   </Link>
-        // }
+        <>
+          <Link to='/' onClick={() => this.demoLogout()}>Logout</Link>
+          {this.context.userType === 'company' &&
+            (
+              <>
+                <span className='linkBullet'>&#9900;</span>
+                <Link to='/jobpost' className='navLink'>
+                  Post Job
+                </Link>
+              </>
+            )
+          }
+        </>
       )
     }
   }
