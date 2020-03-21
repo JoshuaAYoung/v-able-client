@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import Job from '../../components/Job/Job'
 import QualinteerContext from '../../context/QualinteerContext'
+import './JobBoardPage.css'
+
 export default class JobBoardPage extends Component {
   static contextType = QualinteerContext;
 
-
-
   render() {
     return (
-      <div>
+      <div className='boardContainer'>
         <h2 className='pageHeader'>Job Board</h2>
-        <ul>
+        <p className='instructions'>Click on a job to see more details</p>
+        <ul >
           {this.context.jobs.map(job =>
-            <li key={job.id}>
+            <li key={job.id} className='jobCard'>
               <Job
                 id={job.id}
                 title={job.title}

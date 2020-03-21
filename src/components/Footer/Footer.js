@@ -1,4 +1,5 @@
 import React from 'react';
+import './Footer.css'
 
 export default function Footer() {
   function generateCopyright() {
@@ -11,8 +12,9 @@ export default function Footer() {
     <footer className='copyright'>
       <p>
         Copyright &copy; {generateCopyright()}
+        <br />
         <a href='https://joshyoung.net' target='_blank' rel='noopener noreferrer' className='boldLink'>Josh Young</a>
       </p>
-    </footer>
+    </footer >
   );
 }

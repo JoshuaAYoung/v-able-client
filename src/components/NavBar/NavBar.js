@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
-import QualinteerContext from '../../context/QualinteerContext'
+import { Link } from 'react-router-dom';
+import QualinteerContext from '../../context/QualinteerContext';
+import qualinteerlogo from '../../images/qualinteerlogo.svg';
+import './NavBar.css';
 
 //Implement the logic from header.js in blogful once this isn't static anymore
 export default class NavBar extends Component {
@@ -10,6 +12,8 @@ export default class NavBar extends Component {
     this.context.setUser('');
   }
 
+  linkSeparator = (<span className='linkBullet'>&#8226;</span>)
+
   //Can probably keep this logic but update with my auth service to see if we're logged in.
   userLinks = () => {
     if (this.context.userType === '') {
@@ -18,7 +22,7 @@ export default class NavBar extends Component {
           <Link to='/login' className='navLink'>
             Log In
           </Link>
-          <span className='linkBullet'>&#9900;</span>
+          {this.linkSeparator}
           <Link to='/register' className='navLink'>
             Sign Up
           </Link>
@@ -32,9 +36,9 @@ export default class NavBar extends Component {
           {this.context.userType === 'company' &&
             (
               <>
-                <span className='linkBullet'>&#9900;</span>
+                {this.linkSeparator}
                 <Link to='/jobpost' className='navLink'>
-                  Post Job
+                  Post A Job
                 </Link>
               </>
             )
@@ -49,12 +53,13 @@ export default class NavBar extends Component {
       <div className='navContainer'>
         <div className='logoContainer'>
           <Link to='/'>
+            <img src={qualinteerlogo} alt='qualinteer logo' className='mainLogo' />
             <h1 className='navName'>Qualinteer</h1>
           </Link>
         </div>
         <div className='navLinks'>
           {this.userLinks()}
-          <span className='linkBullet'>&#9900;</span>
+          {this.linkSeparator}
           <Link to='/jobboard' className='navLink'>
             Job Board
           </Link>

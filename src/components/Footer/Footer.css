@@ -1,0 +1,10 @@
+.copyright {
+  background: lightgray;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  height: 75px;
+  position: absolute;
+  bottom: 0;
+  border-top: 2px solid #818282
+}

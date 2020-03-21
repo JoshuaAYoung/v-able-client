@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 export default class Job extends Component {
 
   truncate = (str, num_words) => {
@@ -9,15 +9,15 @@ export default class Job extends Component {
   render() {
     const { id, title, description, posted, company, location } = this.props
     return (
-      <div className='jobCard'>
-        <Link to={`/job/${id}`}>
+      <>
+        <NavLink to={`/job/${id}`} className='jobLink'>
           <h3 className='jobTitle'>{title}</h3>
-          <h4 className='companyInfo'>{company}</h4>
-          <h4 className='companyInfo'>{location}</h4>
-          <p className='jobDescription'>Job Description: {this.truncate(description, 20)}...</p>
-          <p className='jobPosted'>Job Posted On: {posted}</p>
-        </Link>
-      </div>
+          <p className='companyInfo'>{company}</p>
+          <p className='companyInfo'>{location}</p>
+          <p className='jobDescription'><b>JOB DESCRIPTION:</b> {this.truncate(description, 20)}... CLICK TO READ MORE</p>
+          <p className='jobPosted'><b>POSTED ON:</b> {posted}</p>
+        </NavLink>
+      </>
     );
   }
 }

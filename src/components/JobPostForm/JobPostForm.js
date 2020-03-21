@@ -25,10 +25,11 @@ export default class JobPostForm extends Component {
       edlevel: ev.target['edlevel'].value,
       experience: ev.target['experience'].value,
       license: ev.target['license'].value,
-      physical: ev.target['physical'].value,
+      remote: ev.target['remote'].value,
       posted: this.getToday(),
       company: 'Stuff and Co.',
-      location: 'Denver, CO 80220'
+      location: 'Denver, CO 80220',
+      website: 'www.companywebsite.com'
     };
     this.context.addJob(newJob);
     this.props.history.push('/jobboard');
@@ -39,39 +40,40 @@ export default class JobPostForm extends Component {
       <div>
         <form className='post-htmlForm' onSubmit={this.handleSubmit}>
           <div>
-            <label htmlFor='title'>Job Title</label>
+            <label htmlFor='title' className='postLabel'>Job Title</label>
             <br />
-            <input placeholder='Example: Senior Architect' type='text' name='title' id='title' />
+            <input placeholder='Example: Senior Architect' type='text' name='title' id='title' className='postInput' />
           </div>
           <br />
           <div>
-            <label htmlFor='description'>Job Description</label>
+            <label htmlFor='description' className='postLabel'>Job Description</label>
             <br />
-            <textarea rows='4' cols='50' placeholder='Write a little bit about expectations for the job...' type='description' name='description' id='description' ></textarea>
+            <textarea rows='4' cols='30' placeholder='Write a little bit about expectations for the job...' type='description' name='description' id='description' className='descriptionBox'></textarea>
           </div>
           <br />
           <div>
-            <label htmlFor='start'>Start Date</label>
+            <label htmlFor='start' className='postLabel'>Start Date</label>
             <br />
-            <input placeholder='Enter a date. Defaults to today.' type='text' name='start' id='start' />
+            <input placeholder='Enter a starting date.' type='text' name='start' id='start' className='postInput' />
           </div>
           <br />
           <div>
-            <label htmlFor='duration'>Duration</label>
+            <label htmlFor='duration' className='postLabel'>Duration</label>
             <br />
-            <input placeholder='Example: 7 weeks' type='text' name='duration' id='duration' />
+            <input placeholder='Example: 7 weeks' type='text' name='duration' id='duration' className='postInput' />
           </div>
           <br />
           <div>
-            <label htmlFor='commitment'>Estimated Time Commitment Per Week</label>
+            <label htmlFor='commitment' className='postLabel'>Estimated Hours Per Week</label>
             <br />
-            <input placeholder='Number of Hours' type='text' name='commitment' id='commitment' />
+            <input placeholder='Number of Hours' type='text' name='commitment' id='commitment' className='postInput' />
           </div>
           <br />
           <div>
-            <label htmlFor='edlevel'>Education Level (optional)</label>
+            <label htmlFor='edlevel' className='postLabel'>Education Level</label>
             <br />
-            <select id='edlevel' name='edlevel'>
+            <select id='edlevel' name='edlevel' className='postInput'>
+              <option value=''>...</option>
               <option value='none'>None</option>
               <option value='highschool'>High School</option>
               <option value='associates'>Associates Degree</option>
@@ -82,28 +84,28 @@ export default class JobPostForm extends Component {
           </div>
           <br />
           <div>
-            <label htmlFor='experience'>Experience</label>
+            <label htmlFor='experience' className='postLabel'>Experience (optional)</label>
             <br />
-            <input placeholder='Example: Residential Architecture' type='text' name='experience' id='experience' />
+            <input placeholder='Example: Residential Architecture' type='text' name='experience' id='experience' className='postInput' />
           </div>
           <br />
           <div>
-            <label htmlFor='license'>License or Certification Required (optional)</label>
+            <label htmlFor='license' className='postLabel'>License or Certification Required (optional)</label>
             <br />
-            <input placeholder="Example: Driver's License" type='text' name='license' id='license' />
+            <input placeholder="Example: Driver's License" type='text' name='license' id='license' className='postInput' />
           </div>
           <br />
           <div>
-            <label htmlFor='physical'>Can this job be done remotely?</label>
+            <label htmlFor='remote' className='postLabel'>Can this job be done remotely?</label>
             <br />
-            <select id='physical' name='physical'>
+            <select id='remote' name='remote' className='postInput'>
               <option value=''>Choose an option...</option>
               <option value='remote'>Yes.</option>
               <option value='in-person'>No.</option>
             </select>
           </div>
           <br />
-          <button type='submit'>Submit</button>
+          <button type='submit' className='postButton'>Submit</button>
         </form>
       </div>
     )
