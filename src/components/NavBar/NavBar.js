@@ -38,7 +38,7 @@ export default class NavBar extends Component {
               <>
                 {this.linkSeparator}
                 <Link to='/jobpost' className='navLink'>
-                  Post A Job
+                  Post a Job
                 </Link>
               </>
             )

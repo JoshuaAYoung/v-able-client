@@ -1,0 +1,36 @@
+
+.registerButton {
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid black;
+  border-radius: 0.2em;
+  margin: 10px 8px 30px 0;
+  transition: all 0.6s;
+  background-color: transparent;
+}
+
+.registerButton:hover {
+  color: #000000;
+  background-color: lightgray;
+}
+
+.registerLabel {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+.registerInput {
+  font-size: 1.2em;
+  width: 420px;
+}
+
+@media screen and (max-width: 480px) {
+  .registerInput {
+    width: 100%;
+  }
+  
+}

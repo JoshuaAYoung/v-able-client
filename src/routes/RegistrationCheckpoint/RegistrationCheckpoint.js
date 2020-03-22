@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import './RegistrationCheckpoint.css'
 
 export default class RegistrationCheckpoint extends Component {
   render() {
     return (
-      <div className='userTypeContainer'>
-        <Link className='userTypeLink' to={'/register/company'}>Get Help</Link>
-        <Link className='userTypeLink' to={'/register/volunteer'}>Volunteer</Link>
+      <div className='checkpointContainer'>
+        <div className="userLinkContainer">
+          <NavLink className='userTypeLink' to={'/register/company'}>Sign up to find help <span className='linkArrow'>&#8594;</span></NavLink>
+        </div>
+        <div className="userLinkContainer">
+          <NavLink className='userTypeLink' to={'/register/volunteer'}>Sign up to volunteer <span className='linkArrow'>&#8594;</span></NavLink>
+        </div>
       </div >
     );
   }

@@ -7,44 +7,63 @@ export default class CompanyRegistration extends Component {
       <div>
         <h2 className='pageHeader'>Sign up to get help</h2>
         <div>
-          <label htmlFor='email'>Email Address</label>
-          <input placeholder='Email' type='text' name='email' id='email' />
+          <label htmlFor='email' className='registerLabel'>Email Address: </label>
+          <br />
+          <input type='text' name='email' id='email' className='registerInput' />
         </div>
+        <br />
         <div>
-          <label htmlFor='password'>Password</label>
-          <input placeholder='Password' type='password' name='password' id='password' />
+          <label htmlFor='password' className='registerLabel'>Password: </label>
+          <br />
+          <input type='password' name='password' id='password' className='registerInput' />
         </div>
+        <br />
         <div>
-          <label htmlFor='fullName'>Full name</label>
-          <input placeholder='Full Name' type='text' name='fullName' id='fullName' />
+          <label htmlFor='fullName' className='registerLabel'>Full name: </label>
+          <br />
+          <input type='text' name='fullName' id='fullName' className='registerInput' />
         </div>
+        <br />
         <div>
-          <label htmlFor='company-name'>Company Name (optional)</label>
-          <input placeholder='Company Name' type='text' name='company-name' id='company-name' />
+          <label htmlFor='company-name' className='registerLabel'>Company Name (optional): </label>
+          <br />
+          <input type='text' name='company-name' id='company-name' className='registerInput' />
         </div>
+        <br />
         <div>
-          <label htmlFor='address'>Address (optional)</label>
-          <input placeholder='Address' type='text' name='address' id='address' />
+          <label htmlFor='address' className='registerLabel'>Address (optional): </label>
+          <br />
+          <input type='text' name='address' id='address' className='registerInput' />
         </div>
+        <br />
         <div>
-          <label htmlFor='city'>City</label>
-          <input placeholder='City' type='text' name='city' id='city' />
+          <label htmlFor='city' className='registerLabel'>City: </label>
+          <br />
+          <input type='text' name='city' id='city' className='registerInput' />
         </div>
+        <br />
         <div>
-          <label htmlFor='state'>State</label>
-          <input placeholder='State' type='text' name='state' id='state' />
+          <label htmlFor='state' className='registerLabel'>State: </label>
+          <br />
+          <input type='text' name='state' id='state' className='registerInput' />
         </div>
+        <br />
         <div>
-          <label htmlFor='zipcode'>Zipcode</label>
-          <input placeholder='Zipcode' type='text' name='zipcode' id='zipcode' />
+          <label htmlFor='zipcode' className='registerLabel'>Zipcode: </label>
+          <br />
+          <input type='text' name='zipcode' id='zipcode' className='registerInput' />
         </div>
+        <br />
         <div>
-          <label htmlFor='phone'>Phone Number (optional)</label>
-          <input placeholder='Phone Number' type='text' name='phone' id='phone' />
+          <label htmlFor='phone' className='registerLabel'>Phone Number (optional): </label>
+          <br />
+          <input type='text' name='phone' id='phone' className='registerInput' />
         </div>
+        <br />
         <div>
-          <label htmlFor='website'>Website (optional)</label>
-          <input placeholder='Website URL' type='text' name='website' id='website' />
+          <label htmlFor='website' className='registerLabel'>Website (optional): </label>
+          <br />
+          <input type='text' name='website' id='website' className='registerInput' />
         </div>
       </div >
     )

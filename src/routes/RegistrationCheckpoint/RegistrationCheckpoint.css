@@ -1,0 +1,29 @@
+.userTypeLink {
+  text-decoration: none;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.checkpointContainer {
+  text-align: center;
+  margin-top: 100px
+}
+
+.userLinkContainer:first-child {
+  margin-right: 50px
+}
+
+.userLinkContainer {
+  border-bottom: 2px solid #818282;
+  width: auto;
+  display: inline-block;
+  padding-bottom: 20px;
+}
+
+.linkArrow {
+  font-size: 50px;
+  font-weight: 600;
+  vertical-align: -3px
+}

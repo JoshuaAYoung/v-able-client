@@ -6,20 +6,27 @@ export default class VolunteerRegistration extends Component {
       <div>
         <h2 className='pageHeader'>Sign up to offer help</h2>
         <div>
-          <label htmlFor='email'>Email Address</label>
-          <input placeholder='Email' type='text' name='email' id='email' />
+          <label htmlFor='email' className='registerLabel'>Email Address</label>
+          <br />
+          <input type='text' name='email' id='email' className='registerInput' />
         </div>
+        <br />
         <div>
-          <label htmlFor='password'>Password</label>
-          <input placeholder='Password' type='password' name='password' id='password' />
+          <label htmlFor='password' className='registerLabel'>Password</label>
+          <br />
+          <input type='password' name='password' id='password' className='registerInput' />
         </div>
+        <br />
         <div>
-          <label htmlFor='full-name'>Full name</label>
-          <input placeholder='Full Name' type='text' name='name' id='name' />
+          <label htmlFor='full-name' className='registerLabel'>Full name</label>
+          <br />
+          <input type='text' name='name' id='name' className='registerInput' />
         </div>
+        <br />
         <div>
-          <label htmlFor='phone'>Phone Number (optional)</label>
-          <input placeholder='Phone Number' type='text' name='phone' id='phone' />
+          <label htmlFor='phone' className='registerLabel'>Phone Number (optional)</label>
+          <br />
+          <input type='text' name='phone' id='phone' className='registerInput' />
         </div>
       </div >
     )

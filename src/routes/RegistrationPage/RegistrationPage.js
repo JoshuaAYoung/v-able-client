@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CompanyRegistration from '../../components/RegistrationForm/CompanyRegistration'
 import VolunteerRegistration from '../../components/RegistrationForm/VolunteerRegistration'
-
+import './RegistrationPage.css'
 export default class RegistrationPage extends Component {
   // static defaultProps = {
   //   onRegistrationSuccess: () => { }
@@ -50,6 +50,7 @@ export default class RegistrationPage extends Component {
         <section>
           <form className='signup-form' onSubmit={ev => this.handleSubmit(ev)}>
             {this.formRender()}
+            <br />
             <button type='submit' className="registerButton">Sign Up</button>
           </form>
         </section >
