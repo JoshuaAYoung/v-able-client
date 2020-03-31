@@ -16,6 +16,12 @@
   background-color: lightgray;
 }
 
+.registerButton:disabled, .registerButton[disabled] {
+  color: gray;
+  background-color: red;
+  border: 0.1em solid gray;
+}
+
 .registerLabel {
   display: inline-block;
   margin-bottom: 10px;

@@ -23,8 +23,8 @@ function LandingPage() {
         <header>
           <h3>Let's Get Giving</h3>
         </header>
-        <p>If you want to volunteer, take a look at the job board (no login required) to find ways in which you can give back. Whether you're seeking help or offering it, you can click on the "Sign up" button at the top of the page to create an account. If you already have an account, you can click on "Log in" in the navigation bar.</p>
-        <p>If you specify that you're looking to volunteer, once you login you'll be able to apply to any of the jobs listed. If you specify that you're in need of volunteers, once you log in you'll be able to post a job to the job board.</p>
+        <p>If you want to volunteer, take a look at the opportunity board (no login required) to find ways in which you can give back. Whether you're seeking help or offering it, you can click on the "Sign up" button at the top of the page to create an account. If you already have an account, you can click on "Log in" in the navigation bar.</p>
+        <p>If you specify that you're looking to volunteer, once you login you'll be able to apply to any of the opportunities listed. If you specify that you're in need of volunteers, once you log in you'll be able to post an opportunity to the opportunity board.</p>
       </section>
     </div>
   );

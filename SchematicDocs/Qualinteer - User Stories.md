@@ -2,24 +2,24 @@
 
 ## Volunteers
 ### As a new volunteer user, I want to:
-* see what volunteer jobs are available without logging in. - high
+* see what volunteer gigs are available without logging in. - high
 * sign up for an account. - medium
 * post a resume to my profile. - low
-* add job history and references to my profile. - low
+* add gig history and references to my profile. - low
 
 
 ### As a returning volunteer user, I want to:
-* apply for a volunteer job. - high
+* apply for a volunteer gig. - high
 * login to my account. - medium
 * edit my account information. - medium
-* be able to directly send an email to the employer when applying for a job - medium
-* see what jobs I've applied for. - medium
-* be able to filter/sort that list of volunteer jobs by location. - low
-* be able to filter that list of volunteer jobs by skillset. - low
-* be able to sort that list of volunteer jobs by date posted. - low
-* see more information about a job or company before applying. - low
+* be able to directly send an email to the employer when applying for a gig - medium
+* see what gigs I've applied for. - medium
+* be able to filter/sort that list of volunteer gigs by location. - low
+* be able to filter that list of volunteer gigs by skillset. - low
+* be able to sort that list of volunteer gigs by date posted. - low
+* see more information about a gig or company before applying. - low
 * track my score as a volunteer. - low
-* favorite jobs to save them for later. - low
+* favorite gigs to save them for later. - low
 
 ## Companies
 ### As a new company user, I want to:
@@ -27,18 +27,18 @@
 
 ### As a returning company user, I want to:
 * login to my account. - high
-* post a job to the job board. - high
+* post a gig to the gig board. - high
 * edit my account information. - medium
-* see a list of volunteer jobs that I've posted. - medium
-* see more information about a volunteer that's applied to one of my jobs. - medium
-* edit information about a job I've posted. - medium
-* have a way to message a user that applies for one of my jobs within the app. - low
+* see a list of volunteer gigs that I've posted. - medium
+* see more information about a volunteer that's applied to one of my gigs. - medium
+* edit information about a gig I've posted. - medium
+* have a way to message a user that applies for one of my gigs within the app. - low
 
 ## Administrators
 ### As an administrator user, I want to:
 * view all user accounts and their associated information. - low
 * be able to delete specific users. - low
-* be able to delete specific jobs. - low
+* be able to delete specific gigs. - low
 * be able to lock user accounts. - low
 
 ## Visually Impaired

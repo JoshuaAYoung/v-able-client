@@ -1,24 +1,30 @@
 import React, { Component } from 'react'
-import STORE from '../STORE'
 
 const QualinteerContext = React.createContext({
-  jobs: [],
+  opportunities: [],
+  opportunity: {},
   error: null,
   userType: '',
+  user: {},
   setError: () => { },
   clearError: () => { },
-  addJob: () => { },
-  setJobs: () => { },
-  setUser: () => { },
+  addOpportunity: () => { },
+  setOpportunity: () => { },
+  clearOpportunity: () => { },
+  setOppsBoard: () => { },
+  setUserType: () => { },
+  setUser: () => { }
 })
 
 export default QualinteerContext
 
 export class QualinteerProvider extends Component {
   state = {
-    jobs: STORE.jobs,
+    opportunities: [],
+    opportunity: {},
     error: null,
-    userType: 'company'
+    userType: localStorage.userType || '',
+    user: {}
   };
 
   setError = error => {
@@ -30,34 +36,53 @@ export class QualinteerProvider extends Component {
     this.setState({ error: null })
   }
 
-  addJob = job => {
-    this.setJobs([
-      ...this.state.jobs,
-      job
+  addOpportunity = opportunity => {
+    this.setOppsBoard([
+      ...this.state.opportunities,
+      opportunity
     ])
   }
 
-  setJobs = jobs => {
+  setOpportunity = opportunity => {
+    this.setState({ opportunity })
+  }
+
+  clearOpportunity = () => {
+    this.setOpportunity([])
+  }
+
+  setOppsBoard = opportunities => {
     this.setState({
-      jobs
+      opportunities
     })
   }
 
-  setUser = userType => {
+  setUserType = userType => {
     this.setState({
       userType
     })
   }
 
+  setUser = user => {
+    this.setState({
+      user
+    })
+  }
+
   render() {
     const value = {
-      jobs: this.state.jobs,
+      opportunities: this.state.opportunities,
+      opportunity: this.state.opportunity,
       error: this.state.error,
       userType: this.state.userType,
+      user: this.state.user,
       setError: this.setError,
       clearError: this.clearError,
-      addJob: this.addJob,
-      setJobs: this.setJobs,
+      addOpportunity: this.addOpportunity,
+      setOpportunity: this.setOpportunity,
+      clearOpportunity: this.clearOpportunity,
+      setOppsBoard: this.setOppsBoard,
+      setUserType: this.setUserType,
       setUser: this.setUser
     }
     return (

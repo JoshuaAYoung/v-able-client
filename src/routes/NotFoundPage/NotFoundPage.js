@@ -4,7 +4,7 @@ export default class NotFound extends Component {
   render() {
     return (
       <div>
-        <img src='http://placekitten.com/400/500' alt='random cat' />
+        <img src='http://placekitten.com/400/500' alt='random cat' className='404cat' />
         <p className='404'>404 ERROR - PAGE NOT FOUND</p>
       </div>
     );

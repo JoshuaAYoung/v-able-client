@@ -1,90 +1,86 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import './App.css'
-// import PrivateRoute from './components/Utilities/PrivateRoute'
-// import PublicOnlyRoute from './components/Utilities/PublicOnlyRoute'
+import PrivateRoute from './utilities/PrivateRoute'
+import PublicOnlyRoute from './utilities/PublicOnlyRoute'
 import Footer from './components/Footer/Footer'
-import JobBoardPage from './routes/JobBoardPage/JobBoardPage'
-import JobDetailsPage from './routes/JobDetailsPage/JobDetailsPage'
-import JobPostPage from './routes/JobPostPage/JobPostPage'
+import OpportunityBoardPage from './routes/OpportunityBoardPage/OpportunityBoardPage'
+import OpportunityDetailsPage from './routes/OpportunityDetailsPage/OpportunityDetailsPage'
+import OpportunityPostPage from './routes/OpportunityPostPage/OpportunityPostPage'
 import LandingPage from './routes/LandingPage/LandingPage'
 import LoginPage from './routes/LoginPage/LoginPage'
 import NavBar from './components/NavBar/NavBar'
 import NotFoundPage from './routes/NotFoundPage/NotFoundPage'
 import RegistrationCheckpoint from './routes/RegistrationCheckpoint/RegistrationCheckpoint'
 import RegistrationPage from './routes/RegistrationPage/RegistrationPage'
-import QualinteerContext from './context/QualinteerContext'
+import ErrorBoundary from './ErrorBoundary'
 
 export default class App extends Component {
-  static contextType = QualinteerContext;
-  // state = { hasError: false }
+  state = { hasError: false }
 
-  // INVESTIGATE ERROR BOUNDARIES!!! PROBABLY NEED TO ADD ERROR BOUNDARIES AROUND OUR ROUTES...
-  // static getDerivedStateFromError(error) {
-  //   console.error(error)
-  //   return { hasError: true }
-  // }
+  static getDerivedStateFromError(error) {
+    console.error(error)
+    return { hasError: true }
+  }
 
   render() {
     return (
       <div className='app'>
         <header className='navBar'>
-          <NavBar />
-        </header>
+          <ErrorBoundary>
+            <Route
+              path={'/qualinteer/'}
+              component={NavBar}
+            />
+          </ErrorBoundary>
+        </header >
         <main className='appMain'>
-          {/* {this.state.hasError && <p className='error'>Error. Something went wrong.</p>} */}
-          <Switch>
-            <Route
-              exact
-              path={'/'}
-              component={LandingPage}
-            />
-            <Route
-              path={'/login'}
-              render={({ history }) => <LoginPage history={history} />}
-            />
-            <Route
-              exact
-              path={'/register'}
-              component={RegistrationCheckpoint}
-            />
-            <Route
-              path={'/register/:name'}
-              render={({ match, history }) => <RegistrationPage history={history} userType={match.params.name} />}
-            />
-            <Route
-              path={'/jobpost'}
-              render={({ history }) => <JobPostPage history={history} />}
-            />
-            <Route
-              exact
-              path='/job/:id'
-              render={({ match }) => <JobDetailsPage job={this.context.jobs.find(job => job.id === parseInt(match.params.id))} />} />
-            {/* <PublicOnlyRoute
-              path={'/login'}
-              component={LoginPage}
-            />
-            <PublicOnlyRoute
-              path={'/register'}
-              render={({ history }) => <RegistrationPage history={history} />}
-            />
-            <PrivateRoute
-              path={'/jobpost'}
-              component={JobPostPage}
-            /> */}
-            <Route
-              path={'/jobboard'}
-              component={JobBoardPage}
-            />
-            <Route
-              component={NotFoundPage}
-            />
-          </Switch>
+          {this.state.hasError && <p className='error'>Error. Something went wrong.</p>}
+          <ErrorBoundary>
+            <Switch>
+              <Route
+                exact
+                path={'/qualinteer/'}
+                component={LandingPage}
+              />
+              <PublicOnlyRoute
+                path={'/qualinteer/login'}
+                component={LoginPage}
+              />
+              <PublicOnlyRoute
+                exact
+                path={'/qualinteer/register'}
+                component={RegistrationCheckpoint}
+              />
+              <PublicOnlyRoute
+                path={'/qualinteer/register/:user'}
+                component={RegistrationPage}
+              />
+              <PrivateRoute
+                path={'/qualinteer/opportunitypost'}
+                component={OpportunityPostPage}
+              />
+              <Route
+                exact
+                path='/qualinteer/opportunity/:oppId'
+                component={OpportunityDetailsPage}
+              />
+              <Route
+                path={'/qualinteer/opportunityboard'}
+                component={OpportunityBoardPage}
+              />
+              <Route
+                component={NotFoundPage}
+              />
+            </Switch>
+          </ErrorBoundary>
         </main>
         <footer>
-          <Footer />
+          <ErrorBoundary>
+            <Footer />
+          </ErrorBoundary>
         </footer>
-      </div>
+      </div >
     )
   }
 }

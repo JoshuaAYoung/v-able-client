@@ -1,57 +1,143 @@
 import React, { Component } from 'react';
-import CompanyRegistration from '../../components/RegistrationForm/CompanyRegistration'
-import VolunteerRegistration from '../../components/RegistrationForm/VolunteerRegistration'
+import OrganizationRegistration from '../../components/RegistrationForms/OrganizationRegistration'
+import VolunteerRegistration from '../../components/RegistrationForms/VolunteerRegistration'
 import './RegistrationPage.css'
+import AuthApiService from '../../services/auth-api-service'
+
 export default class RegistrationPage extends Component {
-  // static defaultProps = {
-  //   onRegistrationSuccess: () => { }
-  // }
+  state = {
+    error: null,
+    emailTempValue: { value: '', touched: false },
+    passwordTempValue: { value: '', touched: false },
+    full_nameTempValue: '',
+    user_typeTempValue: '',
+    nameTempValue: '',
+    addressTempValue: '',
+    cityTempValue: '',
+    stateTempValue: '',
+    zipcodeTempValue: { value: '', touched: false },
+    phoneTempValue: '',
+    websiteTempValue: '',
+  }
 
-  // handleSubmit = event => {
-  //   event.preventDefault()
-  //   const { full_name, nick_name, user_name, password } = event.target
+  addTempValue = (field, input) => {
+    this.setState({
+      [field + 'TempValue']: input
+    })
+  }
 
-  //   this.setState({ error: null })
-  //   AuthApiService.postUser({
-  //     user_name: user_name.value,
-  //     password: password.value,
-  //     full_name: full_name.value,
-  //     nickname: nick_name.value,
-  //   })
-  //     .then(user => {
-  //       full_name.value = ''
-  //       nick_name.value = ''
-  //       user_name.value = ''
-  //       password.value = ''
-  //       this.props.onRegistrationSuccess()
-  //     })
-  //     .catch(res => {
-  //       this.setState({ error: res.error })
-  //     })
-  //CLEAR THE STATE USERTYPE HERE
-  // }
+  addTempValidation = (field, input) => {
+    this.setState({
+      [field + 'TempValue']: {
+        value: input,
+        touched: true
+      }
+    })
+  }
 
   handleSubmit = ev => {
     ev.preventDefault()
-    this.props.history.push('/login')
+    let allFields
+    const userType = this.props.match.params.user
+    const userFields = {
+      email: this.state.emailTempValue.value,
+      password: this.state.passwordTempValue.value,
+      full_name: this.state.full_nameTempValue,
+      user_type: userType
+    }
+    if (userType === 'organization') {
+      const orgFields = {
+        name: this.state.nameTempValue,
+        address: this.state.addressTempValue,
+        city: this.state.cityTempValue,
+        state: this.state.stateTempValue,
+        zipcode: this.state.zipcodeTempValue.value,
+        phone: this.state.phoneTempValue,
+        website: this.state.websiteTempValue
+      }
+      allFields = { ...userFields, ...orgFields }
+    }
+    else {
+      allFields = { ...userFields }
+    }
+
+    this.setState({ error: null })
+    AuthApiService.postUser(allFields)
+      .then(user => {
+        this.props.history.push('/qualinteer/login')
+      })
+      .catch(res => {
+        this.setState({ error: res.error })
+      })
+  }
+
+  generateError = () => {
+    const { emailTempValue, passwordTempValue, zipcodeTempValue } = this.state;
+    //eslint-disable-next-line
+    const passRegEx = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&])[\S]/;
+    //eslint-disable-next-line
+    const emailRegEx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const zipcodeRegEx = /\b\d{5}\b/;
+    const errorProps = {};
+    if (this.state.emailTempValue.touched === true && !emailRegEx.test(emailTempValue.value)) {
+      errorProps.emailError = 'Please enter a valid email address.';
+    }
+    if (this.state.passwordTempValue.touched === true && !passRegEx.test(passwordTempValue.value)) {
+      errorProps.passwordError1 = 'Password must contain 1 upper case, lower case, number and special character.';
+    }
+    if (this.state.passwordTempValue.touched === true && passwordTempValue.value.length < 8) {
+      errorProps.passwordError2 = 'Password must be equal to or longer than 8 characters.';
+    }
+    if (this.state.passwordTempValue.touched === true && passwordTempValue.value.length > 71) {
+      errorProps.passwordError3 = 'Password must be less than 72 characters.';
+    }
+    if (this.state.passwordTempValue.touched === true && (passwordTempValue.value.startsWith(' ') || passwordTempValue.value.endsWith(' '))) {
+      errorProps.passwordError4 = 'Password must not start or end with empty spaces.';
+    }
+    if (this.state.zipcodeTempValue.touched === true && (zipcodeTempValue.value.length !== 5 || !zipcodeRegEx.test(zipcodeTempValue.value))) {
+      errorProps.zipcodeError = 'Zipcode must be a 5 digit number.';
+    }
+    return errorProps;
   }
 
   formRender = () => {
-    if (this.props.userType === 'company') {
-      return <CompanyRegistration />
+    if (this.props.match.params.user === 'organization') {
+      return (
+        <OrganizationRegistration
+          addTempValidation={this.addTempValidation}
+          addTempValue={this.addTempValue}
+          errorProps={this.generateError()}
+        />
+      )
     }
-    else if (this.props.userType === 'volunteer') {
-      return <VolunteerRegistration />
+    else if (this.props.match.params.user === 'volunteer') {
+      return (
+        <VolunteerRegistration
+          addTempValidation={this.addTempValidation}
+          addTempValue={this.addTempValue}
+          errorProps={this.generateError()}
+        />
+      )
     }
   }
+
   render() {
+    const { error } = this.state
     return (
       <div>
         <section>
+          <div role='alert'>
+            {error && <p className='apiError'>Server Error: {error}</p>}
+          </div>
           <form className='signup-form' onSubmit={ev => this.handleSubmit(ev)}>
             {this.formRender()}
             <br />
-            <button type='submit' className="registerButton">Sign Up</button>
+            <button
+              type='submit'
+              className="registerButton"
+            >
+              Sign Up
+              </button>
           </form>
         </section >
       </div >

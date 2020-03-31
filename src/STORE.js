@@ -1,5 +1,5 @@
 export default {
-  jobs: [
+  opportunities: [
     {
       id: 1,
       title: 'A/V Technician',
@@ -11,7 +11,7 @@ export default {
       experience: 'Audio Visual: 2 years (Preferred)',
       remote: 'No.',
       posted: '02-15-2020',
-      company: 'Colorado Bar Association CLE',
+      organization: 'Colorado Bar Association CLE',
       location: 'Denver, CO 80203'
     },
     {
@@ -25,7 +25,7 @@ export default {
       experience: '2+ years of direct experience with Content Management Systems',
       remote: 'Yes.',
       posted: '01-26-2020',
-      company: 'Behavior Analyst Certification Board',
+      organization: 'Behavior Analyst Certification Board',
       location: 'Littleton, CO 80127'
     },
     {
@@ -40,7 +40,7 @@ export default {
       license: '',
       remote: 'No.',
       posted: '03-15-2020',
-      company: 'Blue Spruce Habitat for Humanity',
+      organization: 'Blue Spruce Habitat for Humanity',
       location: 'Evergreen, CO'
     },
     {
@@ -54,7 +54,7 @@ export default {
       experience: 'Undergraduate degree in communications',
       remote: 'No.',
       posted: '02-15-2020',
-      company: 'nternational Rescue Committee',
+      organization: 'International Rescue Committee',
       location: 'Denver, CO 80228'
     },
     {
@@ -68,7 +68,7 @@ export default {
       experience: 'Audio Visual: 2 years (Preferred)',
       remote: 'No.',
       posted: '12-15-2019',
-      company: 'he Public Interest Network',
+      organization: 'The Public Interest Network',
       location: 'Denver, CO'
     },
     {
@@ -83,7 +83,7 @@ export default {
       license: '',
       remote: 'Yes.',
       posted: '02-17-2020',
-      company: 'AVID CENTER STAFF',
+      organization: 'AVID CENTER STAFF',
       location: 'Englewood, CO 80111'
     },
     {
@@ -97,7 +97,7 @@ export default {
       experience: 'Events Management: 3 years (Preferred)',
       remote: 'Yes.',
       posted: '03-20-2020',
-      company: 'OWASP Foundation',
+      organization: 'OWASP Foundation',
       location: 'Denver, CO'
     },
     {
@@ -111,7 +111,7 @@ export default {
       experience: 'At least one (1) year of experience in the hospitality or service industry, preferred',
       remote: 'No.',
       posted: '02-15-2020',
-      company: 'Lutheran Medical Center',
+      organization: 'Lutheran Medical Center',
       location: 'Wheat Ridge, CO 80034'
     },
     {
@@ -125,7 +125,7 @@ export default {
       experience: 'Keyboarding skills of 50 W.P.M.',
       remote: 'No.',
       posted: '01-22-2020',
-      company: 'Volunteers of America Inc',
+      organization: 'Volunteers of America Inc',
       location: 'Denver, CO 80205'
     },
     {
@@ -140,7 +140,7 @@ export default {
       license: '',
       remote: 'No.',
       posted: '03-01-2020',
-      company: 'KIPP Foundation',
+      organization: 'KIPP Foundation',
       location: 'Denver, CO 80203'
     },
     {
@@ -154,7 +154,7 @@ export default {
       experience: 'Passion and historical knowledge of social justice movements, protest and documentary films',
       remote: 'Yes.',
       posted: '02-15-2020',
-      company: 'Free Speech TV',
+      organization: 'Free Speech TV',
       location: 'Denver, CO 80205'
     },
     {
@@ -169,7 +169,7 @@ export default {
       license: '',
       remote: 'Yes.',
       posted: '09-15-2019',
-      company: 'Scrum Alliance, Inc.',
+      organization: 'Scrum Alliance, Inc.',
       location: 'Westminster, CO 80021'
     },
     {
@@ -182,7 +182,7 @@ export default {
       edlevel: 'Bachelors',
       remote: 'No.',
       posted: '03-15-2020',
-      company: 'Savio House',
+      organization: 'Savio House',
       location: 'Denver, CO 80219'
     }
   ]

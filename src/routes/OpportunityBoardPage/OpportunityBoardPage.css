@@ -1,12 +1,11 @@
-.jobCard {
+.opportunityCard {
   width: 80%;
   background: lightgray;
   border: 2px solid #818282;
-  padding-left: 15px;
   margin: 0 0 30px 20px;
 }
 
-.jobLink {
+.opportunityLink {
   text-decoration: none;
   color: black;
 }
@@ -15,14 +14,23 @@
   margin: -20px 0 30px 0;
 }
 
-.jobTitle {
+.opportunityTitle {
   margin-bottom: 0;
+  margin-top: 0;
 }
 
-.companyInfo {
+.orgInfo {
   margin: 0
 }
 
 .boardContainer {
   margin-bottom: 60px
+}
+
+.opportunityContainer {
+  padding: 20px 0 20px 15px;
+}
+
+.opportunityPosted {
+  margin-bottom: 0;
 }

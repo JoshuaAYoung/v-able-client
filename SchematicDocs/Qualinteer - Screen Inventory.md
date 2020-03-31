@@ -15,12 +15,12 @@
     * Provide username and password to demo (autofill)?
     * Usually just a dropdown, not a separate view 
   * ### [Link to HTML]
-## 4) Job Post
+## 4) Opportunity Post
   * ### Content
-    * Job post form for companies
+    * Opportunity post form for companies
   * ### [Link to HTML]
-## 5) Job Board
+## 5) Opportunity Board
   * ### Content
-    * Job board view with Job Cards
-    * Job cards have information and a link to apply
+    * Opportunity board view with Opportunity Cards
+    * Opportunity cards have information and a link to apply
   * ### [Link to HTML]
