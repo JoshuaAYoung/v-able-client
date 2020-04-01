@@ -1,6 +1,6 @@
 {
   "name": "qualinteer-client",
-  "homepage": "http://joshyoung.net/qualinteer",
+  "homepage": "http://qualinteer.joshyoung.net/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

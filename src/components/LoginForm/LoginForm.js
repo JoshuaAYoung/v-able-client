@@ -10,7 +10,24 @@ export default class LoginForm extends Component {
   state = {
     error: null,
     emailTempValue: '',
-    passwordTempValue: ''
+    passwordTempValue: '',
+    showPassword: 'password',
+    showHide: 'Show'
+  }
+
+  toggleShowPassword = () => {
+    if (this.state.showPassword === 'password') {
+      this.setState({
+        showPassword: 'text',
+        showHide: 'Hide'
+      })
+    }
+    else {
+      this.setState({
+        showPassword: 'password',
+        showHide: 'Show'
+      })
+    }
   }
 
   addTempValue = (field, input) => {
@@ -32,12 +49,15 @@ export default class LoginForm extends Component {
         TokenService.saveAuthToken(res.authToken)
         this.context.setUserType(res.userType)
         localStorage.userType = res.userType
+        localStorage.full_name = res.user.full_name
         this.context.setUser(res.user)
+        console.log(res)
+        console.log(res.user)
         this.setState({
           emailTempValue: '',
           passwordTempValue: ''
         })
-        this.props.history.push('/qualinteer/')
+        this.props.history.push('/')
       })
       .catch(res => {
         this.setState({ error: res.error })
@@ -83,20 +103,26 @@ export default class LoginForm extends Component {
               Password:
               </label>
             <input
-              type='password'
+              type={this.state.showPassword}
               name='password'
               id='password'
               className='loginInput'
               required
               onChange={ev => this.addTempValue('password', ev.target.value)}
             />
+            <button
+              type='button'
+              className='showButton'
+              onClick={() => this.toggleShowPassword()}>
+              {this.state.showHide}
+            </button>
           </div>
           <button
             type='submit'
             className='loginButton'>
             Sign In
             </button>
-          <p>Don't have an account? <Link to='/qualinteer/register' className='registerLink'>Click Here</Link> to create one</p>
+          <p>Don't have an account? <Link to='/register' className='registerLink'>Click Here</Link> to create one</p>
         </form>
       </div>
     )

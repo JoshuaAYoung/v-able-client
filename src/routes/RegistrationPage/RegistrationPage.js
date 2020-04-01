@@ -64,7 +64,7 @@ export default class RegistrationPage extends Component {
     this.setState({ error: null })
     AuthApiService.postUser(allFields)
       .then(user => {
-        this.props.history.push('/qualinteer/login')
+        this.props.history.push('/login')
       })
       .catch(res => {
         this.setState({ error: res.error })
@@ -74,7 +74,7 @@ export default class RegistrationPage extends Component {
   generateError = () => {
     const { emailTempValue, passwordTempValue, zipcodeTempValue } = this.state;
     //eslint-disable-next-line
-    const passRegEx = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&])[\S]/;
+    const passRegEx = /^(?:(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).*)$/;
     //eslint-disable-next-line
     const emailRegEx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     const zipcodeRegEx = /\b\d{5}\b/;
@@ -83,7 +83,7 @@ export default class RegistrationPage extends Component {
       errorProps.emailError = 'Please enter a valid email address.';
     }
     if (this.state.passwordTempValue.touched === true && !passRegEx.test(passwordTempValue.value)) {
-      errorProps.passwordError1 = 'Password must contain 1 upper case, lower case, number and special character.';
+      errorProps.passwordError1 = 'Password must contain an upper case letter, a lower case letter and a number.';
     }
     if (this.state.passwordTempValue.touched === true && passwordTempValue.value.length < 8) {
       errorProps.passwordError2 = 'Password must be equal to or longer than 8 characters.';

@@ -36,6 +36,7 @@ const OppApiService = {
         org_id: opp.org_id,
         title: opp.title,
         description: opp.description,
+        contact: opp.contact,
         start_date: opp.start_date,
         duration: opp.duration,
         commitment: opp.commitment,

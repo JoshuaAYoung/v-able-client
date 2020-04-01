@@ -29,7 +29,7 @@ export default class App extends Component {
         <header className='navBar'>
           <ErrorBoundary>
             <Route
-              path={'/qualinteer/'}
+              path={'/'}
               component={NavBar}
             />
           </ErrorBoundary>
@@ -40,33 +40,33 @@ export default class App extends Component {
             <Switch>
               <Route
                 exact
-                path={'/qualinteer/'}
+                path={'/'}
                 component={LandingPage}
               />
               <PublicOnlyRoute
-                path={'/qualinteer/login'}
+                path={'/login'}
                 component={LoginPage}
               />
               <PublicOnlyRoute
                 exact
-                path={'/qualinteer/register'}
+                path={'/register'}
                 component={RegistrationCheckpoint}
               />
               <PublicOnlyRoute
-                path={'/qualinteer/register/:user'}
+                path={'/register/:user'}
                 component={RegistrationPage}
               />
               <PrivateRoute
-                path={'/qualinteer/opportunitypost'}
+                path={'/opportunitypost'}
                 component={OpportunityPostPage}
               />
               <Route
                 exact
-                path='/qualinteer/opportunity/:oppId'
+                path='/opportunity/:oppId'
                 component={OpportunityDetailsPage}
               />
               <Route
-                path={'/qualinteer/opportunityboard'}
+                path={'/opportunityboard'}
                 component={OpportunityBoardPage}
               />
               <Route

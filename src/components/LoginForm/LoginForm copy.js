@@ -8,8 +8,8 @@ export default class LoginForm extends Component {
   demoLogin = (userType) => {
     this.context.setUserType(userType);
     userType === 'organization'
-      ? this.props.history.push('/qualinteer/')
-      : this.props.history.push('/qualinteer/opportunityboard')
+      ? this.props.history.push('/')
+      : this.props.history.push('/opportunityboard')
   }
 
   render() {
@@ -32,7 +32,7 @@ export default class LoginForm extends Component {
           </div>
           <button type='button' onClick={() => this.demoLogin('organization')} className='loginButton'>Sign In Organization</button>
           <button type='button' onClick={() => this.demoLogin('volunteer')} className='loginButton'>Sign In Volunteer</button>
-          <p>Don't have an account? <Link to='/qualinteer/register' className='registerLink'>Click Here</Link> to create one</p>
+          <p>Don't have an account? <Link to='/register' className='registerLink'>Click Here</Link> to create one</p>
         </form>
       </div>
     )

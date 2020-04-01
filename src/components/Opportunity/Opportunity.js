@@ -12,7 +12,7 @@ export default class Opportunity extends Component {
     const { opportunity_id, title, description, contact, posted, name, address, city, state, zipcode, website } = this.props
     return (
       <>
-        <button type='button' onClick={ev => this.props.history.push(`/qualinteer/opportunity/${opportunity_id}`)} className='opportunityLink'>
+        <button type='button' onClick={ev => this.props.history.push(`/opportunity/${opportunity_id}`)} className='opportunityLink'>
           <div className='opportunityContainer'>
             <h3 className='opportunityTitle'>{title}</h3>
             <LinkName name={name} website={website} />

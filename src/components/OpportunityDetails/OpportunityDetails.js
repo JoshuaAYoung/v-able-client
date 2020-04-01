@@ -15,7 +15,11 @@ export default class OpportunityDetails extends Component {
         <p className='orgInfo'>{address}</p>
         <p className='orgInfo'>{city}, {state} {zipcode}</p>
         <p className='orgInfo'>{phone}</p>
-        <VolunteerButton contact={contact} />
+        <VolunteerButton
+          title={title}
+          contact={contact}
+          name={name}
+        />
         <p className='opportunityInfo'><b>POSTED ON: </b>{cleanDate(posted)}</p>
         <p className='opportunityInfo'><b>START DATE: </b>{start_date}</p>
         <p className='opportunityInfo'><b>JOB DURATION: </b>{duration}</p>

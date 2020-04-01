@@ -15,10 +15,10 @@ export default class OpportunityPostForm extends Component {
     start_dateTempValue: '',
     durationTempValue: '',
     commitmentTempValue: '',
-    ed_levelTempValue: '',
+    ed_levelTempValue: 'none',
     experienceTempValue: '',
     licenseTempValue: '',
-    remoteTempValue: '',
+    remoteTempValue: 'No',
   }
 
   addTempValue = (field, input) => {
@@ -73,7 +73,7 @@ export default class OpportunityPostForm extends Component {
     }
     OppApiService.postOpportunity(newOpp)
       .then(this.context.addOpportunity)
-      .then(this.props.history.push('/qualinteer/opportunityboard'))
+      .then(this.props.history.push('/opportunityboard'))
       .catch(res => {
         this.setState({ error: res.error })
       })
@@ -222,7 +222,7 @@ export default class OpportunityPostForm extends Component {
               name='ed_level'
               className='postInput'
               onChange={ev => this.addTempValue('ed_level', ev.target.value)}>
-              <option value='none'>None</option>
+              <option value='none' defaultValue='none'>None</option>
               <option value='highschool'>High School</option>
               <option value='associates'>Associates Degree</option>
               <option value='bachelors'>Bachelors Degree</option>

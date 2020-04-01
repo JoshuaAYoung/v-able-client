@@ -11,7 +11,7 @@ export default class NavBar extends Component {
     TokenService.clearAuthToken();
     this.context.setUserType('');
     this.context.setUser({});
-    this.props.history.push('/qualinteer/');
+    this.props.history.push('/');
   }
 
   linkSeparator = (<span className='linkBullet'>&#8226;</span>)
@@ -21,7 +21,7 @@ export default class NavBar extends Component {
       return (
         <>
           <Link
-            to='/qualinteer/'
+            to='/'
             onClick={() => this.handleLogout()}>
             Logout
           </Link>
@@ -32,13 +32,13 @@ export default class NavBar extends Component {
       return (
         <>
           <Link
-            to='/qualinteer/'
+            to='/'
             onClick={() => this.handleLogout()}>
             Logout
           </Link>
           {this.linkSeparator}
           <Link
-            to='/qualinteer/opportunitypost'
+            to='/opportunitypost'
             className='navLink'>
             Recruit Volunteers
           </Link>
@@ -48,11 +48,11 @@ export default class NavBar extends Component {
     else {
       return (
         <>
-          <Link to='/qualinteer/login' className='navLink'>
+          <Link to='/login' className='navLink'>
             Log In
           </Link>
           {this.linkSeparator}
-          <Link to='/qualinteer/register' className='navLink'>
+          <Link to='/register' className='navLink'>
             Sign Up
           </Link>
         </>
@@ -66,15 +66,15 @@ export default class NavBar extends Component {
     return (
       <div className='navContainer'>
         <div className='logoContainer'>
-          <Link to='/qualinteer/'>
-            <img src='/qualinteer/assets/qualinteerlogo.svg' alt='qualinteer logo' className='mainLogo' />
+          <Link to='/'>
+            <img src='/assets/qualinteerlogo.svg' alt='qualinteer logo' className='mainLogo' />
             <h1 className='navName'>Qualinteer</h1>
           </Link>
         </div>
         <div className='navLinks'>
           {this.userLinks()}
           {this.linkSeparator}
-          <Link to='/qualinteer/opportunityboard' className='navLink'>
+          <Link to='/opportunityboard' className='navLink'>
             Find Opportunities
           </Link>
         </div>
