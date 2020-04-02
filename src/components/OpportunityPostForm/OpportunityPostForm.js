@@ -197,7 +197,7 @@ export default class OpportunityPostForm extends Component {
             <label
               htmlFor='ed_level'
               className='postLabel'>
-              Education Level:
+              Requested Education Level:
               </label>
             <br />
             <select
@@ -218,7 +218,7 @@ export default class OpportunityPostForm extends Component {
             <label
               htmlFor='experience'
               className='postLabel'>
-              Experience (optional):
+              Requested Experience (optional):
               </label>
             <br />
             <input

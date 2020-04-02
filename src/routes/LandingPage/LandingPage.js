@@ -4,14 +4,14 @@ function LandingPage() {
   return (
     <div className="landingMain">
       <header role="banner" className="landingBanner">
-        <h1>v&#8226able</h1>
+        <h1>v&bull;able</h1>
         <h2>Gift your experience</h2>
       </header>
       <section className="landingDescription">
         <header>
           <h3>A Unique Way to Give Back</h3>
         </header>
-        <p>v&#8226able is a place where non-profit organizations in need of skilled labor are connected with volunteers that have the exertise required to help.</p>
+        <p>v&bull;able is a place where non-profit organizations in need of skilled labor are connected with volunteers that have the exertise required to help.</p>
         <p>
           A lot of volunteer work consists of unskilled labor, which is great if that's what's needed. When it comes to shopping for professional services and skilled labor, though, non-profits tend to pay market rate.
         </p>

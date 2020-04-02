@@ -14,7 +14,7 @@ export default class NavBar extends Component {
     this.props.history.push('/');
   }
 
-  linkSeparator = (<span className='linkBullet'>&#8226;</span>)
+  linkSeparator = (<span className='linkBullet'>&bull;</span>)
 
   userLinks = () => {
     if (this.context.userType === 'volunteer' && TokenService.hasAuthToken()) {
@@ -67,8 +67,8 @@ export default class NavBar extends Component {
       <div className='navContainer'>
         <div className='logoContainer'>
           <Link to='/'>
-            <img src='/assets/vablelogo.svg' alt='v-able logo' className='mainLogo' />
-            <h1 className='navName'>v&#8226able</h1>
+            <img src='/assets/v-able-logo.svg' alt='v-able logo' className='mainLogo' />
+            <h1 className='navName'>v&bull;able</h1>
           </Link>
         </div>
         <div className='navLinks'>

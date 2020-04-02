@@ -11,7 +11,7 @@ export default class OpportunityBoardPage extends Component {
 
   componentDidMount() {
     const { oppId } = this.props.match.params
-    this.context.clearError()
+    this.setState({ error: null })
     OppApiService.getOppById(oppId)
       .then(this.context.setOpportunity)
       .catch(res => {
