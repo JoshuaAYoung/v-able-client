@@ -3,6 +3,7 @@ import QualinteerContext from '../../context/QualinteerContext'
 import { cleanDate } from '../../utilities/Utils'
 import OppApiService from '../../services/opp-api-service'
 import ValidationError from '../../utilities/ValidationError'
+import TextEditor from '../TextEditor/TextEditor'
 
 export default class OpportunityPostForm extends Component {
   static contextType = QualinteerContext;
@@ -10,7 +11,6 @@ export default class OpportunityPostForm extends Component {
   state = {
     error: null,
     titleTempValue: '',
-    descriptionTempValue: '',
     contactTempValue: { value: '', touched: false },
     start_dateTempValue: '',
     durationTempValue: '',
@@ -19,6 +19,7 @@ export default class OpportunityPostForm extends Component {
     experienceTempValue: '',
     licenseTempValue: '',
     remoteTempValue: 'No',
+    editorState: null
   }
 
   addTempValue = (field, input) => {
@@ -36,6 +37,10 @@ export default class OpportunityPostForm extends Component {
     })
   }
 
+  handleEditorChange = (editorState) => {
+    this.setState({ editorState })
+  }
+
   convertBoolean = value => {
     if (value === 'Yes') {
       return true
@@ -49,7 +54,6 @@ export default class OpportunityPostForm extends Component {
     ev.preventDefault()
     const {
       titleTempValue,
-      descriptionTempValue,
       contactTempValue,
       start_dateTempValue,
       durationTempValue,
@@ -60,7 +64,7 @@ export default class OpportunityPostForm extends Component {
       remoteTempValue } = this.state
     const newOpp = {
       title: titleTempValue,
-      description: descriptionTempValue,
+      description: this.context.user.description,
       contact: contactTempValue.value,
       start_date: start_dateTempValue,
       duration: durationTempValue,
@@ -72,8 +76,8 @@ export default class OpportunityPostForm extends Component {
       posted: cleanDate()
     }
     OppApiService.postOpportunity(newOpp)
-      .then(this.context.addOpportunity)
-      .then(this.props.history.push('/opportunityboard'))
+      .then(res => this.context.addOpportunity)
+      .then(res => this.props.history.push('/success/oppboard'))
       .catch(res => {
         this.setState({ error: res.error })
       })
@@ -102,7 +106,7 @@ export default class OpportunityPostForm extends Component {
             <label
               htmlFor='title'
               className='postLabel'>
-              Position Title
+              Position Title:
               </label>
             <br />
             <input
@@ -118,34 +122,13 @@ export default class OpportunityPostForm extends Component {
           <br />
           <div>
             <label
-              htmlFor='description'
-              className='postLabel'>
-              Opportunity Description
-              </label>
-            <br />
-            <textarea
-              rows='4'
-              cols='30'
-              placeholder="Give potential volunteers some more info about the position. What's expected? Who will they report to? Who will they be working with? etc"
-              type='description'
-              name='description'
-              id='description'
-              className='descriptionBox'
-              required
-              onChange={ev => this.addTempValue('description', ev.target.value)}
-            >
-            </textarea>
-          </div>
-          <br />
-          <div>
-            <label
               htmlFor='contact'
               className='postLabel'>
               Contact Person's Email:
               </label>
             <br />
             <input
-              placeholder='Who sould we send applications to?'
+              placeholder='Who should we send applications to?'
               type='text'
               name='contact'
               id='contact'
@@ -160,7 +143,7 @@ export default class OpportunityPostForm extends Component {
             <label
               htmlFor='start_date'
               className='postLabel'>
-              Start Date
+              Start Date:
               </label>
             <br />
             <input
@@ -178,7 +161,7 @@ export default class OpportunityPostForm extends Component {
             <label
               htmlFor='duration'
               className='postLabel'>
-              Duration
+              Duration:
               </label>
             <br />
             <input
@@ -196,7 +179,7 @@ export default class OpportunityPostForm extends Component {
             <label
               htmlFor='commitment'
               className='postLabel'>
-              Estimated Hours Per Week
+              Estimated Hours Per Week:
               </label>
             <br />
             <input
@@ -214,7 +197,7 @@ export default class OpportunityPostForm extends Component {
             <label
               htmlFor='ed_level'
               className='postLabel'>
-              Education Level
+              Education Level:
               </label>
             <br />
             <select
@@ -235,7 +218,7 @@ export default class OpportunityPostForm extends Component {
             <label
               htmlFor='experience'
               className='postLabel'>
-              Experience (optional)
+              Experience (optional):
               </label>
             <br />
             <input
@@ -252,7 +235,7 @@ export default class OpportunityPostForm extends Component {
             <label
               htmlFor='license'
               className='postLabel'>
-              License or Certification Required (optional)
+              License or Certification Required (optional):
               </label>
             <br />
             <input
@@ -269,7 +252,7 @@ export default class OpportunityPostForm extends Component {
             <label
               htmlFor='remote'
               className='postLabel'>
-              Can this opportunity be done remotely?
+              Can this opportunity be done remotely?:
               </label>
             <br />
             <select
@@ -282,9 +265,21 @@ export default class OpportunityPostForm extends Component {
             </select>
           </div>
           <br />
+          <div>
+            <label
+              htmlFor='description'
+              className='postLabel'>
+              Opportunity Description:
+    </label>
+            <br />
+            <TextEditor
+            />
+          </div>
+          <br />
           <button
             type='submit'
-            className='postButton'>
+            className='postButton'
+            disabled={this.generateError()}>
             Submit
             </button>
         </form>

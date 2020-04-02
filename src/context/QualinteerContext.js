@@ -13,7 +13,8 @@ const QualinteerContext = React.createContext({
   clearOpportunity: () => { },
   setOppsBoard: () => { },
   setUserType: () => { },
-  setUser: () => { }
+  setUser: () => { },
+  setDescription: () => { }
 })
 
 export default QualinteerContext
@@ -69,6 +70,14 @@ export class QualinteerProvider extends Component {
     })
   }
 
+  setDescription = description => {
+    this.setState({
+      user: {
+        description
+      }
+    })
+  }
+
   render() {
     const value = {
       opportunities: this.state.opportunities,
@@ -83,7 +92,8 @@ export class QualinteerProvider extends Component {
       clearOpportunity: this.clearOpportunity,
       setOppsBoard: this.setOppsBoard,
       setUserType: this.setUserType,
-      setUser: this.setUser
+      setUser: this.setUser,
+      setDescription: this.setUser
     }
     return (
       <QualinteerContext.Provider value={value}>

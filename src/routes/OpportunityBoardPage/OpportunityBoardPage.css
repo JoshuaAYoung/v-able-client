@@ -3,11 +3,23 @@
   background: lightgray;
   border: 2px solid #818282;
   margin: 0 0 30px 20px;
+  position: relative;
 }
 
-.opportunityLink {
+.opportunityCard {
+  list-style-type: none;
+}
+
+.oppList {
+  margin: 0;
+  padding: 0;
+}
+
+.oppCardLink {
   text-decoration: none;
   color: black;
+  /* position:absolute;
+  left:0; top:0; bottom:0; right:0; */
 }
 
 .instructions {

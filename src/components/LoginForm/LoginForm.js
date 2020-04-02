@@ -70,10 +70,10 @@ export default class LoginForm extends Component {
     return (
       <div>
         <h2 className='pageHeader'>Log In</h2>
-        <h3>TO LOG IN AS A TEST USER:</h3>
-        <p>Either click on the <b>"Sign In Organization"</b> or <b>"Sign In Volunteer"</b> buttons below to login as one of the user types.</p>
-        <p>User registration is disabled for now, though I could use some feedback on the form if you wouldn't mind checking out the "Sign Up" page if you have a moment.</p>
-        <p>If you've tested one user type and want to try out the other one, click on the <b>logout</b> link in the navigation bar and come back to this page to sign is as the other user type.</p>
+        <h3>TO LOG IN:</h3>
+        <p>You can either click <b>"Sign Up"</b> on the navigation bar to create an account or login using the following email and password combination:</p>
+        <p>email: <b>testuser1@gmail.com </b></p>
+        <p>password: <b>myPassword</b></p>
         <div role='alert'>
           {error && <p className='apiError'>{error}</p>}
         </div>

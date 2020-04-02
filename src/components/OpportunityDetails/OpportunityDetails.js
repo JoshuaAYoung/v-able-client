@@ -28,7 +28,7 @@ export default class OpportunityDetails extends Component {
         {experience && <p className='opportunityInfo'><b>EXPERIENCE REQUESTED: </b>{experience}</p>}
         {license && <p className='opportunityInfo'><b>LICENSE REQUESTED: </b>{license}</p>}
         <p className='opportunityInfo'><b>OPTION TO VOLUNTEER REMOTELY: </b>{remote ? 'Yes' : 'No'} </p>
-        <p className='opportunityDescription'><b>JOB DESCRIPTION: </b></p><pre>{description}</pre>
+        <p className='opportunityDescription'><b>JOB DESCRIPTION: </b></p><div dangerouslySetInnerHTML={{ __html: description }} />
       </>
     );
   }

@@ -17,14 +17,14 @@ export function cleanDate(date) {
 export function LinkName({ website, name }) {
   if (website) {
     return (
-      <a href={website} alt="organization's website">
-        <p className='org'>{name}</p>
+      <a href={website} alt="organization's website" className='orgLink'>
+        <p className='orgName'>{name}</p>
       </a>
     )
   }
   else {
     return (
-      <p className='org'>{name}</p>
+      <p className='orgName'>{name}</p>
     )
   }
 }

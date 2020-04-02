@@ -1,4 +1,4 @@
-# Blogful client
+# Qualinteer client
 
 ## Scripts
 

@@ -2,8 +2,12 @@ import TokenService from './token-service'
 import config from '../config'
 
 const OppApiService = {
-  getOpps() {
-    return fetch(`${config.API_ENDPOINT}/opportunities`, {
+  getOpps(searchTerm) {
+    let oppUrl = `${config.API_ENDPOINT}/opportunities`
+    if (searchTerm) {
+      oppUrl = oppUrl + '/?searchTerm=' + searchTerm
+    }
+    return fetch(oppUrl, {
       headers: {
       },
     })

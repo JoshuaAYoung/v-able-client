@@ -64,7 +64,7 @@ export default class RegistrationPage extends Component {
     this.setState({ error: null })
     AuthApiService.postUser(allFields)
       .then(user => {
-        this.props.history.push('/login')
+        this.props.history.push('/success/login')
       })
       .catch(res => {
         this.setState({ error: res.error })
@@ -134,7 +134,8 @@ export default class RegistrationPage extends Component {
             <br />
             <button
               type='submit'
-              className="registerButton"
+              className='registerButton'
+              disabled={this.generateError()}
             >
               Sign Up
               </button>

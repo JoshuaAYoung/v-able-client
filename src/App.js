@@ -13,6 +13,7 @@ import NavBar from './components/NavBar/NavBar'
 import NotFoundPage from './routes/NotFoundPage/NotFoundPage'
 import RegistrationCheckpoint from './routes/RegistrationCheckpoint/RegistrationCheckpoint'
 import RegistrationPage from './routes/RegistrationPage/RegistrationPage'
+import SuccessPage from './routes/SuccessPage/SuccessPage'
 import ErrorBoundary from './ErrorBoundary'
 
 export default class App extends Component {
@@ -68,6 +69,10 @@ export default class App extends Component {
               <Route
                 path={'/opportunityboard'}
                 component={OpportunityBoardPage}
+              />
+              <Route
+                path={'/success/:destination'}
+                component={SuccessPage}
               />
               <Route
                 component={NotFoundPage}
