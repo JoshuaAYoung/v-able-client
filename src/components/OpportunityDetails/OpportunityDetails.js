@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import QualinteerContext from '../../context/QualinteerContext'
+import VableContext from '../../context/VableContext'
 import { cleanDate, LinkName } from '../../utilities/Utils'
 import VolunteerButton from '../VolunteerButton/VolunteerButton'
 
 export default class OpportunityDetails extends Component {
-  static contextType = QualinteerContext;
+  static contextType = VableContext;
 
   render() {
     const { title, description, contact, start_date, duration, commitment, ed_level, experience, license, remote, posted, name, address, city, state, zipcode, phone, website } = this.context.opportunity

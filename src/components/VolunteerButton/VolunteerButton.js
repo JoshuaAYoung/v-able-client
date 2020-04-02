@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import QualinteerContext from '../../context/QualinteerContext';
+import VableContext from '../../context/VableContext';
 import TokenService from '../../services/token-service'
 
 export default class VolunteerButton extends Component {
-  static contextType = QualinteerContext;
+  static contextType = VableContext;
 
   renderVolunteer = () => {
     const { title, contact, name } = this.props;

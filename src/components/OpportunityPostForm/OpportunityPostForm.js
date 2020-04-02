@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import QualinteerContext from '../../context/QualinteerContext'
+import VableContext from '../../context/VableContext'
 import { cleanDate } from '../../utilities/Utils'
 import OppApiService from '../../services/opp-api-service'
 import ValidationError from '../../utilities/ValidationError'
 import TextEditor from '../TextEditor/TextEditor'
 
 export default class OpportunityPostForm extends Component {
-  static contextType = QualinteerContext;
+  static contextType = VableContext;
 
   state = {
     error: null,

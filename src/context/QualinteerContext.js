@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-const QualinteerContext = React.createContext({
+const VableContext = React.createContext({
   opportunities: [],
   opportunity: {},
   userType: '',
@@ -14,9 +14,9 @@ const QualinteerContext = React.createContext({
   setDescription: () => { }
 })
 
-export default QualinteerContext
+export default VableContext
 
-export class QualinteerProvider extends Component {
+export class VableProvider extends Component {
   state = {
     opportunities: [],
     opportunity: {},
@@ -80,9 +80,9 @@ export class QualinteerProvider extends Component {
       setDescription: this.setUser
     }
     return (
-      <QualinteerContext.Provider value={value}>
+      <VableContext.Provider value={value}>
         {this.props.children}
-      </QualinteerContext.Provider>
+      </VableContext.Provider>
     )
   }
 }

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import OpportunityCard from '../../components/OpportunityCard/OpportunityCard'
 import OppApiService from '../../services/opp-api-service'
-import QualinteerContext from '../../context/QualinteerContext'
+import VableContext from '../../context/VableContext'
 import './OpportunityBoardPage.css'
 import ErrorBoundary from '../../ErrorBoundary'
 
 export default class OpportunityBoardPage extends Component {
-  static contextType = QualinteerContext;
+  static contextType = VableContext;
 
   state = {
     error: null,

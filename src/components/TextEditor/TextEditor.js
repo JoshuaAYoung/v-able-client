@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import JoditEditor from "jodit-react";
-import QualinteerContext from '../../context/QualinteerContext'
+import VableContext from '../../context/VableContext'
 import TextEditorUtils from '../../utilities/TextEditorUtils'
 
 export default class TextEditor extends Component {
-  static contextType = QualinteerContext;
+  static contextType = VableContext;
 
   constructor(props) {
     super(props)

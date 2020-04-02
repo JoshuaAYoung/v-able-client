@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import QualinteerContext from '../../context/QualinteerContext';
+import VableContext from '../../context/VableContext';
 import './NavBar.css';
 import TokenService from '../../services/token-service'
 
 export default class NavBar extends Component {
-  static contextType = QualinteerContext;
+  static contextType = VableContext;
 
   handleLogout = () => {
     TokenService.clearAuthToken();
@@ -67,8 +67,8 @@ export default class NavBar extends Component {
       <div className='navContainer'>
         <div className='logoContainer'>
           <Link to='/'>
-            <img src='/assets/qualinteerlogo.svg' alt='qualinteer logo' className='mainLogo' />
-            <h1 className='navName'>Qualinteer</h1>
+            <img src='/assets/vablelogo.svg' alt='v-able logo' className='mainLogo' />
+            <h1 className='navName'>v&#8226able</h1>
           </Link>
         </div>
         <div className='navLinks'>

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import OpportunityDetails from '../../components/OpportunityDetails/OpportunityDetails'
 import OppApiService from '../../services/opp-api-service'
-import QualinteerContext from '../../context/QualinteerContext'
+import VableContext from '../../context/VableContext'
 import './OpportunityDetailsPage.css'
 
 export default class OpportunityBoardPage extends Component {
-  static contextType = QualinteerContext;
+  static contextType = VableContext;
 
   state = { error: null }
 

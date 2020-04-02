@@ -1,10 +1,10 @@
-# QUALINTEER
+# v-able
 
 ## Give the gift of your carefully cultivated skills
 
 ### General Proposal
 
-I am proposing to create an app called Qualinteer that essentially connects non-profits and others in need of skilled volunteer labor with those people that have those skills and want to donate their time. 
+I am proposing to create an app called v-able that essentially connects non-profits and others in need of skilled volunteer labor with those people that have those skills and want to donate their time. 
 
 My architecture and engineering firm often donates time packaging meals into containers for a non-profit called Food for Thought. While this is a worthwhile endeavor in that it is giving back, it's also menial labor and something someone could get paid minimum wage to do. Our firm charges anywhere from $100 to $200 an hour for our services. 
 It occured to me that a better way to give back would be to use the skills that you've spent a long time cultivating. This could be anything, from web design, to architecture, construction, teaching, accounting, legal advice, physical therapy, entertainment... just about anything really.

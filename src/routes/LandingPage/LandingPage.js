@@ -4,19 +4,19 @@ function LandingPage() {
   return (
     <div className="landingMain">
       <header role="banner" className="landingBanner">
-        <h1>Qualinteer</h1>
+        <h1>v&#8226able</h1>
         <h2>Gift your experience</h2>
       </header>
       <section className="landingDescription">
         <header>
           <h3>A Unique Way to Give Back</h3>
         </header>
-        <p>Qualinteer is a place where non-profit organizations in need of skilled labor are connected with volunteers that have the exertise required to help.</p>
+        <p>v&#8226able is a place where non-profit organizations in need of skilled labor are connected with volunteers that have the exertise required to help.</p>
         <p>
           A lot of volunteer work consists of unskilled labor, which is great if that's what's needed. When it comes to shopping for professional services and skilled labor, though, non-profits tend to pay market rate.
         </p>
         <p>
-          In part, this is an issue with the tools available. Hiring volunteers to pack boxes or serve soup is a simple process. Volunteer coordinators can blanket the social media airwaves with the same ad, since just about any warm body will do. Finding someone with the expertise to build you a website or design your new office can be a little more complicated, though. Also want them to work pro-bono? For that you need Qualinteer...
+          In part, this is an issue with the tools available. Hiring volunteers to pack boxes or serve soup is a simple process. Volunteer coordinators can blanket the social media airwaves with the same ad, since just about any warm body will do. Finding someone with the expertise to build you a website or design your new office can be a little more complicated, though. Also want them to work pro-bono? For that you need v&#8226able...
         </p>
       </section>
       <section className="landingInstructions">
