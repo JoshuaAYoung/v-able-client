@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { cleanDate, LinkName } from '../../utilities/Utils';
-import VolunteerButton from '../VolunteerButton/VolunteerButton'
+import { cleanDate } from '../../utilities/Utils';
 
 
 export default class OpportunityCard extends Component {
@@ -15,23 +14,17 @@ export default class OpportunityCard extends Component {
   }
 
   render() {
-    const { opportunity_id, title, description, contact, posted, name, address, city, state, zipcode, website } = this.props.opportunity
+    const { opportunity_id, title, description, posted, name, address, city, state, zipcode } = this.props.opportunity
     return (
       <>
         <a href={`/opportunity/${opportunity_id}`} className='oppCardLink'>
           <h3 className='opportunityTitle'>{title}</h3>
+          <p className='orgTitle'>{name}</p>
           <p className='orgInfo'>{address}</p>
           <p className='orgInfo'>{city}, {state} {zipcode}</p>
           <p className='opportunityDescription'><b>JOB DESCRIPTION: </b> {this.descriptionText(description)}...  <span className='moreLink'>More ></span></p>
-          {/* <p className='opportunityDescription'><b>JOB DESCRIPTION: </b> {this.truncate(description, 20)}...  <span className='moreLink'>More ></span></p> */}
           <p className='opportunityPosted'><b>POSTED ON: </b>{cleanDate(posted)}</p>
-          <VolunteerButton
-            title={title}
-            contact={contact}
-            name={name}
-          />
         </a>
-        <LinkName name={name} website={website} />
       </>
     );
   }

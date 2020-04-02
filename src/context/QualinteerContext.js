@@ -3,11 +3,8 @@ import React, { Component } from 'react'
 const QualinteerContext = React.createContext({
   opportunities: [],
   opportunity: {},
-  error: null,
   userType: '',
   user: {},
-  setError: () => { },
-  clearError: () => { },
   addOpportunity: () => { },
   setOpportunity: () => { },
   clearOpportunity: () => { },
@@ -23,19 +20,9 @@ export class QualinteerProvider extends Component {
   state = {
     opportunities: [],
     opportunity: {},
-    error: null,
     userType: localStorage.userType || '',
     user: {}
   };
-
-  setError = error => {
-    console.error(error)
-    this.setState({ error })
-  }
-
-  clearError = () => {
-    this.setState({ error: null })
-  }
 
   addOpportunity = opportunity => {
     this.setOppsBoard([
@@ -82,11 +69,8 @@ export class QualinteerProvider extends Component {
     const value = {
       opportunities: this.state.opportunities,
       opportunity: this.state.opportunity,
-      error: this.state.error,
       userType: this.state.userType,
       user: this.state.user,
-      setError: this.setError,
-      clearError: this.clearError,
       addOpportunity: this.addOpportunity,
       setOpportunity: this.setOpportunity,
       clearOpportunity: this.clearOpportunity,

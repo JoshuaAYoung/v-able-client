@@ -51,8 +51,6 @@ export default class LoginForm extends Component {
         localStorage.userType = res.userType
         localStorage.full_name = res.user.full_name
         this.context.setUser(res.user)
-        console.log(res)
-        console.log(res.user)
         this.setState({
           emailTempValue: '',
           passwordTempValue: ''
@@ -71,9 +69,13 @@ export default class LoginForm extends Component {
       <div>
         <h2 className='pageHeader'>Log In</h2>
         <h3>TO LOG IN:</h3>
-        <p>You can either click <b>"Sign Up"</b> on the navigation bar to create an account or login using the following email and password combination:</p>
+        <p>You can either click <b>"Sign Up"</b> on the navigation bar to create an account or login using the following email and password combinations:</p>
+        <h2>Organization Demo Login</h2>
         <p>email: <b>testuser1@gmail.com </b></p>
         <p>password: <b>myPassword</b></p>
+        <h2>Organization Demo Login</h2>
+        <p>email: <b>testuser3@gmail.com </b></p>
+        <p>password: <b>secretpassword</b></p>
         <div role='alert'>
           {error && <p className='apiError'>{error}</p>}
         </div>

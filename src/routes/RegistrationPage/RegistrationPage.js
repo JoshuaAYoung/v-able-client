@@ -135,7 +135,7 @@ export default class RegistrationPage extends Component {
             <button
               type='submit'
               className='registerButton'
-              disabled={this.generateError()}
+              disabled={Object.keys(this.generateError()).length}
             >
               Sign Up
               </button>
