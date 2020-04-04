@@ -1,8 +1,12 @@
-.checkIcon {
-  width: 100px;
+.successImage {
+  width: 25rem;
+  margin-top: 7rem
 }
 
-.successContainer {
-  margin-top: 100px;
-  text-align: center
+.successImageContainer {
+  text-align: center;
+}
+
+.successBanner {
+  position: relative;
 }

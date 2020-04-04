@@ -67,7 +67,7 @@ export default class LoginForm extends Component {
     const { error } = this.state
     return (
       <div>
-        <header role="banner" className="checkpointBanner">
+        <header role="banner" className="loginBanner">
           <h1 className='pageHeader'>Login.</h1>
           <p className='pageInstructions'>Enter your email and password or choose a demo user.</p>
         </header>

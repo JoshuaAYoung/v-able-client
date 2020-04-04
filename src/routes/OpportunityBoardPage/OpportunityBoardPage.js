@@ -64,7 +64,7 @@ export default class OpportunityBoardPage extends Component {
     const { error } = this.state
     return (
       <div className='boardContainer'>
-        <header role="banner" className="checkpointBanner oppBoardBanner">
+        <header role="banner" className="oppBoardBanner oppBoardBanner">
           <h1 className='pageHeader textCenter'>Opportunity Board.</h1>
           <form className='searchForm' onSubmit={this.handleSubmit}>
             <input

@@ -75,7 +75,7 @@ export default class NavBar extends Component {
             <NavLink
               to='/'
               className='navLink'
-              onClick={() => this.hideHamburger()}>
+              onClick={() => this.handleLogout()}>
               Log Out.
           </NavLink>
           </div>

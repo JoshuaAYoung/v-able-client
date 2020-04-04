@@ -35,36 +35,36 @@ export default class SuccessPage extends Component {
     if (params === 'login') {
       return (
         <>
-          <p className='successTitle'>Congrats!</p>
-          <p className='successCopy'>You've successfully registered an account.</p>
-          <p className='successCopy'>Redirecting you to the login page.</p>
+          <h1 className='pageHeader'>Congrats!</h1>
+          <p className='pageInstructions'>You've successfully registered an account.
+          </p>
         </>
       )
     }
     else if (params === 'oppboard') {
       return (
         <>
-          <p className='successTitle'>Congrats!</p>
-          <p className='successCopy'>Your opportunity was submitted successfully.</p>
-          <p className='successCopy'>Redirecting you to the opportunity board page.</p>
+          <h1 className='pageHeader'>Congrats!</h1>
+          <p className='pageInstructions'>Your opportunity was submitted successfully.
+          </p>
         </>
       )
     }
     else if (params === 'redirect') {
       return (
         <>
-          <p className='successTitle'>Login</p>
-          <p className='successCopy'>You must be logged in as a volunteer user to apply.</p>
-          <p className='successCopy'>Redirecting you to the login page.</p>
+          <h1 className='pageHeader'>Login</h1>
+          <p className='pageInstructions'>You must be logged in as a volunteer user to apply.
+          </p>
         </>
       )
     }
     else if (params === 'homepage') {
       return (
         <>
-          <p className='successTitle'>Congrats!</p>
-          <p className='successCopy'>You've successfully logged in as a {this.context.userType} user.</p>
-          <p className='successCopy'>Redirecting you to the homepage.</p>
+          <h1 className='pageHeader'>Congrats!</h1>
+          <p className='pageInstructions'>You've successfully logged in as a {this.context.userType} user.
+          </p>
         </>
       )
     }
@@ -72,10 +72,12 @@ export default class SuccessPage extends Component {
 
   render() {
     return (
-      <div className='successContainer'>
-        <img src='/assets/checkmark.svg' alt='checkmark icon' className='checkIcon' />
+      <header role="banner" className="successBanner">
         {this.renderMessage()}
-      </div>
+        <div className='successImageContainer'>
+          <img src='/assets/success-cloud.svg' alt='not found' className='successImage' />
+        </div>
+      </header>
     )
   }
 }

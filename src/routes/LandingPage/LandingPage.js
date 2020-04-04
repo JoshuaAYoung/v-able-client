@@ -6,7 +6,7 @@ function LandingPage() {
     <div className="landingMain">
       <header role="banner" className="landingBanner">
         <h1 className='pageHeader'>Experience as a Gift.</h1>
-        <p className='pageInstructions'><span className='defaultMedium'>v<span className='inlineBullet'>&bull;</span>able</span> is a platform for connecting <span className='defaultMedium'><u>viable</u></span>, <span className='defaultMedium'><u>volunteerable</u></span>, <span className='defaultMedium'><u>very able</u></span> people to the causes that they find <span className='defaultMedium'><u>valuable</u></span>.</p>
+        <p className='pageInstructions'><span className='defaultMedium'>v<span className='inlineBullet'>&bull;</span>able</span> is a platform for connecting <span className='defaultMedium'><u>viable</u></span>, <span className='defaultMedium'><u>volunteerable</u></span>, <span className='defaultMedium'><u>very able</u></span> people to the causes that they find most <span className='defaultMedium'><u>valuable</u></span>.</p>
         <img src='/assets/landing-hero.svg' alt='people working on a spaceship' className='heroImage' />
       </header>
       <section className='callToAction textCenter'>
