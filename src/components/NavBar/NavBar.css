@@ -1,12 +1,12 @@
-.navContainer {
-  background: #F9EDBD;
+.navBar {
+  background: #FFEEA6;
   width: 100%;
   position: fixed;
-  z-index: 999;
   height: 6rem;
+  z-index: 999;
 }
 
-.logoContainer {
+.logoLink {
   height: 100%;
   display: inline-block;
 }
@@ -31,26 +31,3 @@
   padding-right: 1rem;
 }
 
-.navLinks{
-position: absolute;
-right: 25px;
-top: 18px;
-font-weight: 700;
-display: none;
-}
-
-.linkBullet {
-  margin: 0 .08rem;
-  font-size: 1.5em;
-  vertical-align: -3px
-}
-
-
-
-@media screen and (max-width: 620px) {
-  .navLinks {
-    top: 50px;
-    position: static;
-    margin-left: 20px;
-  }
-}

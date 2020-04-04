@@ -23,7 +23,11 @@ export default class OpportunityBoardPage extends Component {
     const { error } = this.state
     return (
       <div className='opportunityDetails'>
-        <h2 className='pageHeader'>Opportunity Details</h2>
+        <header role="banner" className="checkpointBanner detailsBanner">
+          <h1 className='pageHeader detailsHeader'>Opportunity Details.</h1>
+          <img src='/assets/board-rocket.svg' alt='people working on a spaceship' className='detailsImage' />
+          <p className='pageInstructions'>Click <br />volunteer to send a <br />message to the organization.</p>
+        </header>
         <div role='alert'>
           {error && <p className='apiError'>Server Error: {error}</p>}
         </div>

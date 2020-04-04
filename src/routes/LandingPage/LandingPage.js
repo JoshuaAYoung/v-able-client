@@ -16,7 +16,7 @@ function LandingPage() {
             <img src='/assets/login.svg' alt='a screen showing secure login' className='actionImage' />
             <h4 className='smallHeader'>Register</h4>
             <p>
-              Whether you’re a volunteer or looking for one, you can click here to create an account. Once you’re registered, you can click here to login.
+              Whether you’re a volunteer or looking for one, you can click here to create an account. Once you’re registered, you'll be redirected to the login page.
             </p>
           </a>
         </div>

@@ -1,0 +1,68 @@
+.detailsHeader {
+margin-right: 25rem;
+margin-bottom: 5rem;
+}
+
+.detailsBanner {
+  position: relative;
+  height: 24rem;
+}
+
+.detailsImage {
+  width: 17rem;
+  position: absolute;
+  right: 1rem;
+  top: 2rem;
+}
+
+.detailsContainer {
+  margin: 1rem -2.5rem 0;
+  background-color: #FFEEA6;
+  border-top: 2px solid #F4BD5B;
+  border-bottom: 2px solid #F4BD5B;
+  padding: 1.5rem 2rem 1rem;
+  width: auto;
+  font-size: 1.4rem;
+}
+
+.detailsTitle {
+  font-size: 2rem;
+}
+
+.opportunityInfo {
+  margin-bottom: 1.3rem;
+}
+
+.volunteerLink {
+  text-decoration: none;
+  color: white;
+}
+
+.volunteerButton {
+  width: auto;
+  display: inline-block;
+  height: 3.6rem;
+  cursor: pointer;
+  background-color: #F0667B;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 1.7rem;
+  cursor: pointer;
+  border-radius: 1.4rem;
+  padding: .6rem 2rem 0;
+  transition: all 0.3s;
+  margin-bottom: 2rem;
+}
+
+.volunteerButton:hover {
+  color: black;
+  background-color: #F4BD5B;
+}
+
+.descriptionContainer {
+  margin: 3rem -.5rem 7rem;
+}
+
+.opportunityDescription {
+  margin-top: 1rem;
+}

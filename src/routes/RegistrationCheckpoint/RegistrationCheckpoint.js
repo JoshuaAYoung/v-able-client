@@ -13,12 +13,12 @@ export default class RegistrationCheckpoint extends Component {
         <div className='userTypeContainer'>
           <div className="userLinkContainer">
             <NavLink className='userTypeLink' to={'/register/organization'}>
-              Volunteer
+              Find Help
               <img src='/assets/checkpoint-arrow.svg' alt='arrow' className='checkpointArrow' />
             </NavLink>
           </div>
           <div className="userLinkContainer">
-            <NavLink className='userTypeLink' to={'/register/volunteer'}>Find help
+            <NavLink className='userTypeLink' to={'/register/volunteer'}>Volunteer
               <img src='/assets/checkpoint-arrow.svg' alt='arrow' className='checkpointArrow' />
             </NavLink>
           </div>

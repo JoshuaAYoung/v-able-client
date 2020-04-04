@@ -28,7 +28,7 @@ export default function Footer() {
         <p className='copyright'>
           Copyright &copy; {generateCopyright()}
           <br />
-          <a href='https://joshyoung.net' target='_blank' rel='noopener noreferrer' className='boldLink'>Josh Young</a>
+          <a href='https://joshyoung.net' target='_blank' rel='noopener noreferrer' className='portLink'>Josh Young</a>
         </p>
       </div>
     </footer >

@@ -25,8 +25,8 @@ export default class TextEditor extends Component {
         ref={editor => { this.editor = editor }}
         value={this.context.user.description}
         config={this.config}
-        tabIndex={1} // tabIndex of textarea
-        onBlur={description => this.setContent(description)} // preferred to use only this option to update the content for performance reasons
+        tabIndex={1}
+        onBlur={description => this.setContent(description)}
       />
     );
   }

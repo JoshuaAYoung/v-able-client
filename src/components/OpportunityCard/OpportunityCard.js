@@ -20,8 +20,8 @@ export default class OpportunityCard extends Component {
           <h3 className='opportunityTitle'>{title}</h3>
           <p className='orgTitle'>{name}</p>
           <p className='orgInfo'>{city}, {state} {zipcode}</p>
-          <p className='opportunityDescription'><b>JOB DESCRIPTION: </b> {this.stripString(description)}...  <span className='moreLink'>More ></span></p>
-          <p className='opportunityPosted'><b>POSTED ON: </b>{cleanDate(posted)}</p>
+          <p className='opportunityDescription'><span className='defaultMedium'>Description: </span> {this.stripString(description)}...  <span className='defaultMedium'>More ></span></p>
+          <p className='opportunityPosted'><span className='defaultMedium'>Posted </span>{cleanDate(posted)}</p>
         </a>
       </>
     );

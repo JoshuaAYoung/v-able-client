@@ -7,6 +7,7 @@ import AuthApiService from '../../services/auth-api-service'
 export default class RegistrationPage extends Component {
   state = {
     error: null,
+    header: '',
     emailTempValue: { value: '', touched: false },
     passwordTempValue: { value: '', touched: false },
     full_nameTempValue: '',
@@ -100,6 +101,15 @@ export default class RegistrationPage extends Component {
     return errorProps;
   }
 
+  componentDidMount() {
+    if (this.props.match.params.user === 'organization') {
+      this.setState({ header: 'Find Help.' })
+    }
+    else if (this.props.match.params.user === 'volunteer') {
+      this.setState({ header: 'Volunteer.' })
+    }
+  }
+
   formRender = () => {
     if (this.props.match.params.user === 'organization') {
       return (
@@ -126,12 +136,15 @@ export default class RegistrationPage extends Component {
     return (
       <div>
         <section>
+          <header role="banner" className="checkpointBanner">
+            <h1 className='pageHeader'>{this.state.header}</h1>
+            <p className='pageInstructions'>All fields are required unless noted otherwise.</p>
+          </header>
           <div role='alert'>
-            {error && <p className='apiError'>Server Error: {error}</p>}
+            {error && <p className='apiError'>Error: {error}</p>}
           </div>
-          <form className='signup-form' onSubmit={ev => this.handleSubmit(ev)}>
+          <form className='signupForm' onSubmit={ev => this.handleSubmit(ev)}>
             {this.formRender()}
-            <br />
             <button
               type='submit'
               className='registerButton'

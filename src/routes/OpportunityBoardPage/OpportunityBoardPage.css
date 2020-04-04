@@ -1,48 +1,78 @@
-.opportunityCard {
-  width: 80%;
-  background: lightgray;
-  border: 2px solid #818282;
-  margin: 0 0 30px 20px;
-  position: relative;
-}
-
-.opportunityCard {
-  list-style-type: none;
+.oppBoardBanner {
+  height: 25rem;
+  margin: -8rem -2.5rem 0;
+  padding: 8rem 2.5rem 0;
+  background-color: #FFEEA6;
+  border-bottom: 2px solid #F4BD5B;
 }
 
 .oppList {
-  margin: 0;
-  padding: 0;
+  margin-bottom: 8rem;
+}
+
+.searchForm {
+  position: relative;
+  margin: 3.5rem 1rem 0;
+}
+
+.oppSearch[type=text] {
+  width: 100%;
+  height: 3.5rem;
+  font-size: 2rem;
+  padding-left: 1rem;
+  color: black;
+  padding-bottom: .2em;
+  background-color: white;
+  }
+
+.searchButton {
+  width: 4rem;
+  height: 3.5rem;
+  border-radius: 0;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  background-repeat: no-repeat;
+  background-size: 2.4rem;
+  background-position: center;
+  background-image: url('/assets/mag-glass.svg');
+}
+
+.searchButton:hover {
+  background-color: #F0667B
+}
+
+.opportunityCard {
+  width: 100%;
+  margin-top: 3.5rem;
 }
 
 .oppCardLink {
-  text-decoration: none;
-  color: black;
-  /* position:absolute;
-  left:0; top:0; bottom:0; right:0; */
+  background-color: #FFEEA6;
+  border-top: 2px solid #F4BD5B;
+  padding: 1rem;
+  width: 100%;
+  display: block;
+  transition: all 0.5s;
 }
 
-.instructions {
-  margin: -20px 0 30px 0;
+.oppCardLink:hover {
+  background-color: #F4BD5B
 }
 
 .opportunityTitle {
-  margin-bottom: 0;
-  margin-top: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 1.7rem;
+  margin: .2rem 0 .7rem;
 }
 
-.orgInfo {
-  margin: 0
+.oppCardLink {
+  color: black;
+  text-decoration: none;
+  font-size: 1.4rem;
 }
 
-.boardContainer {
-  margin-bottom: 60px
-}
-
-.opportunityContainer {
-  padding: 20px 0 20px 15px;
-}
-
-.opportunityPosted {
-  margin-bottom: 0;
+.orgInfo, .opportunityDescription {
+  margin-bottom: 2rem;
 }

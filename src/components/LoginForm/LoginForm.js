@@ -12,20 +12,20 @@ export default class LoginForm extends Component {
     emailTempValue: '',
     passwordTempValue: '',
     showPassword: 'password',
-    showHide: 'Show'
+    showHide: 'show'
   }
 
   toggleShowPassword = () => {
     if (this.state.showPassword === 'password') {
       this.setState({
         showPassword: 'text',
-        showHide: 'Hide'
+        showHide: 'hide'
       })
     }
     else {
       this.setState({
         showPassword: 'password',
-        showHide: 'Show'
+        showHide: 'show'
       })
     }
   }
@@ -67,56 +67,48 @@ export default class LoginForm extends Component {
     const { error } = this.state
     return (
       <div>
-        <h2 className='pageHeader'>Log In</h2>
-        <h3>TO LOG IN:</h3>
-        <p>You can either click <b>"Sign Up"</b> on the navigation bar to create an account or login using the following email and password combinations:</p>
-        <h2>Organization Demo Login</h2>
-        <p>email: <b>testuser1@gmail.com </b></p>
-        <p>password: <b>myPassword</b></p>
-        <h2>Organization Demo Login</h2>
-        <p>email: <b>testuser3@gmail.com </b></p>
-        <p>password: <b>secretpassword</b></p>
+        <header role="banner" className="checkpointBanner">
+          <h1 className='pageHeader'>Login.</h1>
+          <p className='pageInstructions'>Enter your email and password or choose a demo user.</p>
+        </header>
         <div role='alert'>
-          {error && <p className='apiError'>{error}</p>}
+          {error && <p className='apiError'>Error: {error}</p>}
+        </div>
+        <div className='demoInstructions'>
+          <p className='defaultMedium'>Volunteer Demo:</p>
+          <p className='demoLogin'>email@email.com / Joshs4pp</p>
+          <p className='defaultMedium'>Organization Demo:</p>
+          <p className='demoLogin'>j@young.net / P4ssword</p>
         </div>
         <form
-          className='signin-form'
+          className='loginForm'
           onSubmit={this.handleSubmitJwtAuth}
         >
-          <div>
-            <label
-              htmlFor='email'
-              className='loginLabel'>
-              Email Address:
-              </label>
+          <div className='inputContainer'>
             <input
               type='text'
               name='email'
               id='email'
               className='loginInput'
               required
+              placeholder='Email'
               onChange={ev => this.addTempValue('email', ev.target.value)}
             />
           </div>
-          <div>
-            <label
-              htmlFor='password'
-              className='loginLabel'>
-              Password:
-              </label>
+          <div className='inputContainer'>
             <input
               type={this.state.showPassword}
               name='password'
               id='password'
               className='loginInput'
               required
+              placeholder='Password'
               onChange={ev => this.addTempValue('password', ev.target.value)}
             />
             <button
               type='button'
-              className='showButton'
+              className={`${this.state.showHide}LoginButton`}
               onClick={() => this.toggleShowPassword()}>
-              {this.state.showHide}
             </button>
           </div>
           <button
@@ -124,7 +116,7 @@ export default class LoginForm extends Component {
             className='loginButton'>
             Sign In
             </button>
-          <p>Don't have an account? <Link to='/register' className='registerLink'>Click Here</Link> to create one</p>
+          <p className='registerInstructions'>Need an account? <Link to='/register' className='registerLink'>Click Here</Link> to create one.</p>
         </form>
       </div>
     )

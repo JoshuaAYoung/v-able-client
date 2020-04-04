@@ -1,30 +1,60 @@
-.formLabel {
-  display: block;
-  font-weight: 500;
-  margin: 8px 0 8px;
-}
-
-.loginInput, .loginLabel {
-  font-size: 1.2em;
-}
-
-.loginButton {
-  box-sizing: border-box;
-  display: inline-block;
-  font-size: 1rem;
-  padding: 0.35em 1.2em;
-  border: 0.1em solid black;
-  border-radius: 0.2em;
-  margin: 20px 8px 0 0;
-  transition: all 0.6s;
-  background-color: transparent;
-}
-
-.loginButton:hover {
-  color: #000000;
-  background-color: lightgray;
-}
+.loginInput {
+  width: 100%;
+  height: 3.5rem;
+  font-size: 2rem;
+  padding-left: 1rem;
+  color: black;
+  padding-bottom: .2em;
+  }
 
 .registerLink {
   font-weight: 600;
+  color: black;
+}
+
+.loginForm {
+  margin-top: 1.8rem;
+  margin-bottom: 6rem;
+}
+
+.demoInstructions {
+  margin-top: 5.5rem;
+  line-height: 2.3rem;
+}
+
+.demoLogin {
+  margin-bottom: 1rem;
+}
+
+.showLoginButton, .hideLoginButton {
+  width: 4rem;
+  height: 3.5rem;
+  border-radius: 0;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  background-repeat: no-repeat;
+  background-size: 1.8rem;
+  background-position: center;
+}
+
+.showLoginButton {
+  background-image: url("/assets/show-password.svg");
+}
+
+.hideLoginButton {
+  background-image: url("/assets/hide-password.svg");
+}
+
+.hideLoginButton:hover, .showLoginButton:hover {
+  background-color: #F0667B
+}
+
+.loginButton {
+  margin-top: 1rem;
+}
+
+.registerInstructions {
+  margin-top: 2rem;
+  font-size: 1.4rem;
 }

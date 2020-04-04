@@ -99,113 +99,73 @@ export default class OpportunityPostForm extends Component {
           {error && <p className='apiError'>Server Error: {error}</p>}
         </div>
         <form
-          className='post-htmlForm'
+          className='postForm'
           onSubmit={this.handleSubmit}
         >
-          <div>
-            <label
-              htmlFor='title'
-              className='postLabel'>
-              Position Title:
-              </label>
-            <br />
+          <div className='inputContainer'>
             <input
-              placeholder='Example: Volunteer Coordinator'
               type='text'
               name='title'
               id='title'
               className='postInput'
+              placeholder='Position Title'
               required
               onChange={ev => this.addTempValue('title', ev.target.value)}
             />
           </div>
-          <br />
-          <div>
-            <label
-              htmlFor='contact'
-              className='postLabel'>
-              Contact Person's Email:
-              </label>
-            <br />
+          <div className='inputContainer'>
             <input
-              placeholder='Who should we send applications to?'
               type='text'
               name='contact'
               id='contact'
               className='postInput'
               required
+              placeholder="Contact Person's Email"
               onChange={ev => this.addTempValidation('contact', ev.target.value)}
             />
           </div>
           {this.generateError() && <ValidationError message={this.generateError()} />}
-          <br />
-          <div>
-            <label
-              htmlFor='start_date'
-              className='postLabel'>
-              Start Date:
-              </label>
-            <br />
+          <div className='inputContainer'>
             <input
-              placeholder='Example: 09-22-2020'
               type='text'
               name='start_date'
               id='start_date'
               className='postInput'
               required
+              placeholder='Start Date'
               onChange={ev => this.addTempValue('start_date', ev.target.value)}
             />
           </div>
-          <br />
-          <div>
-            <label
-              htmlFor='duration'
-              className='postLabel'>
-              Duration:
-              </label>
-            <br />
+          <div className='inputContainer'>
             <input
-              placeholder='Example: 7 weeks'
               type='text'
               name='duration'
               id='duration'
               className='postInput'
               required
+              placeholder='Volunteer Duration'
               onChange={ev => this.addTempValue('duration', ev.target.value)}
             />
           </div>
-          <br />
-          <div>
-            <label
-              htmlFor='commitment'
-              className='postLabel'>
-              Estimated Hours Per Week:
-              </label>
-            <br />
+          <div className='inputContainer'>
             <input
-              placeholder='Number of Hours'
               type='text'
               name='commitment'
               id='commitment'
               className='postInput'
               required
+              placeholder='Estimated Hours Per Week'
               onChange={ev => this.addTempValue('commitment', ev.target.value)}
             />
           </div>
-          <br />
-          <div>
-            <label
-              htmlFor='ed_level'
-              className='postLabel'>
-              Requested Education Level:
-              </label>
-            <br />
+          <div className='inputContainer'>
             <select
               id='ed_level'
               name='ed_level'
-              className='postInput'
+              className='postInput postSelect'
               onChange={ev => this.addTempValue('ed_level', ev.target.value)}>
-              <option value='none' defaultValue='none'>None</option>
+              <option value='' hidden>Education Level (optional)</option>
+              <option value='none'>None</option>
               <option value='highschool'>High School</option>
               <option value='associates'>Associates Degree</option>
               <option value='bachelors'>Bachelors Degree</option>
@@ -213,75 +173,49 @@ export default class OpportunityPostForm extends Component {
               <option value='phd'>Ph. D.</option>
             </select>
           </div>
-          <br />
-          <div>
-            <label
-              htmlFor='experience'
-              className='postLabel'>
-              Requested Experience (optional):
-              </label>
-            <br />
+          <div className='inputContainer'>
             <input
-              placeholder='Example: Residential Architecture'
               type='text'
               name='experience'
               id='experience'
               className='postInput'
+              placeholder='Experience Requested (optional)'
               onChange={ev => this.addTempValue('experience', ev.target.value)}
             />
           </div>
-          <br />
-          <div>
-            <label
-              htmlFor='license'
-              className='postLabel'>
-              License or Certification Required (optional):
-              </label>
-            <br />
+          <div className='inputContainer'>
             <input
-              placeholder="Example: Driver's License"
               type='text'
               name='license'
               id='license'
               className='postInput'
+              placeholder="Professional License (optional)"
               onChange={ev => this.addTempValue('license', ev.target.value)}
             />
           </div>
-          <br />
-          <div>
-            <label
-              htmlFor='remote'
-              className='postLabel'>
-              Can this opportunity be done remotely?:
-              </label>
-            <br />
+          <div className='inputContainer'>
             <select
               id='remote'
               name='remote'
-              className='postInput'
+              className='postInput postSelect'
               onChange={ev => this.addTempValue('remote', ev.target.value)}>
-              <option value='No'>No.</option>
+              <option value='' hidden>Option To Work Remotely?</option>
+              <option value='No' defaultValue='No'>No.</option>
               <option value='Yes'>Yes.</option>
             </select>
           </div>
-          <br />
-          <div>
-            <label
-              htmlFor='description'
-              className='postLabel'>
-              Opportunity Description:
-    </label>
-            <br />
+          <div className='editorContainer'>
             <TextEditor
             />
           </div>
-          <br />
-          <button
-            type='submit'
-            className='postButton'
-            disabled={this.generateError()}>
-            Submit
+          <div className='postButtonContainer'>
+            <button
+              type='submit'
+              className='postButton'
+              disabled={this.generateError()}>
+              Post
             </button>
+          </div>
         </form>
       </div>
     )

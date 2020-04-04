@@ -64,23 +64,24 @@ export default class OpportunityBoardPage extends Component {
     const { error } = this.state
     return (
       <div className='boardContainer'>
-        <h2 className='pageHeader'>Opportunity Board</h2>
-        <form className='searchForm' onSubmit={this.handleSubmit}>
-          <input
-            placeholder='Search by keyword or location'
-            type='text'
-            name='oppSearch'
-            id='oppSearch'
-            className='oppSearch'
-            onChange={ev => this.addTempSearch(ev.target.value)}
-          />
-          <button
-            type='submit'
-            className='searchButton'>
-            Search
-          </button>
-        </form>
-        <br />
+        <header role="banner" className="checkpointBanner oppBoardBanner">
+          <h1 className='pageHeader textCenter'>Opportunity Board.</h1>
+          <form className='searchForm' onSubmit={this.handleSubmit}>
+            <input
+              placeholder='Keyword or Location...'
+              type='text'
+              name='oppSearch'
+              id='oppSearch'
+              className='oppSearch'
+              onChange={ev => this.addTempSearch(ev.target.value)}
+            />
+            <button
+              type='submit'
+              className='searchButton'>
+            </button>
+          </form>
+        </header>
+        <p className='pageInstructions'>Click an opportunity to see more details or enter a search above.</p>
         <div role='alert'>
           {error && <p className='apiError'>Error: {error}</p>}
         </div>

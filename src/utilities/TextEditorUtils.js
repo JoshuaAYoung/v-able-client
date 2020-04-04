@@ -5,7 +5,7 @@ export default {
   height: 400,
   // theme: 'dark',
 
-  placeholder: "<span style='font-size: 18px;'><strong>Give potential volunteers some more info about the position.</strong></span><br><br> What's expected? Who will they report to? Will they be working with other volunteers or is the work performed solo?<br><br>Format your text however you'd like. Add a heading. Insert a list of tasks. Add your organization's logo. Maybe add a link to your organization's about page. Anything that you think might be helpful to <u>catch the eye</u> of a potential volunteer!",
+  placeholder: "<span style='font-size: 18px;'><strong>Opportunity Description</strong></span><br><br><strong>Give potential volunteers some more info about the position.</strong><br><br>What's expected? Who will they report to? Will they be working with other volunteers or is the work performed solo?<br><br>Format your text however you'd like. Add a heading. Insert a list of tasks. Add your organization's logo. Maybe add a link to your organization's about page. Anything that you think might be helpful to <u>catch the eye</u> of a potential volunteer!",
   buttons: [
     'source',
     'fullsize',
