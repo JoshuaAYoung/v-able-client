@@ -1,19 +1,72 @@
-.appMain {
-  padding: 50px 20px 80px 20px;
-  margin: 0 auto;
-}
-
 .app {
   min-height: 100vh;
   position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 300;
+}
+
+p {
+  margin: 0;
+}
+
+.appMain {
+  padding: 7rem 2.5rem 14rem 2.5rem;
+  margin: 0 auto;
 }
 
 button {
   cursor: pointer;
 }
 
+.smallHeader {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  margin: -.5rem 0 .5rem;
+}
+
 .pageHeader {
-  margin-top: 30px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 3.6rem;
+  color: black;
+  padding: 1.7rem 0 0 0;
+  margin: 0;
+}
+
+.noTopMargin {
+margin-top: 0;
+}
+
+.subHeader {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 3.2rem;
+  color: black;
+  margin-bottom: 3rem;
+  line-height: 1.3em;
+} 
+
+.pageInstructions {
+  padding: 0;
+  margin-top: 1.7rem;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.inlineBullet {
+  margin: 0 .1em;
+  vertical-align: -.08em;
+}
+
+.defaultMedium {
+  font-weight: 500;
+}
+
+.inline {
+  display: inline-block;
 }
 
 @media screen and (max-width: 620px) {

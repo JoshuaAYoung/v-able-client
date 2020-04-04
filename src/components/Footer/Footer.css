@@ -1,10 +1,40 @@
-.copyright {
-  background: lightgray;
+.footer {
   width: 100%;
   text-align: center;
   margin: 0;
-  height: 75px;
+  height: auto;
   position: absolute;
   bottom: 0;
-  border-top: 2px solid #818282
+}
+
+.footerInside {
+  background: #F9EDBD;
+  height: 100%;
+}
+
+.socialImage {
+  width: 4.5rem;
+}
+
+.socialContainer {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 1.5rem;
+}
+
+.footerWaveContainer {
+  overflow: hidden;
+  height: 6.8rem;
+  margin-bottom: -1rem;
+}
+
+.footerWave {
+  height: 6.8rem;
+  object-position: -10rem;
+}
+
+.copyright {
+  margin-top: 1em;
+  padding-bottom: 1em;
+  font-size: 1.4rem;
 }

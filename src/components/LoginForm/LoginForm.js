@@ -55,7 +55,7 @@ export default class LoginForm extends Component {
           emailTempValue: '',
           passwordTempValue: ''
         })
-        this.props.history.push('/')
+        this.props.history.push('success/homepage')
       })
       .catch(res => {
         this.setState({ error: res.error })

@@ -17,7 +17,7 @@ export function cleanDate(date) {
 export function LinkName({ website, name }) {
   if (website) {
     return (
-      <a href={website} alt="organization's website" className='orgLink'>
+      <a href={website} alt="organization's website" className='orgLink' target='_blank' rel="noopener noreferrer">
         <p className='orgName'>{name}</p>
       </a>
     )

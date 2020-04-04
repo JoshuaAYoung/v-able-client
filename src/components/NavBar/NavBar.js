@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import VableContext from '../../context/VableContext';
 import './NavBar.css';
 import TokenService from '../../services/token-service'
@@ -65,12 +65,10 @@ export default class NavBar extends Component {
   render() {
     return (
       <div className='navContainer'>
-        <div className='logoContainer'>
-          <Link to='/'>
-            <img src='/assets/v-able-logo.svg' alt='v-able logo' className='mainLogo' />
-            <h1 className='navName'>v&bull;able</h1>
-          </Link>
-        </div>
+        <NavLink to='/' className='logoContainer'>
+          <img src='/assets/v-able-logo.svg' alt='v-able logo' className='mainLogo' />
+          <h1 className='navName'>v<span className='inlineBullet'>&bull;</span>able</h1>
+        </NavLink>
         <div className='navLinks'>
           {this.userLinks()}
           {this.linkSeparator}

@@ -1,32 +1,109 @@
 import React from 'react';
+import './LandingPage.css'
 
 function LandingPage() {
   return (
     <div className="landingMain">
       <header role="banner" className="landingBanner">
-        <h1>v&bull;able</h1>
-        <h2>Gift your experience</h2>
+        <h1 className='pageHeader'>Experience as a Gift.</h1>
+        <p className='pageInstructions'><span className='defaultMedium'>v<span className='inlineBullet'>&bull;</span>able</span> is a platform for connecting <span className='defaultMedium'><u>viable</u></span>, <span className='defaultMedium'><u>volunteerable</u></span>, <span className='defaultMedium'><u>very able</u></span> people to the causes that they find <span className='defaultMedium'><u>valuable</u></span>.</p>
+        <img src='/assets/landing-hero.svg' alt='people working on a spaceship' className='heroImage' />
       </header>
-      <section className="landingDescription">
-        <header>
-          <h3>A Unique Way to Give Back</h3>
-        </header>
-        <p>v&bull;able is a place where non-profit organizations in need of skilled labor are connected with volunteers that have the exertise required to help.</p>
-        <p>
-          A lot of volunteer work consists of unskilled labor, which is great if that's what's needed. When it comes to shopping for professional services and skilled labor, though, non-profits tend to pay market rate.
-        </p>
-        <p>
-          In part, this is an issue with the tools available. Hiring volunteers to pack boxes or serve soup is a simple process. Volunteer coordinators can blanket the social media airwaves with the same ad, since just about any warm body will do. Finding someone with the expertise to build you a website or design your new office can be a little more complicated, though. Also want them to work pro-bono? For that you need v&#8226able...
-        </p>
+      <section className='callToAction textCenter'>
+        <h2 className='subHeader'>Ok. Let's get Giving.</h2>
+        <div className='actionContainer'>
+          <a href='/register' className='actionLink'>
+            <img src='/assets/login.svg' alt='a screen showing secure login' className='actionImage' />
+            <h4 className='smallHeader'>Register</h4>
+            <p>
+              Whether you’re a volunteer or looking for one, you can click here to create an account. Once you’re registered, you can click here to login.
+            </p>
+          </a>
+        </div>
+        <div className='actionContainer'>
+          <a href='/register' className='actionLink'>
+            <img src='/assets/recruit.svg' alt='a woman connecting with people' className='actionImage' />
+            <h4 className='smallHeader'>Recruit</h4>
+            <p>
+              Looking to find skilled help? Once you have an organization account you can click here to login, then head over to the opportunity post page to recruit volunteers.
+            </p>
+          </a>
+        </div>
+        <div className='actionContainer'>
+          <a href='/opportunityboard' className='actionLink'>
+            <img src='/assets/volunteer.svg' alt='a computer with an application' className='actionImage' />
+            <h4 className='smallHeader'>Volunteer</h4>
+            <p>
+              Have a special skill that you’d like to contribute? Click here to head over to the opportunity board page to find ways in which you can give back. Anyone can browse available opportunities, but you'll need to be logged in as a volunteer to apply.
+            </p>
+          </a>
+        </div>
       </section>
-      <section className="landingInstructions">
-        <header>
-          <h3>Let's Get Giving</h3>
-        </header>
-        <p>If you want to volunteer, take a look at the opportunity board (no login required) to find ways in which you can give back. Whether you're seeking help or offering it, you can click on the "Sign up" button at the top of the page to create an account. If you already have an account, you can click on "Log in" in the navigation bar.</p>
-        <p>If you specify that you're looking to volunteer, once you login you'll be able to apply to any of the opportunities listed. If you specify that you're in need of volunteers, once you log in you'll be able to post an opportunity to the opportunity board.</p>
+      <section className='appFeatures'>
+        <div className='waveContainer'>
+          <img src='/assets/top-waves.svg' alt='wavy border' className='topWaves' />
+        </div>
+        <div className='featureContainer'>
+          <h2 className='subHeader noTopMargin'>Now this is
+        <br />
+        feature-rich volunteering.</h2>
+          <div className='features'>
+            <img src='/assets/hands-hearts.svg' alt='hands up holding hearts' className='handsImage' />
+            <img src='/assets/checkmark.svg' alt='checkmark' className='featureCheck' />
+            <div className='feature'>
+              <h4 className='smallHeader'>Opportunity Board</h4>
+              <p>
+                All opportunities in one place. Search by location or keyword.
+            </p>
+            </div>
+            <img src='/assets/checkmark.svg' alt='checkmark' className='featureCheck' />
+            <div className='feature'>
+              <h4 className='smallHeader'>Registration and Login</h4>
+              <p>
+                Real authentication using advanced security techniques.
+            </p>
+            </div>
+            <img src='/assets/checkmark.svg' alt='checkmark' className='featureCheck' />
+            <div className='feature'>
+              <h4 className='smallHeader'>Opportunity Post</h4>
+              <p>
+                Create an opportunity using the embedded rich text editor.
+            </p>
+            </div>
+            <img src='/assets/checkmark.svg' alt='checkmark' className='featureCheck' />
+            <div className='feature'>
+              <h4 className='smallHeader'>Volunteer Button</h4>
+              <p>
+                Opens the default email client with pre-populated info.
+            </p>
+            </div>
+          </div>
+        </div>
+        <div className='waveContainer'>
+          <img src='/assets/bottom-waves.svg' alt='wavy border' className='bottomWaves' />
+        </div>
       </section>
-    </div>
+      <section className='testimonials textCenter'>
+        <div className='testimonialsContainer'>
+          <img src='/assets/megaphone.svg' alt='megaphone' className='megaphoneImage' />
+          <h2 className='subHeader inline'>Testimonials.</h2>
+          <div className='testimonial'>
+            <p className='testimonialQuote'>“We’ve used v•able for years for all of our volunteer needs. It’s a perfect fit for us.”</p>
+            <p className='testimonialAuthor defaultMedium'>- Sadie Giver (Hands For America)</p>
+          </div>
+          <div className='testimonial'>
+            <p className='testimonialQuote'>“We had no problem getting volunteers to pack trucks. But when we needed an architect, we had a difficult time finding one that would work pro-bono.  That is, until we discovered v<span className='inlineBullet'>&bull;</span>able.”
+            </p>
+            <p className='testimonialAuthor defaultMedium'>- Rachael Goodman (Food All Around)</p>
+          </div>
+          <div className='testimonial'>
+            <p className='testimonialQuote'>“v<span className='inlineBullet'>&bull;</span>able makes finding skilled volunteers so simple and easy. I wish I had found it sooner!”
+            </p>
+            <p className='testimonialAuthor defaultMedium'>- Miranda Sainthouse (All Cats Foundation)</p>
+          </div>
+        </div>
+      </section>
+    </div >
   );
 }
 

@@ -7,7 +7,10 @@ export default class OrganizationRegistration extends Component {
     const { zipcodeError } = this.props.errorProps
     return (
       <div>
-        <h2 className='pageHeader'>Sign up to recruit help</h2>
+        <header role="banner" className="checkpointBanner">
+          <h1 className='pageHeader'>Find Help.</h1>
+          <p className='pageInstructions'>All fields are required unless noted otherwise.</p>
+        </header>
         <UserFields
           addTempValidation={this.props.addTempValidation}
           addTempValue={this.props.addTempValue}

@@ -80,11 +80,9 @@ export default class App extends Component {
             </Switch>
           </ErrorBoundary>
         </main>
-        <footer>
-          <ErrorBoundary>
-            <Footer />
-          </ErrorBoundary>
-        </footer>
+        <ErrorBoundary>
+          <Footer />
+        </ErrorBoundary>
       </div >
     )
   }

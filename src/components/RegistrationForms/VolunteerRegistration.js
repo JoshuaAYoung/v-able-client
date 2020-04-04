@@ -5,7 +5,10 @@ export default class VolunteerRegistration extends Component {
   render() {
     return (
       <div>
-        <h2 className='pageHeader'>Sign up to volunteer</h2>
+        <header role="banner" className="checkpointBanner">
+          <h1 className='pageHeader'>Volunteer.</h1>
+          <p className='pageInstructions'>All fields are required unless noted otherwise.</p>
+        </header>
         <UserFields
           addTempValidation={this.props.addTempValidation}
           addTempValue={this.props.addTempValue}

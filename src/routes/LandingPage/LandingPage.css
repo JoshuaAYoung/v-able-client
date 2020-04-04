@@ -1,0 +1,96 @@
+.landingBanner {
+  margin: -8rem -2.5rem 5rem;
+  padding: 8rem 2.5rem 0;
+  height: 50rem;
+  border-bottom: 1px solid black;
+  background: #F9EDBD;
+  position: relative;
+}
+
+.heroImage {
+  width: 30.4rem;
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+}
+
+.actionImage {
+  width: 16rem;
+  margin-top: -1rem;
+}
+
+.actionContainer {
+  margin-bottom: 4rem;
+}
+
+.actionLink {
+  color: black;
+  text-decoration: none;
+}
+
+.callToAction {
+  margin-bottom: 8rem;
+}
+
+.appFeatures {
+  margin: 0 -2.5rem;
+  position: relative;
+}
+
+.topWaves, .bottomWaves {
+  height: 6.8rem;
+}
+
+.waveContainer {
+  overflow: hidden;
+  height: 6.8rem;
+  margin-bottom: -.1rem;
+}
+
+.featureContainer {
+  padding: 0 2.5rem;
+  background: #F9EDBD;
+}
+
+.handsImage {
+  width: 14rem;
+  position: absolute;
+  top: -3.8rem;
+  left: 16rem;
+}
+
+.features {
+  display: inline-block;
+}
+
+.feature {
+  width: calc(100vw - 10.5rem);
+  display: inline-block;
+  margin-bottom: 2.4rem;
+}
+
+.featureCheck {
+  width: 4rem;
+  margin-right: 1.5rem;
+  vertical-align: .5rem;
+}
+
+.bottomWaves {
+  object-position: -30rem;
+}
+
+.megaphoneImage {
+  width: 8rem;
+  display: inline-block;
+  margin: 0 1.2rem 0 -2rem;
+  vertical-align: -1rem;
+}
+
+.testimonialQuote {
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.testimonialAuthor {
+  margin-bottom: 3.5rem;
+}

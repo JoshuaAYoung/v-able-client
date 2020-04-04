@@ -6,11 +6,22 @@ export default class RegistrationCheckpoint extends Component {
   render() {
     return (
       <div className='checkpointContainer'>
-        <div className="userLinkContainer">
-          <NavLink className='userTypeLink' to={'/register/organization'}>Sign up to find help <span className='linkArrow'>&#8594;</span></NavLink>
-        </div>
-        <div className="userLinkContainer">
-          <NavLink className='userTypeLink' to={'/register/volunteer'}>Sign up to volunteer <span className='linkArrow'>&#8594;</span></NavLink>
+        <header role="banner" className="checkpointBanner">
+          <h1 className='pageHeader'>Choose your Path.</h1>
+          <p className='pageInstructions'>Registration only takes a minute. Click on the option that applies to you.</p>
+        </header>
+        <div className='userTypeContainer'>
+          <div className="userLinkContainer">
+            <NavLink className='userTypeLink' to={'/register/organization'}>
+              Volunteer
+              <img src='/assets/checkpoint-arrow.svg' alt='arrow' className='checkpointArrow' />
+            </NavLink>
+          </div>
+          <div className="userLinkContainer">
+            <NavLink className='userTypeLink' to={'/register/volunteer'}>Find help
+              <img src='/assets/checkpoint-arrow.svg' alt='arrow' className='checkpointArrow' />
+            </NavLink>
+          </div>
         </div>
       </div >
     );

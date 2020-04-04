@@ -27,7 +27,7 @@ export default class OpportunityBoardPage extends Component {
         <div role='alert'>
           {error && <p className='apiError'>Server Error: {error}</p>}
         </div>
-        <OpportunityDetails />
+        <OpportunityDetails history={this.props.history} />
       </div>
     );
   }

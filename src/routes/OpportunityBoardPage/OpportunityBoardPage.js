@@ -22,15 +22,17 @@ export default class OpportunityBoardPage extends Component {
   handleSubmit = ev => {
     ev.preventDefault()
     this.getOpportunities(this.state.tempSearchValue)
-    this.noOppsError()
   }
 
   getOpportunities = (searchTerm) => {
     OppApiService.getOpps(searchTerm)
       .then(this.setState({ error: null }))
-      .then(
-        this.context.setOppsBoard)
-      .then(this.noOppsError())
+      .then(data => {
+        if (data.length === 0) {
+          this.setState({ error: 'No opportunities could be found.' })
+        }
+        this.context.setOppsBoard(data)
+      })
       .catch(res => {
         this.setState({ error: res.error })
       })
@@ -40,12 +42,6 @@ export default class OpportunityBoardPage extends Component {
     this.getOpportunities()
   }
 
-  noOppsError() {
-    console.log('inside nooppserror', this.context.opportunities.length)
-    if (this.context.opportunities.length === 0) {
-      this.setState({ error: 'No opportunities could be found.' })
-    }
-  }
 
   renderOpportunities() {
     return (
@@ -59,8 +55,7 @@ export default class OpportunityBoardPage extends Component {
               />
             </ErrorBoundary>
           </li>
-        )
-        }
+        )}
       </ul>
     )
   }

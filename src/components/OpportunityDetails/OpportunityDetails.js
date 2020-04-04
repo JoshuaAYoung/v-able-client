@@ -19,6 +19,7 @@ export default class OpportunityDetails extends Component {
           title={title}
           contact={contact}
           name={name}
+          history={this.props.history}
         />
         <p className='opportunityInfo'><b>POSTED ON: </b>{cleanDate(posted)}</p>
         <p className='opportunityInfo'><b>START DATE: </b>{start_date}</p>
