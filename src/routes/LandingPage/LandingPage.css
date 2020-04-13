@@ -2,8 +2,8 @@
   margin: -8rem -2.5rem 5rem;
   padding: 8rem 2.5rem 0;
   height: 50rem;
-  border-bottom: 1px solid black;
-  background: #FFEEA6;
+  border-bottom: .1rem solid black;
+  background: #FFF0B0;
   position: relative;
 }
 
@@ -16,11 +16,31 @@
 
 .actionImage {
   width: 16rem;
-  margin-top: -1rem;
 }
 
-.actionContainer {
-  margin-bottom: 4rem;
+.actionVolContainer {
+  margin-bottom: 6rem;
+}
+
+.featureSubHeader {
+  padding-left: calc(50% - 16rem);
+  margin-top: 0;
+  position: relative;
+  padding-top: 3rem;
+}
+
+.actionInstructions {
+  padding: 0 2rem;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+.actionInstructionsVol {
+  padding-top: 2rem;
+}
+
+.actionInstructionsOrg {
+  padding-top: 2rem;
 }
 
 .actionLink {
@@ -37,26 +57,30 @@
   position: relative;
 }
 
-.topWaves, .bottomWaves {
-  height: 6.8rem;
+.bottomWaves {
+  height: 3rem;
+}
+
+.topWaves {
+  height: 3rem;
+  object-position: -16rem;
 }
 
 .waveContainer {
   overflow: hidden;
-  height: 6.8rem;
-  margin-bottom: -.1rem;
+  height: 3rem;
 }
 
-.featureContainer {
+.featuresContainer {
   padding: 0 2.5rem;
-  background: #FFEEA6;
+  background: #FFF0B0;
 }
 
 .handsImage {
   width: 14rem;
   position: absolute;
-  top: -3.8rem;
-  left: 16rem;
+  top: -7rem;
+  right: calc(50% - 11rem);
 }
 
 .features {
@@ -70,14 +94,11 @@
 }
 
 .featureCheck {
-  width: 4rem;
+  width: 3rem;
   margin-right: 1.5rem;
-  vertical-align: .5rem;
+  vertical-align: 1rem;
 }
 
-.bottomWaves {
-  object-position: -30rem;
-}
 
 .megaphoneImage {
   width: 8rem;
@@ -93,4 +114,115 @@
 
 .testimonialAuthor {
   margin-bottom: 3.5rem;
+}
+
+
+@media only screen and (max-width: 360px) {
+  .heroImage {
+    width: 27rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .landingBanner {
+    padding-top: 19rem;
+  }
+  .heroImage {
+    width: 43rem;
+    right: calc(49vw - 42rem);
+  }
+  .heroTextContainer {
+    left: calc(49vw - 42rem);
+    width: 42rem;
+    position: absolute;
+  }
+  .landingBanner{
+    margin-right: calc(42rem - 49vw);
+    margin-left: calc(42rem - 49vw);
+  }
+
+  .actionVolContainer {
+    text-align: right;
+    margin-right: 6rem;
+  }
+
+  .actionOrgContainer {
+    text-align: left;
+    margin-left: 6rem;
+  }
+
+  .actionSeparator {
+    border-right: .2rem solid #F4BD5B;
+    height: 50rem;
+    align-self: center
+  }
+
+  .callToAction {
+    display: flex;
+    margin-bottom: 4rem;
+  }
+
+  .actionInstructionsVol {
+    padding-left: 5rem;
+  }
+
+  .actionInstructionsOrg {
+    padding-right: 5rem;
+  }
+
+  .actionInstructions {
+    padding: 0;
+  }
+
+  .handsImage {
+    top: -7rem;
+  }
+
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 3rem;
+  }
+
+  .featuresContainer {
+    padding-right: calc(49vw - 33rem);
+    padding-left: calc(49vw - 33rem);
+  }
+
+  .featureContainer {
+    width: 31rem
+  }
+
+  .feature {
+    width: 26rem;
+  }
+  
+  .featureCheck {
+    vertical-align: 3rem;
+  }
+
+  .featureSubHeader {
+    margin-left: calc(50% - 16rem);
+    margin-bottom: 6rem;
+    width: 32rem;
+    padding-top: 3rem;
+    padding-left: 0;
+  }
+
+  .testimonialsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .testimonial {
+    width: 46%;
+  }
+
+  .testimonials {
+    margin: 3rem 3rem 0;
+  }
+
 }

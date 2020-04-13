@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RegistrationPage Component RegistrationPage Snapshot Test 1`] = `
+<div>
+  <section>
+    <header
+      className="registerBanner"
+      role="banner"
+    >
+      <h1
+        className="pageHeader"
+      >
+        Volunteer.
+      </h1>
+      <p
+        className="pageInstructions"
+      >
+        All fields are required unless noted otherwise.
+      </p>
+    </header>
+    <div
+      role="alert"
+    />
+    <form
+      className="signupForm"
+      onSubmit={[Function]}
+    >
+      <VolunteerRegistration
+        addTempValidation={[Function]}
+        addTempValue={[Function]}
+        errorProps={Object {}}
+      />
+      <button
+        className="registerButton"
+        disabled={0}
+        type="submit"
+      >
+        Sign Up
+      </button>
+    </form>
+  </section>
+</div>
+`;

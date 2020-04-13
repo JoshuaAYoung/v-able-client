@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserFields Component UserFields Snapshot Test 1`] = `
+<Fragment>
+  <div
+    className="inputContainer"
+  >
+    <input
+      className="registrationInput"
+      id="email"
+      name="email"
+      onChange={[Function]}
+      placeholder="Your Email"
+      required={true}
+      type="text"
+    />
+  </div>
+  <ValidationError
+    message="test error 1"
+  />
+  <div
+    className="inputContainer"
+  >
+    <input
+      className="registrationInput passwordInput"
+      id="password"
+      name="password"
+      onChange={[Function]}
+      placeholder="Password"
+      required={true}
+      type="password"
+    />
+    <button
+      className="showRegistrationButton"
+      onClick={[Function]}
+      type="button"
+    />
+  </div>
+  <ValidationError
+    message="test error 1"
+  />
+  <ValidationError
+    message="test error 1"
+  />
+  <ValidationError
+    message="test error 1"
+  />
+  <ValidationError
+    message="test error 1"
+  />
+  <div
+    className="inputContainer"
+  >
+    <input
+      className="registrationInput"
+      id="full_Name"
+      name="full_Name"
+      onChange={[Function]}
+      placeholder="Your Full Name"
+      required={true}
+      type="text"
+    />
+  </div>
+</Fragment>
+`;

@@ -29,7 +29,7 @@ export default class OrganizationRegistration extends Component {
             name='address'
             id='address'
             className='registrationInput'
-            placeholder='Address (optional)'
+            placeholder='Address'
             onChange={ev => this.props.addTempValue('address', ev.target.value)}
           />
         </div>
@@ -65,8 +65,8 @@ export default class OrganizationRegistration extends Component {
             onChange={ev => this.props.addTempValidation('zipcode', ev.target.value)}
             required
           />
+          {zipcodeError && <ValidationError message={zipcodeError} />}
         </div>
-        {zipcodeError && <ValidationError message={zipcodeError} />}
         <div className='inputContainer'>
           <input
             type='text'

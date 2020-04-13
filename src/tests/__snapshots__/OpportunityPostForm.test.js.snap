@@ -1,0 +1,193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OpportunityPostForm Component OpportunityPostForm Snapshot Test 1`] = `
+<div>
+  <div
+    role="alert"
+  />
+  <form
+    className="postForm"
+    onSubmit={[Function]}
+  >
+    <div
+      className="inputContainer"
+    >
+      <input
+        className="postInput"
+        id="title"
+        name="title"
+        onChange={[Function]}
+        placeholder="Position Title"
+        required={true}
+        type="text"
+      />
+    </div>
+    <div
+      className="inputContainer"
+    >
+      <input
+        className="postInput"
+        id="contact"
+        name="contact"
+        onChange={[Function]}
+        placeholder="Contact Person's Email"
+        required={true}
+        type="text"
+      />
+    </div>
+    <div
+      className="inputContainer"
+    >
+      <input
+        className="postInput"
+        id="start_date"
+        name="start_date"
+        onChange={[Function]}
+        placeholder="Start Date"
+        required={true}
+        type="text"
+      />
+    </div>
+    <div
+      className="inputContainer"
+    >
+      <input
+        className="postInput"
+        id="duration"
+        name="duration"
+        onChange={[Function]}
+        placeholder="Volunteer Duration"
+        required={true}
+        type="text"
+      />
+    </div>
+    <div
+      className="inputContainer"
+    >
+      <input
+        className="postInput"
+        id="commitment"
+        name="commitment"
+        onChange={[Function]}
+        placeholder="Estimated Hours Per Week"
+        required={true}
+        type="text"
+      />
+    </div>
+    <div
+      className="inputContainer"
+    >
+      <select
+        className="postInput postSelect"
+        id="ed_level"
+        name="ed_level"
+        onChange={[Function]}
+      >
+        <option
+          hidden={true}
+          value=""
+        >
+          Education Level (optional)
+        </option>
+        <option
+          value="none"
+        >
+          None
+        </option>
+        <option
+          value="highschool"
+        >
+          High School
+        </option>
+        <option
+          value="associates"
+        >
+          Associates Degree
+        </option>
+        <option
+          value="bachelors"
+        >
+          Bachelors Degree
+        </option>
+        <option
+          value="masters"
+        >
+          Masters Degree
+        </option>
+        <option
+          value="phd"
+        >
+          Ph. D.
+        </option>
+      </select>
+    </div>
+    <div
+      className="inputContainer"
+    >
+      <input
+        className="postInput"
+        id="experience"
+        name="experience"
+        onChange={[Function]}
+        placeholder="Experience Requested (optional)"
+        type="text"
+      />
+    </div>
+    <div
+      className="inputContainer"
+    >
+      <input
+        className="postInput"
+        id="license"
+        name="license"
+        onChange={[Function]}
+        placeholder="Professional License (optional)"
+        type="text"
+      />
+    </div>
+    <div
+      className="inputContainer"
+    >
+      <select
+        className="postInput postSelect"
+        id="remote"
+        name="remote"
+        onChange={[Function]}
+      >
+        <option
+          hidden={true}
+          value=""
+        >
+          Option To Work Remotely?
+        </option>
+        <option
+          defaultValue="No"
+          value="No"
+        >
+          No.
+        </option>
+        <option
+          value="Yes"
+        >
+          Yes.
+        </option>
+      </select>
+    </div>
+    <div
+      className="editorContainer"
+    >
+      <TextEditor />
+    </div>
+    <div
+      className="postButtonContainer"
+    >
+      <button
+        className="postButton"
+        type="submit"
+      >
+        Post
+      </button>
+    </div>
+  </form>
+</div>
+`;

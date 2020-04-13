@@ -24,14 +24,25 @@ export default class SuccessPage extends Component {
     else if (params === 'homepage') {
       this.setState({ redirectPath: '/' })
     }
+    else if (params === 'logout') {
+      this.setState({ redirectPath: '/' })
+    }
     setTimeout(() => {
       this.props.history.push(this.state.redirectPath)
-    }, 3000)
+    }, 2000)
+  }
+
+  userMessage = () => {
+    if (this.context.userType === 'organization') {
+      return 'an organization'
+    }
+    else {
+      return 'a volunteer'
+    }
   }
 
   renderMessage = () => {
     const params = this.props.match.params.destination;
-    console.log(this.props.match.params.destination)
     if (params === 'login') {
       return (
         <>
@@ -63,7 +74,16 @@ export default class SuccessPage extends Component {
       return (
         <>
           <h1 className='pageHeader'>Congrats!</h1>
-          <p className='pageInstructions'>You've successfully logged in as a {this.context.userType} user.
+          <p className='pageInstructions'>You've successfully logged in as <span className='defaultMedium'>{this.userMessage()}</span> user.
+          </p>
+        </>
+      )
+    }
+    else if (params === 'logout') {
+      return (
+        <>
+          <h1 className='pageHeader'>Congrats!</h1>
+          <p className='pageInstructions'>You've successfully logged out.
           </p>
         </>
       )

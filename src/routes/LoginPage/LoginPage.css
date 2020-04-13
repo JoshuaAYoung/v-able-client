@@ -1,11 +1,15 @@
 .loginInput {
   width: 100%;
   height: 3.5rem;
-  font-size: 2rem;
+  font-size: 1.7rem;
   padding-left: 1rem;
   color: black;
   padding-bottom: .2em;
   }
+
+.tallerInput {
+margin-bottom: .6rem;
+}
 
 .registerLink {
   font-weight: 600;
@@ -18,7 +22,7 @@
 }
 
 .demoInstructions {
-  margin-top: 5.5rem;
+  margin: 5.5rem 0 3rem;
   line-height: 2.3rem;
 }
 

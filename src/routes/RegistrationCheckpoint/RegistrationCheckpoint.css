@@ -12,7 +12,7 @@
 }
 
 .userLinkContainer {
-  border-bottom: 2px solid #818282;
+  border-bottom: .2rem solid #818282;
   width: auto;
   display: inline-block;
   padding-bottom: .6rem;

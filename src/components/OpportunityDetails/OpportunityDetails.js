@@ -9,9 +9,12 @@ export default class OpportunityDetails extends Component {
   render() {
     const { title, description, contact, start_date, duration, commitment, ed_level, experience, license, remote, posted, name, address, city, state, zipcode, phone, website } = this.context.opportunity
     return (
-      <>
+      <section className='detailsSection'>
+        <div className='detailsWaveContainer'>
+          <img src='/assets/top-waves.svg' alt='wavy border' className='detailsTopWaves' />
+        </div>
         <div className='detailsContainer'>
-          <h3 className='detailsTitle'>{title}</h3>
+          <h3 className='opportunityTitle'>{title}</h3>
           <LinkName name={name} website={website} />
           <p className='orgAddress'>{address}</p>
           <p className='orgLocation'>{city}, {state} {zipcode}</p>
@@ -24,12 +27,15 @@ export default class OpportunityDetails extends Component {
           />
           <p className='opportunityInfo'><span className='defaultMedium'>Posted On: </span>{cleanDate(posted)}</p>
           <p className='opportunityInfo'><span className='defaultMedium'>Start Date: </span>{start_date}</p>
-          <p className='opportunityInfo'><span className='defaultMedium'>Job Duraction: </span>{duration}</p>
+          <p className='opportunityInfo'><span className='defaultMedium'>Job Duration: </span>{duration}</p>
           <p className='opportunityInfo'><span className='defaultMedium'>Job Commitment (hrs/wk): </span>{commitment}</p>
           <p className='opportunityInfo'><span className='defaultMedium'>Education Level Requested: </span>{ed_level}</p>
           {experience && <p className='opportunityInfo'><span className='defaultMedium'>Experience Requested: </span>{experience}</p>}
           {license && <p className='opportunityInfo'><span className='defaultMedium'>License Requested: </span>{license}</p>}
           <p className='opportunityInfo'><span className='defaultMedium'>Option to Volunteer Remotely: </span>{remote ? 'Yes' : 'No'} </p>
+        </div>
+        <div className='detailsWaveContainer'>
+          <img src='/assets/bottom-waves.svg' alt='wavy border' className='detailsBottomWaves' />
         </div>
         <div className='descriptionContainer'>
           <p className='defaultMedium'>
@@ -39,7 +45,7 @@ export default class OpportunityDetails extends Component {
             <div dangerouslySetInnerHTML={{ __html: description }} />
           </div>
         </div>
-      </>
+      </section>
     );
   }
 }

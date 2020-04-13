@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VolunteerButton Component VolunteerButton Snapshot Test 1`] = `
+<div
+  className="volunteerButton"
+>
+  <a
+    className="volunteerLink"
+    href="mailto:undefined?subject=undefined%20-%20See%20enclosed%20Volunteer%20Application&body=Good News!%20undefined%20would%20like%20to%20apply%20to%20volunteer%20for%20the%20undefined%20position%20at%20undefined!%0D%0A%0D%0ASee%20below%20for%20a%20message%20from%20undefined:%0D%0A%0D%0A**undefined, please erase this message and enter some information about yourself. You could start off by explaining why you want to volunteer for undefined? Are there any qualifications that you have that would help you in the volunteer position?**%0D%0A%0D%0A**If the volunteer description indicated that they required certain experience or professional licenses, it might be helpful to attach your resume or other qualifying documents to this email.**"
+    onClick={[Function]}
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    volunteer!
+  </a>
+</div>
+`;

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import VableContext from '../../context/VableContext'
 import TokenService from '../../services/token-service'
 import AuthApiService from '../../services/auth-api-service'
+import ErrorToast from '../ErrorToast/ErrorToast'
 
 export default class LoginForm extends Component {
   static contextType = VableContext;
@@ -71,9 +72,7 @@ export default class LoginForm extends Component {
           <h1 className='pageHeader'>Login.</h1>
           <p className='pageInstructions'>Enter your email and password or choose a demo user.</p>
         </header>
-        <div role='alert'>
-          {error && <p className='apiError'>Error: {error}</p>}
-        </div>
+        {error && <ErrorToast errorMessage={error} />}
         <div className='demoInstructions'>
           <p className='defaultMedium'>Volunteer Demo:</p>
           <p className='demoLogin'>email@email.com / Joshs4pp</p>
@@ -84,7 +83,7 @@ export default class LoginForm extends Component {
           className='loginForm'
           onSubmit={this.handleSubmitJwtAuth}
         >
-          <div className='inputContainer'>
+          <div className='inputContainer tallerInput'>
             <input
               type='text'
               name='email'
@@ -95,7 +94,7 @@ export default class LoginForm extends Component {
               onChange={ev => this.addTempValue('email', ev.target.value)}
             />
           </div>
-          <div className='inputContainer'>
+          <div className='inputContainer tallerInput'>
             <input
               type={this.state.showPassword}
               name='password'

@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OpportunityPostPage Component OpportunityPostPage Snapshot Test 1`] = `
+<div
+  className="opportunityPostContainer"
+>
+  <header
+    className="oppPostBanner"
+    role="banner"
+  >
+    <h1
+      className="pageHeader"
+    >
+      Opportunity Post.
+    </h1>
+    <p
+      className="pageInstructions"
+    >
+      Fields are optional unless noted otherwise.
+    </p>
+  </header>
+  <OpportunityPostForm />
+</div>
+`;

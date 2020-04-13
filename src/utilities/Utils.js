@@ -1,5 +1,4 @@
 import React from 'react'
-import './Utils.css'
 
 export function cleanDate(date) {
   let d = date ? new Date(date) : new Date();

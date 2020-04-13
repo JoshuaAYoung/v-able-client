@@ -18,7 +18,7 @@ export default class OpportunityCard extends Component {
       <>
         <a href={`/opportunity/${opportunity_id}`} className='oppCardLink'>
           <h3 className='opportunityTitle'>{title}</h3>
-          <p className='orgTitle'>{name}</p>
+          <p>{name}</p>
           <p className='orgInfo'>{city}, {state} {zipcode}</p>
           <p className='opportunityDescription'><span className='defaultMedium'>Description: </span> {this.stripString(description)}...  <span className='defaultMedium'>More ></span></p>
           <p className='opportunityPosted'><span className='defaultMedium'>Posted </span>{cleanDate(posted)}</p>

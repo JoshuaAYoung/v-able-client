@@ -4,6 +4,7 @@ import OppApiService from '../../services/opp-api-service'
 import VableContext from '../../context/VableContext'
 import './OpportunityBoardPage.css'
 import ErrorBoundary from '../../ErrorBoundary'
+import ErrorToast from '../../components/ErrorToast/ErrorToast'
 
 export default class OpportunityBoardPage extends Component {
   static contextType = VableContext;
@@ -82,9 +83,7 @@ export default class OpportunityBoardPage extends Component {
           </form>
         </header>
         <p className='pageInstructions'>Click an opportunity to see more details or enter a search above.</p>
-        <div role='alert'>
-          {error && <p className='apiError'>Error: {error}</p>}
-        </div>
+        {error && <ErrorToast errorMessage={error} />}
         {this.renderOpportunities()}
       </div >
     );

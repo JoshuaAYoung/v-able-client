@@ -1,9 +1,15 @@
-.navBar {
-  background: #FFEEA6;
-  width: 100%;
-  position: fixed;
-  height: 6rem;
+.navBarContainer {
+  position: relative;
   z-index: 999;
+  height: 6rem;
+}
+
+.menuContainer{
+  z-index: 998;
+  background: #FFF0B0;
+  position: fixed;
+  width: 100%;
+  height: 6rem;
 }
 
 .logoLink {
@@ -31,3 +37,14 @@
   padding-right: 1rem;
 }
 
+@media only screen and (min-width: 1024px) {
+  .navBarContainer {
+    padding-right: calc(49vw - 42rem);
+    padding-left: calc(49vw - 42rem);
+    z-index: initial;
+  }
+
+  .mainLogo {
+    margin-left: 0;
+  }
+}

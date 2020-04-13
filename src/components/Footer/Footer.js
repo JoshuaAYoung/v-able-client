@@ -21,7 +21,7 @@ export default function Footer() {
           <a href='https://github.com/JoshuaAYoung' target='_blank' className='githubLink' rel="noopener noreferrer">
             <img src='/assets/github-logo.svg' alt='github logo' className='socialImage' />
           </a>
-          <a href='https://www.linkedin.com/in/joshua-young-250a7512' target='_blank' className='linkedinLink' rel="noopener noreferrer">
+          <a href='https://www.linkedin.com/in/joshua-young-aia-250a7512' target='_blank' className='linkedinLink' rel="noopener noreferrer">
             <img src='/assets/linkedin-logo.svg' alt='linkedin logo' className='socialImage' />
           </a>
         </div>

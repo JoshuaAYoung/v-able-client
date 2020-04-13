@@ -4,6 +4,7 @@ import { cleanDate } from '../../utilities/Utils'
 import OppApiService from '../../services/opp-api-service'
 import ValidationError from '../../utilities/ValidationError'
 import TextEditor from '../TextEditor/TextEditor'
+import ErrorToast from '../ErrorToast/ErrorToast'
 
 export default class OpportunityPostForm extends Component {
   static contextType = VableContext;
@@ -95,9 +96,7 @@ export default class OpportunityPostForm extends Component {
     const { error } = this.state
     return (
       <div>
-        <div role='alert'>
-          {error && <p className='apiError'>Server Error: {error}</p>}
-        </div>
+        {error && <ErrorToast errorMessage={error} />}
         <form
           className='postForm'
           onSubmit={this.handleSubmit}
@@ -123,8 +122,8 @@ export default class OpportunityPostForm extends Component {
               placeholder="Contact Person's Email"
               onChange={ev => this.addTempValidation('contact', ev.target.value)}
             />
+            {this.generateError() && <ValidationError message={this.generateError()} />}
           </div>
-          {this.generateError() && <ValidationError message={this.generateError()} />}
           <div className='inputContainer'>
             <input
               type='text'
@@ -179,7 +178,7 @@ export default class OpportunityPostForm extends Component {
               name='experience'
               id='experience'
               className='postInput'
-              placeholder='Experience Requested (optional)'
+              placeholder="Experience (optional)"
               onChange={ev => this.addTempValue('experience', ev.target.value)}
             />
           </div>
@@ -189,7 +188,7 @@ export default class OpportunityPostForm extends Component {
               name='license'
               id='license'
               className='postInput'
-              placeholder="Professional License (optional)"
+              placeholder="Licensure (optional)"
               onChange={ev => this.addTempValue('license', ev.target.value)}
             />
           </div>
@@ -204,10 +203,8 @@ export default class OpportunityPostForm extends Component {
               <option value='Yes'>Yes.</option>
             </select>
           </div>
-          <div className='editorContainer'>
-            <TextEditor
-            />
-          </div>
+          <TextEditor
+          />
           <div className='postButtonContainer'>
             <button
               type='submit'

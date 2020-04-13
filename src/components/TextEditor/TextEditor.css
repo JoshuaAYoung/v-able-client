@@ -1,0 +1,17 @@
+.jodit_vable_theme .jodit_toolbar {
+  background: #F4BD5B;
+  border: none;
+}
+.jodit_vable_theme .jodit_statusbar {
+  background: #F4BD5B;
+  border: none;
+}
+
+.jodit_placeholder {
+  font-family: 'Montserrat', sans-serif;
+  color: #888888;
+}
+
+.jodit_toolbar_btn-separator {
+  border-right: 1px solid #777777 !important;
+}

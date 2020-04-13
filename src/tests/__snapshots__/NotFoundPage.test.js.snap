@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFoundPage Component NotFoundPage Snapshot Test 1`] = `
+<div>
+  <header
+    className="notFoundBanner"
+    role="banner"
+  >
+    <h1
+      className="pageHeader"
+    >
+      404
+      <br />
+      Page Not Found.
+    </h1>
+    <p
+      className="pageInstructions"
+    >
+      We can’t find the page you’re looking for. Please check the url.
+    </p>
+  </header>
+  <div
+    className="notFoundImageContainer"
+  >
+    <img
+      alt="not found"
+      className="notFoundImage"
+      src="/assets/not-found.svg"
+    />
+  </div>
+</div>
+`;

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VolunteerRegistration Component VolunteerRegistration Snapshot Test 1`] = `
+<div>
+  <UserFields
+    errorProps={
+      Object {
+        "emailError": "test error 1",
+        "passwordError1": "test error 1",
+        "passwordError2": "test error 1",
+        "passwordError3": "test error 1",
+        "passwordError4": "test error 1",
+      }
+    }
+  />
+</div>
+`;

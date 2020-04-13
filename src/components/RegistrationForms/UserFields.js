@@ -37,8 +37,8 @@ export default class UserFields extends Component {
             onChange={ev => this.props.addTempValidation('email', ev.target.value)}
             required
           />
+          {emailError && <ValidationError message={emailError} />}
         </div>
-        {emailError && <ValidationError message={emailError} />}
         <div className='inputContainer'>
           <input
             type={this.state.showPassword}
@@ -54,11 +54,11 @@ export default class UserFields extends Component {
             className={`${this.state.showHide}RegistrationButton`}
             onClick={() => this.toggleShowPassword()}>
           </button>
+          {passwordError1 && <ValidationError message={passwordError1} />}
+          {passwordError2 && <ValidationError message={passwordError2} />}
+          {passwordError3 && <ValidationError message={passwordError3} />}
+          {passwordError4 && <ValidationError message={passwordError4} />}
         </div>
-        {passwordError1 && <ValidationError message={passwordError1} />}
-        {passwordError2 && <ValidationError message={passwordError2} />}
-        {passwordError3 && <ValidationError message={passwordError3} />}
-        {passwordError4 && <ValidationError message={passwordError4} />}
         <div className='inputContainer'>
           <input
             type='text'

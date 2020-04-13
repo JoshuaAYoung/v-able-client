@@ -40,7 +40,6 @@ export default class NavBar extends Component {
     TokenService.clearAuthToken();
     this.context.setUserType('');
     this.context.setUser({});
-    this.props.history.push('/');
   }
 
   linkSeparator = (<span className='linkBullet'>&bull;</span>)
@@ -51,10 +50,10 @@ export default class NavBar extends Component {
         <>
           <div className='linkContainer'>
             <NavLink
-              to='/'
+              to='/success/logout'
               onClick={() => this.handleLogout()}
               className='navLink'>
-              Log Out.
+              Log Out
           </NavLink>
           </div>
         </>
@@ -68,15 +67,16 @@ export default class NavBar extends Component {
               to='/opportunitypost'
               className='navLink'
               onClick={() => this.hideHamburger()}>
-              Recruit Help.
+              Recruit Help
           </NavLink>
           </div>
+          {this.linkSeparator}
           <div className='linkContainer'>
             <NavLink
-              to='/'
+              to='/success/logout'
               className='navLink'
               onClick={() => this.handleLogout()}>
-              Log Out.
+              Log Out
           </NavLink>
           </div>
         </>
@@ -90,16 +90,16 @@ export default class NavBar extends Component {
               to='/login'
               className='navLink'
               onClick={() => this.hideHamburger()}>
-              Log In.
+              Log In
           </NavLink>
           </div>
-          {/* {this.linkSeparator} */}
+          {this.linkSeparator}
           <div className='linkContainer'>
             <NavLink
               to='/register'
               className='navLink'
               onClick={() => this.hideHamburger()}>
-              Sign Up.
+              Sign Up
           </NavLink>
           </div>
         </>
@@ -109,8 +109,29 @@ export default class NavBar extends Component {
 
   render() {
     return (
-      <div className='navContainer'>
-        <div className='navBar'>
+      <div className='menuContainer'>
+        <div className={`navMenu fadeMenu${this.state.animationClass}`}>
+          <div className='linkContainer'>
+            <NavLink
+              to='/'
+              className='navLink'
+              onClick={() => this.hideHamburger()}>
+              Home
+          </NavLink>
+          </div>
+          {this.linkSeparator}
+          {this.userLinks()}
+          {this.linkSeparator}
+          <div className='linkContainer'>
+            <NavLink
+              to='/opportunityboard'
+              className='navLink'
+              onClick={() => this.hideHamburger()}>
+              Opportunity Board
+          </NavLink>
+          </div>
+        </div>
+        <div className='navBarContainer'>
           <NavLink
             to='/'
             className='logoLink'
@@ -126,18 +147,6 @@ export default class NavBar extends Component {
               <span></span>
               <span></span>
             </div>
-          </div>
-        </div>
-        <div className={`navMenu fadeMenu${this.state.animationClass}`}>
-          {this.userLinks()}
-          {/* {this.linkSeparator} */}
-          <div className='linkContainer'>
-            <NavLink
-              to='/opportunityboard'
-              className='navLink'
-              onClick={() => this.hideHamburger()}>
-              Opportunity Board.
-          </NavLink>
           </div>
         </div>
       </div >

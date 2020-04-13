@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrganizationRegistration Component OrganizationRegistration Snapshot Test 1`] = `
+<div>
+  <UserFields
+    errorProps={
+      Object {
+        "zipcodeError": "Test Error",
+      }
+    }
+  />
+  <div
+    className="inputContainer"
+  >
+    <input
+      className="registrationInput"
+      id="name"
+      name="name"
+      onChange={[Function]}
+      placeholder="Organization Name"
+      required={true}
+      type="text"
+    />
+  </div>
+  <div
+    className="inputContainer"
+  >
+    <input
+      className="registrationInput"
+      id="address"
+      name="address"
+      onChange={[Function]}
+      placeholder="Address"
+      type="text"
+    />
+  </div>
+  <div
+    className="inputContainer"
+  >
+    <input
+      className="registrationInput"
+      id="city"
+      name="city"
+      onChange={[Function]}
+      placeholder="City"
+      required={true}
+      type="text"
+    />
+  </div>
+  <div
+    className="inputContainer"
+  >
+    <input
+      className="registrationInput"
+      id="state"
+      name="state"
+      onChange={[Function]}
+      placeholder="State"
+      required={true}
+      type="text"
+    />
+  </div>
+  <div
+    className="inputContainer"
+  >
+    <input
+      className="registrationInput"
+      id="zipcode"
+      name="zipcode"
+      onChange={[Function]}
+      placeholder="Zipcode"
+      required={true}
+      type="text"
+    />
+  </div>
+  <ValidationError
+    message="Test Error"
+  />
+  <div
+    className="inputContainer"
+  >
+    <input
+      className="registrationInput"
+      id="phone"
+      name="phone"
+      onChange={[Function]}
+      placeholder="Phone Number (optional)"
+      type="text"
+    />
+  </div>
+  <div
+    className="inputContainer"
+  >
+    <input
+      className="registrationInput"
+      id="website"
+      name="website"
+      onChange={[Function]}
+      placeholder="Website (optional)"
+      type="text"
+    />
+  </div>
+</div>
+`;

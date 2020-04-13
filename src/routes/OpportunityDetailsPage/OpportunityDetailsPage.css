@@ -1,11 +1,21 @@
 .detailsHeader {
 margin-right: 25rem;
-margin-bottom: 5rem;
+margin-bottom: 4rem;
 }
 
 .detailsBanner {
   position: relative;
   height: 24rem;
+  margin-bottom: -2.5rem;
+}
+
+.detailsInstructions {
+  margin-right: 20rem;
+  margin-top:
+}
+
+.orgTitle {
+  font-weight: 500
 }
 
 .detailsImage {
@@ -16,17 +26,35 @@ margin-bottom: 5rem;
 }
 
 .detailsContainer {
-  margin: 1rem -2.5rem 0;
-  background-color: #FFEEA6;
-  border-top: 2px solid #F4BD5B;
-  border-bottom: 2px solid #F4BD5B;
-  padding: 1.5rem 2rem 1rem;
+  background-color: #FFF0B0;
+  padding: 2rem 2rem 1rem;
   width: auto;
   font-size: 1.4rem;
 }
 
+.detailsSection {
+  position: relative;
+  margin: 0 -2.5rem;
+}
+
+.detailsWaveContainer {
+  overflow: hidden;
+  height: 3rem;
+  margin-bottom: -1rem;
+}
+
+.detailsBottomWaves {
+  height: 3rem;
+}
+
+.detailsTopWaves {
+  object-position: -16rem;
+  height: 3rem;
+}
+
 .detailsTitle {
-  font-size: 2rem;
+  font-size: 2.2rem;
+  margin: 0 0 1rem;
 }
 
 .opportunityInfo {
@@ -60,7 +88,7 @@ margin-bottom: 5rem;
 }
 
 .descriptionContainer {
-  margin: 3rem -.5rem 7rem;
+  margin: 0 2rem 6rem;
 }
 
 .opportunityDescription {

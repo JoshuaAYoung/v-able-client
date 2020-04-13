@@ -3,6 +3,7 @@ import OrganizationRegistration from '../../components/RegistrationForms/Organiz
 import VolunteerRegistration from '../../components/RegistrationForms/VolunteerRegistration'
 import './RegistrationPage.css'
 import AuthApiService from '../../services/auth-api-service'
+import ErrorToast from '../../components/ErrorToast/ErrorToast'
 
 export default class RegistrationPage extends Component {
   state = {
@@ -140,9 +141,7 @@ export default class RegistrationPage extends Component {
             <h1 className='pageHeader'>{this.state.header}</h1>
             <p className='pageInstructions'>All fields are required unless noted otherwise.</p>
           </header>
-          <div role='alert'>
-            {error && <p className='apiError'>Error: {error}</p>}
-          </div>
+          {error && <ErrorToast errorMessage={error} />}
           <form className='signupForm' onSubmit={ev => this.handleSubmit(ev)}>
             {this.formRender()}
             <button

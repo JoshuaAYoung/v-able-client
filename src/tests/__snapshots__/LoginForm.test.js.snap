@@ -1,0 +1,184 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginForm Component LoginForm Snapshot Test 1`] = `
+<div>
+  <header
+    className="loginBanner"
+    role="banner"
+  >
+    <h1
+      className="pageHeader"
+    >
+      Login.
+    </h1>
+    <p
+      className="pageInstructions"
+    >
+      Enter your email and password or choose a demo user.
+    </p>
+  </header>
+  <div
+    role="alert"
+  />
+  <div
+    className="demoInstructions"
+  >
+    <p
+      className="defaultMedium"
+    >
+      Volunteer Demo:
+    </p>
+    <p
+      className="demoLogin"
+    >
+      email@email.com / Joshs4pp
+    </p>
+    <p
+      className="defaultMedium"
+    >
+      Organization Demo:
+    </p>
+    <p
+      className="demoLogin"
+    >
+      j@young.net / P4ssword
+    </p>
+  </div>
+  <form
+    className="loginForm"
+    onSubmit={[Function]}
+  >
+    <div
+      className="inputContainer"
+    >
+      <input
+        className="loginInput"
+        id="email"
+        name="email"
+        onChange={[Function]}
+        placeholder="Email"
+        required={true}
+        type="text"
+      />
+    </div>
+    <div
+      className="inputContainer"
+    >
+      <input
+        className="loginInput"
+        id="password"
+        name="password"
+        onChange={[Function]}
+        placeholder="Password"
+        required={true}
+        type="password"
+      />
+      <button
+        className="showLoginButton"
+        onClick={[Function]}
+        type="button"
+      />
+    </div>
+    <button
+      className="loginButton"
+      type="submit"
+    >
+      Sign In
+    </button>
+    <p
+      className="registerInstructions"
+    >
+      Need an account? 
+      <Link
+        className="registerLink"
+        to="/register"
+      >
+        Click Here
+      </Link>
+       to create one.
+    </p>
+  </form>
+</div>
+`;
+
+exports[`NavBar Component NavBar Snapshot Test 1`] = `
+<div
+  className="navContainer"
+>
+  <div
+    className="navBar"
+  >
+    <NavLink
+      className="logoLink"
+      onClick={[Function]}
+      to="/"
+    >
+      <img
+        alt="v-able logo"
+        className="mainLogo"
+        src="/assets/v-able-logo.svg"
+      />
+      <h1
+        className="navName"
+      >
+        v
+        <span
+          className="inlineBullet"
+        >
+          •
+        </span>
+        able
+      </h1>
+    </NavLink>
+    <div
+      className="hamburgerContainer"
+    >
+      <div
+        className="burgerButton falseBurger"
+        onClick={[Function]}
+      >
+        <span />
+        <span />
+        <span />
+      </div>
+    </div>
+  </div>
+  <div
+    className="navMenu fadeMenuHidden"
+  >
+    <div
+      className="linkContainer"
+    >
+      <NavLink
+        className="navLink"
+        onClick={[Function]}
+        to="/login"
+      >
+        Log In.
+      </NavLink>
+    </div>
+    <div
+      className="linkContainer"
+    >
+      <NavLink
+        className="navLink"
+        onClick={[Function]}
+        to="/register"
+      >
+        Sign Up.
+      </NavLink>
+    </div>
+    <div
+      className="linkContainer"
+    >
+      <NavLink
+        className="navLink"
+        onClick={[Function]}
+        to="/opportunityboard"
+      >
+        Opportunity Board.
+      </NavLink>
+    </div>
+  </div>
+</div>
+`;

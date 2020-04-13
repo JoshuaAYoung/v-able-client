@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OpportunityCard Component OpportunityCard Snapshot Test 1`] = `
+<Fragment>
+  <a
+    className="oppCardLink"
+    href="/opportunity/1"
+  >
+    <h3
+      className="opportunityTitle"
+    >
+      test title
+    </h3>
+    <p
+      className="orgTitle"
+    >
+      test name
+    </p>
+    <p
+      className="orgInfo"
+    >
+      test city
+      , 
+      test state
+       
+      90210
+    </p>
+    <p
+      className="opportunityDescription"
+    >
+      <span
+        className="defaultMedium"
+      >
+        Description: 
+      </span>
+       
+      test description
+      ...  
+      <span
+        className="defaultMedium"
+      >
+        More &gt;
+      </span>
+    </p>
+    <p
+      className="opportunityPosted"
+    >
+      <span
+        className="defaultMedium"
+      >
+        Posted 
+      </span>
+      12-22-2019
+    </p>
+  </a>
+</Fragment>
+`;

@@ -3,6 +3,7 @@ import OpportunityDetails from '../../components/OpportunityDetails/OpportunityD
 import OppApiService from '../../services/opp-api-service'
 import VableContext from '../../context/VableContext'
 import './OpportunityDetailsPage.css'
+import ErrorToast from '../../components/ErrorToast/ErrorToast'
 
 export default class OpportunityBoardPage extends Component {
   static contextType = VableContext;
@@ -26,11 +27,9 @@ export default class OpportunityBoardPage extends Component {
         <header role="banner" className="detailsBanner detailsBanner">
           <h1 className='pageHeader detailsHeader'>Opportunity Details.</h1>
           <img src='/assets/board-rocket.svg' alt='people working on a spaceship' className='detailsImage' />
-          <p className='pageInstructions'>Click <br />volunteer to send a <br />message to the organization.</p>
+          <p className='pageInstructions detailsInstructions'>Login as a volunteer  user to apply.</p>
         </header>
-        <div role='alert'>
-          {error && <p className='apiError'>Server Error: {error}</p>}
-        </div>
+        {error && <ErrorToast errorMessage={error} />}
         <OpportunityDetails history={this.props.history} />
       </div>
     );

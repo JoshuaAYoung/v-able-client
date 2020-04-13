@@ -1,0 +1,177 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Component Footer Snapshot Test 1`] = `
+<footer
+  className="footer"
+>
+  <div
+    className="footerWaveContainer"
+  >
+    <img
+      alt="wavy border"
+      className="footerWave"
+      src="/assets/top-waves.svg"
+    />
+  </div>
+  <div
+    className="footerInside"
+  >
+    <div
+      className="socialContainer"
+    >
+      <a
+        className="mailToLink"
+        href="mailto:joshua@young.net"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img
+          alt="email logo"
+          className="socialImage"
+          src="/assets/email-logo.svg"
+        />
+      </a>
+      <a
+        className="githubLink"
+        href="https://github.com/JoshuaAYoung"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img
+          alt="github logo"
+          className="socialImage"
+          src="/assets/github-logo.svg"
+        />
+      </a>
+      <a
+        className="linkedinLink"
+        href="https://www.linkedin.com/in/joshua-young-250a7512"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img
+          alt="linkedin logo"
+          className="socialImage"
+          src="/assets/linkedin-logo.svg"
+        />
+      </a>
+    </div>
+    <p
+      className="copyright"
+    >
+      Copyright © 
+      2020
+      <br />
+      <a
+        className="portLink"
+        href="https://joshyoung.net"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Josh Young
+      </a>
+    </p>
+  </div>
+</footer>
+`;
+
+exports[`LoginForm Component LoginForm Snapshot Test 1`] = `
+<div>
+  <header
+    className="loginBanner"
+    role="banner"
+  >
+    <h1
+      className="pageHeader"
+    >
+      Login.
+    </h1>
+    <p
+      className="pageInstructions"
+    >
+      Enter your email and password or choose a demo user.
+    </p>
+  </header>
+  <div
+    role="alert"
+  />
+  <div
+    className="demoInstructions"
+  >
+    <p
+      className="defaultMedium"
+    >
+      Volunteer Demo:
+    </p>
+    <p
+      className="demoLogin"
+    >
+      email@email.com / Joshs4pp
+    </p>
+    <p
+      className="defaultMedium"
+    >
+      Organization Demo:
+    </p>
+    <p
+      className="demoLogin"
+    >
+      j@young.net / P4ssword
+    </p>
+  </div>
+  <form
+    className="loginForm"
+    onSubmit={[Function]}
+  >
+    <div
+      className="inputContainer"
+    >
+      <input
+        className="loginInput"
+        id="email"
+        name="email"
+        onChange={[Function]}
+        placeholder="Email"
+        required={true}
+        type="text"
+      />
+    </div>
+    <div
+      className="inputContainer"
+    >
+      <input
+        className="loginInput"
+        id="password"
+        name="password"
+        onChange={[Function]}
+        placeholder="Password"
+        required={true}
+        type="password"
+      />
+      <button
+        className="showLoginButton"
+        onClick={[Function]}
+        type="button"
+      />
+    </div>
+    <button
+      className="loginButton"
+      type="submit"
+    >
+      Sign In
+    </button>
+    <p
+      className="registerInstructions"
+    >
+      Need an account? 
+      <Link
+        className="registerLink"
+        to="/register"
+      >
+        Click Here
+      </Link>
+       to create one.
+    </p>
+  </form>
+</div>
+`;

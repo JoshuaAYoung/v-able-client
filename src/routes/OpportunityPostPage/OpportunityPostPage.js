@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import OpportunityPostForm from '../../components/OpportunityPostForm/OpportunityPostForm'
 import './OpportunityPostPage.css'
-export default class OpportunityPostPage extends Component {
 
+export default class OpportunityPostPage extends Component {
   render() {
     return (
       <div className="opportunityPostContainer">
