@@ -24,7 +24,7 @@ export default class OpportunityBoardPage extends Component {
     const { error } = this.state
     return (
       <div className='opportunityDetails'>
-        <header role="banner" className="detailsBanner detailsBanner">
+        <header role="banner" className="detailsBanner">
           <h1 className='pageHeader detailsHeader'>Opportunity Details.</h1>
           <img src='/assets/board-rocket.svg' alt='people working on a spaceship' className='detailsImage' />
           <p className='pageInstructions detailsInstructions'>Login as a volunteer  user to apply.</p>

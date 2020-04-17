@@ -136,7 +136,7 @@ export default class RegistrationPage extends Component {
     const { error } = this.state
     return (
       <div>
-        <section>
+        <section className='registrationContainer'>
           <header role="banner" className="registerBanner">
             <h1 className='pageHeader'>{this.state.header}</h1>
             <p className='pageInstructions'>All fields are required unless noted otherwise.</p>

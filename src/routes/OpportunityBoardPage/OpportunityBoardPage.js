@@ -65,8 +65,9 @@ export default class OpportunityBoardPage extends Component {
     const { error } = this.state
     return (
       <div className='boardContainer'>
-        <header role="banner" className="oppBoardBanner oppBoardBanner">
+        <header role="banner" className="oppBoardBanner">
           <h1 className='pageHeader textCenter'>Opportunity Board.</h1>
+          <p className='pageInstructions boardInstructions'>Click an opportunity to see more details or enter a search above.</p>
           <form className='searchForm' onSubmit={this.handleSubmit}>
             <input
               placeholder='Keyword or Location...'
@@ -82,7 +83,6 @@ export default class OpportunityBoardPage extends Component {
             </button>
           </form>
         </header>
-        <p className='pageInstructions'>Click an opportunity to see more details or enter a search above.</p>
         {error && <ErrorToast errorMessage={error} />}
         {this.renderOpportunities()}
       </div >

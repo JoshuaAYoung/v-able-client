@@ -45,4 +45,14 @@
   padding-top: .1em;
 }
 
+@media only screen and (min-width: 1024px) {
+  .oppPostBanner {
+    text-align: center;
+  }
+  .postInputs {
+    padding-right: 15rem;
+    padding-left: 15rem;
+  }
+}
+
   

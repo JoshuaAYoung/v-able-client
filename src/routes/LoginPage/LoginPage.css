@@ -62,3 +62,15 @@ margin-bottom: .6rem;
   margin-top: 2rem;
   font-size: 1.4rem;
 }
+
+@media only screen and (min-width: 1024px) {
+  .loginFormContainer {
+    padding: 0 20rem;
+  }
+  .demoInstructions {
+    margin-top: 5rem;
+  }
+  .registerInstructions {
+    margin-top: 4rem;
+  }
+}

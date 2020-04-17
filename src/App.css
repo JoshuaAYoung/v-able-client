@@ -34,7 +34,10 @@ button, input[type="submit"] {
   outline: none;
   border-radius: 1.4rem;
   padding: 0 2rem .2rem;
-  transition: all 0.3s;
+  transition: all 0.1s ease-out .1s;
+  -webkit-transition: all 0.1s ease-out .1s;
+  -moz-transition: all 0.1s ease-out .1s;
+  -o-transition: all 0.1s ease-out .1s;
 }
 
 button:hover {
@@ -86,10 +89,6 @@ button:disabled, button[disabled] {
   margin-bottom: 3rem;
   line-height: 1.3em;
 } 
-
-.noTopMargin {
-  margin-top: 0;
-}
 
 .pageInstructions {
   padding: 0;
@@ -155,5 +154,8 @@ input[type=text], select, input {
   .appMain {
     padding-right: calc(49vw - 42rem);
     padding-left: calc(49vw - 42rem);
+  }
+  .inputContainer {
+    width: 100%;
   }
 }

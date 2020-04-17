@@ -1,5 +1,5 @@
 .oppBoardBanner {
-  height: 25rem;
+  height: auto;
   margin: -8rem -2.5rem 0;
   padding: 8rem 2.5rem 0;
   background-color: #FFF0B0;
@@ -12,7 +12,7 @@
 
 .searchForm {
   position: relative;
-  margin: 3.5rem 1rem 0;
+  margin: 3.5rem 1rem 2rem;
 }
 
 .oppSearch[type=text] {
@@ -40,6 +40,10 @@
 
 .searchButton:hover {
   background-color: #F0667B
+}
+
+.boardInstructions {
+  text-align: center;
 }
 
 .opportunityCard {
@@ -76,4 +80,26 @@
 
 .orgInfo, .opportunityDescription {
   margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: 1024px) {
+  .oppBoardBanner{
+    margin-right: calc(42rem - 49vw);
+    margin-left: calc(42rem - 49vw);
+    padding-left: calc(49vw - 27rem);
+    padding-right: calc(49vw - 27rem);
+  }
+
+  .searchForm {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+  }
+
+  .boardInstructions {
+    padding: 0 10rem;
+  }
+
+  .oppList {
+    margin-top: 5rem;
+  }
 }

@@ -1,19 +1,32 @@
 .errorToast {
   position: fixed;
   top: 40vh;
-  height: 6rem;
-  right: calc(50vw - 30rem);
-  min-width: 60rem;
+  min-height: 6rem;
+  left: 50%;
+  margin: 0 auto;
+  width: auto;
   border: .1rem solid gray;
-  padding: 1rem;
   box-shadow: 1rem 1rem .5rem grey;
   background-image: url('/assets/alert.svg');
   background-repeat: no-repeat;
   background-size: 6rem;
   background-position: left;
-  padding-left: 8rem;
+  padding-left: 6rem;
   z-index: 998;
-  background-color: white;
+  background-color: #F0667B;
+  font-size: 1.4rem;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-font-smoothing: antialiased;
+}
+
+.toastMessage {
+  padding: 1rem 0 1rem 1rem;
+  background: white;
+  min-height: 6rem;
 }
 
 .toastButton {
@@ -22,9 +35,9 @@
   right: 0;
   top: 0;
   height: 100%;
-  font-weight: 300;
-  font-size: 3rem;
+  font-size: 2.5rem;
   background-color: white;
+  z-index: 0
 }
 
 .toastButton:hover {
@@ -34,4 +47,8 @@
 
 .hiddenToast {
   display: none;
+}
+
+.serverMessage {
+  padding-right: 6rem;
 }

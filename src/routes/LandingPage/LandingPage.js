@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { NavLink } from "react-router-dom";
 import './LandingPage.css'
 
 export default class LandingPage extends Component {
@@ -54,7 +53,7 @@ export default class LandingPage extends Component {
           </div>
           <div className='featuresContainer'>
             <div className='featureSubHeader'>
-              <h2 className='subHeader noTopMargin'>Now this is
+              <h2 className='subHeader featuresSubHeader'>Now this is
               <br />
               feature-rich volunteering.</h2>
               <img src='/assets/hands-hearts.svg' alt='hands up holding hearts' className='handsImage' />

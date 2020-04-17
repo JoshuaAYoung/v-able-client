@@ -15,3 +15,11 @@
 .jodit_toolbar_btn-separator {
   border-right: 1px solid #777777 !important;
 }
+
+.jodit_tooltip {
+  display: none;
+}
+
+.jodit_tooltip.jodit_tooltip_visible {
+  display: initial;
+}

@@ -8,7 +8,9 @@ export default class RegistrationCheckpoint extends Component {
       <div className='checkpointContainer'>
         <header role="banner" className="checkpointBanner">
           <h1 className='pageHeader'>Choose your Path.</h1>
-          <p className='pageInstructions'>Registration only takes a minute. Click on the option that applies to you.</p>
+          <p className='pageInstructions'>Registration only takes a minute.
+          <br />
+          Click on the option that applies to you.</p>
         </header>
         <div className='userTypeContainer'>
           <div className="userLinkContainer">

@@ -26,11 +26,11 @@
 
 .footerWaveContainer {
   overflow: hidden;
-  height: 3rem;
+  height: 2rem;
 }
 
 .footerWave {
-  height: 3rem;
+  height: 2rem;
   object-position: -20rem;
 }
 

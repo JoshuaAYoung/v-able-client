@@ -101,107 +101,109 @@ export default class OpportunityPostForm extends Component {
           className='postForm'
           onSubmit={this.handleSubmit}
         >
-          <div className='inputContainer'>
-            <input
-              type='text'
-              name='title'
-              id='title'
-              className='postInput'
-              placeholder='Position Title'
-              required
-              onChange={ev => this.addTempValue('title', ev.target.value)}
-            />
-          </div>
-          <div className='inputContainer'>
-            <input
-              type='text'
-              name='contact'
-              id='contact'
-              className='postInput'
-              required
-              placeholder="Contact Person's Email"
-              onChange={ev => this.addTempValidation('contact', ev.target.value)}
-            />
-            {this.generateError() && <ValidationError message={this.generateError()} />}
-          </div>
-          <div className='inputContainer'>
-            <input
-              type='text'
-              name='start_date'
-              id='start_date'
-              className='postInput'
-              required
-              placeholder='Start Date'
-              onChange={ev => this.addTempValue('start_date', ev.target.value)}
-            />
-          </div>
-          <div className='inputContainer'>
-            <input
-              type='text'
-              name='duration'
-              id='duration'
-              className='postInput'
-              required
-              placeholder='Volunteer Duration'
-              onChange={ev => this.addTempValue('duration', ev.target.value)}
-            />
-          </div>
-          <div className='inputContainer'>
-            <input
-              type='text'
-              name='commitment'
-              id='commitment'
-              className='postInput'
-              required
-              placeholder='Estimated Hours Per Week'
-              onChange={ev => this.addTempValue('commitment', ev.target.value)}
-            />
-          </div>
-          <div className='inputContainer'>
-            <select
-              id='ed_level'
-              name='ed_level'
-              className='postInput postSelect'
-              onChange={ev => this.addTempValue('ed_level', ev.target.value)}>
-              <option value='' hidden>Education Level (optional)</option>
-              <option value='none'>None</option>
-              <option value='highschool'>High School</option>
-              <option value='associates'>Associates Degree</option>
-              <option value='bachelors'>Bachelors Degree</option>
-              <option value='masters'>Masters Degree</option>
-              <option value='phd'>Ph. D.</option>
-            </select>
-          </div>
-          <div className='inputContainer'>
-            <input
-              type='text'
-              name='experience'
-              id='experience'
-              className='postInput'
-              placeholder="Experience (optional)"
-              onChange={ev => this.addTempValue('experience', ev.target.value)}
-            />
-          </div>
-          <div className='inputContainer'>
-            <input
-              type='text'
-              name='license'
-              id='license'
-              className='postInput'
-              placeholder="Licensure (optional)"
-              onChange={ev => this.addTempValue('license', ev.target.value)}
-            />
-          </div>
-          <div className='inputContainer'>
-            <select
-              id='remote'
-              name='remote'
-              className='postInput postSelect'
-              onChange={ev => this.addTempValue('remote', ev.target.value)}>
-              <option value='' hidden>Option To Work Remotely?</option>
-              <option value='No' defaultValue='No'>No.</option>
-              <option value='Yes'>Yes.</option>
-            </select>
+          <div className='postInputs'>
+            <div className='inputContainer'>
+              <input
+                type='text'
+                name='title'
+                id='title'
+                className='postInput'
+                placeholder='Position Title'
+                required
+                onChange={ev => this.addTempValue('title', ev.target.value)}
+              />
+            </div>
+            <div className='inputContainer'>
+              <input
+                type='text'
+                name='contact'
+                id='contact'
+                className='postInput'
+                required
+                placeholder="Contact Person's Email"
+                onChange={ev => this.addTempValidation('contact', ev.target.value)}
+              />
+              {this.generateError() && <ValidationError message={this.generateError()} />}
+            </div>
+            <div className='inputContainer'>
+              <input
+                type='text'
+                name='start_date'
+                id='start_date'
+                className='postInput'
+                required
+                placeholder='Start Date'
+                onChange={ev => this.addTempValue('start_date', ev.target.value)}
+              />
+            </div>
+            <div className='inputContainer'>
+              <input
+                type='text'
+                name='duration'
+                id='duration'
+                className='postInput'
+                required
+                placeholder='Volunteer Duration'
+                onChange={ev => this.addTempValue('duration', ev.target.value)}
+              />
+            </div>
+            <div className='inputContainer'>
+              <input
+                type='text'
+                name='commitment'
+                id='commitment'
+                className='postInput'
+                required
+                placeholder='Estimated Hours Per Week'
+                onChange={ev => this.addTempValue('commitment', ev.target.value)}
+              />
+            </div>
+            <div className='inputContainer'>
+              <select
+                id='ed_level'
+                name='ed_level'
+                className='postInput postSelect'
+                onChange={ev => this.addTempValue('ed_level', ev.target.value)}>
+                <option value='' hidden>Education Level (optional)</option>
+                <option value='none'>None</option>
+                <option value='highschool'>High School</option>
+                <option value='associates'>Associates Degree</option>
+                <option value='bachelors'>Bachelors Degree</option>
+                <option value='masters'>Masters Degree</option>
+                <option value='phd'>Ph. D.</option>
+              </select>
+            </div>
+            <div className='inputContainer'>
+              <input
+                type='text'
+                name='experience'
+                id='experience'
+                className='postInput'
+                placeholder="Experience (optional)"
+                onChange={ev => this.addTempValue('experience', ev.target.value)}
+              />
+            </div>
+            <div className='inputContainer'>
+              <input
+                type='text'
+                name='license'
+                id='license'
+                className='postInput'
+                placeholder="Licensure (optional)"
+                onChange={ev => this.addTempValue('license', ev.target.value)}
+              />
+            </div>
+            <div className='inputContainer'>
+              <select
+                id='remote'
+                name='remote'
+                className='postInput postSelect'
+                onChange={ev => this.addTempValue('remote', ev.target.value)}>
+                <option value='' hidden>Option To Work Remotely?</option>
+                <option value='No' defaultValue='No'>No.</option>
+                <option value='Yes'>Yes.</option>
+              </select>
+            </div>
           </div>
           <TextEditor
           />
