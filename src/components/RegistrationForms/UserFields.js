@@ -34,6 +34,7 @@ export default class UserFields extends Component {
             id='email'
             className='registrationInput'
             placeholder='Your Email'
+            aria-label='Your Email'
             onChange={ev => this.props.addTempValidation('email', ev.target.value)}
             required
           />
@@ -46,13 +47,16 @@ export default class UserFields extends Component {
             id='password'
             className='registrationInput passwordInput'
             placeholder='Password'
+            aria-label='Password'
             onChange={ev => this.props.addTempValidation('password', ev.target.value)}
             required
           />
           <button
             type='button'
             className={`${this.state.showHide}RegistrationButton`}
-            onClick={() => this.toggleShowPassword()}>
+            onClick={() => this.toggleShowPassword()}
+            aria-label='show password'
+          >
           </button>
           {passwordError1 && <ValidationError message={passwordError1} />}
           {passwordError2 && <ValidationError message={passwordError2} />}
@@ -66,6 +70,7 @@ export default class UserFields extends Component {
             id='full_Name'
             className='registrationInput'
             placeholder='Your Full Name'
+            aria-label='Your Full Name'
             onChange={ev => this.props.addTempValue('full_name', ev.target.value)}
             required
           />

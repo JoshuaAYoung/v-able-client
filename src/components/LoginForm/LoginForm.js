@@ -68,10 +68,10 @@ export default class LoginForm extends Component {
     const { error } = this.state
     return (
       <div>
-        <header role="banner" className="loginBanner">
+        <div className="loginBanner">
           <h1 className='pageHeader'>Login.</h1>
           <p className='pageInstructions'>Enter your email and password or choose a demo user.</p>
-        </header>
+        </div>
         {error && <ErrorToast errorMessage={error} />}
         <div className='demoInstructions'>
           <p className='defaultMedium'>Volunteer Demo:</p>
@@ -91,6 +91,7 @@ export default class LoginForm extends Component {
               className='loginInput'
               required
               placeholder='Email'
+              aria-label='email'
               onChange={ev => this.addTempValue('email', ev.target.value)}
             />
           </div>
@@ -102,12 +103,15 @@ export default class LoginForm extends Component {
               className='loginInput'
               required
               placeholder='Password'
+              aria-label='password'
               onChange={ev => this.addTempValue('password', ev.target.value)}
             />
             <button
               type='button'
               className={`${this.state.showHide}LoginButton`}
-              onClick={() => this.toggleShowPassword()}>
+              aria-label='show password'
+              onClick={() => this.toggleShowPassword()}
+            >
             </button>
           </div>
           <button

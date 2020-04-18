@@ -91,12 +91,12 @@ export default class SuccessPage extends Component {
 
   render() {
     return (
-      <header role="banner" className="successBanner">
+      <div className="successBanner">
         {this.renderMessage()}
         <div className='successImageContainer'>
           <img src='/assets/success-cloud.svg' alt='not found' className='successImage' />
         </div>
-      </header>
+      </div>
     )
   }
 }

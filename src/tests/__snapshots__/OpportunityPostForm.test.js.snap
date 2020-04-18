@@ -13,6 +13,7 @@ exports[`OpportunityPostForm Component OpportunityPostForm Snapshot Test 1`] = `
         className="inputContainer"
       >
         <input
+          aria-label="Position Title"
           className="postInput"
           id="title"
           name="title"
@@ -26,6 +27,7 @@ exports[`OpportunityPostForm Component OpportunityPostForm Snapshot Test 1`] = `
         className="inputContainer"
       >
         <input
+          aria-label="Contact Person's Email"
           className="postInput"
           id="contact"
           name="contact"
@@ -39,6 +41,7 @@ exports[`OpportunityPostForm Component OpportunityPostForm Snapshot Test 1`] = `
         className="inputContainer"
       >
         <input
+          aria-label="Start Date"
           className="postInput"
           id="start_date"
           name="start_date"
@@ -52,6 +55,7 @@ exports[`OpportunityPostForm Component OpportunityPostForm Snapshot Test 1`] = `
         className="inputContainer"
       >
         <input
+          aria-label="Volunteer Duration"
           className="postInput"
           id="duration"
           name="duration"
@@ -65,6 +69,7 @@ exports[`OpportunityPostForm Component OpportunityPostForm Snapshot Test 1`] = `
         className="inputContainer"
       >
         <input
+          aria-label="Estimated Hours Per Week"
           className="postInput"
           id="commitment"
           name="commitment"
@@ -78,6 +83,7 @@ exports[`OpportunityPostForm Component OpportunityPostForm Snapshot Test 1`] = `
         className="inputContainer"
       >
         <select
+          aria-label="education level"
           className="postInput postSelect"
           id="ed_level"
           name="ed_level"
@@ -125,6 +131,7 @@ exports[`OpportunityPostForm Component OpportunityPostForm Snapshot Test 1`] = `
         className="inputContainer"
       >
         <input
+          aria-label="Experience"
           className="postInput"
           id="experience"
           name="experience"
@@ -137,6 +144,7 @@ exports[`OpportunityPostForm Component OpportunityPostForm Snapshot Test 1`] = `
         className="inputContainer"
       >
         <input
+          aria-label="Licensure"
           className="postInput"
           id="license"
           name="license"
@@ -149,6 +157,7 @@ exports[`OpportunityPostForm Component OpportunityPostForm Snapshot Test 1`] = `
         className="inputContainer"
       >
         <select
+          aria-label="remote option"
           className="postInput postSelect"
           id="remote"
           name="remote"

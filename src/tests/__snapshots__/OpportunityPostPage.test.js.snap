@@ -4,9 +4,8 @@ exports[`OpportunityPostPage Component OpportunityPostPage Snapshot Test 1`] = `
 <div
   className="opportunityPostContainer"
 >
-  <header
+  <div
     className="oppPostBanner"
-    role="banner"
   >
     <h1
       className="pageHeader"
@@ -18,7 +17,7 @@ exports[`OpportunityPostPage Component OpportunityPostPage Snapshot Test 1`] = `
     >
       Fields are optional unless noted otherwise.
     </p>
-  </header>
+  </div>
   <OpportunityPostForm />
 </div>
 `;

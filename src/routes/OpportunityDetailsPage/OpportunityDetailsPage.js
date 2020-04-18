@@ -4,11 +4,21 @@ import OppApiService from '../../services/opp-api-service'
 import VableContext from '../../context/VableContext'
 import './OpportunityDetailsPage.css'
 import ErrorToast from '../../components/ErrorToast/ErrorToast'
+import TokenService from '../../services/token-service'
 
 export default class OpportunityBoardPage extends Component {
   static contextType = VableContext;
 
   state = { error: null }
+
+  renderInstructions = () => {
+    if (this.context.userType === 'volunteer' && TokenService.hasAuthToken()) {
+      return (<p className='pageInstructions detailsInstructions'>Click on the "Volunteer" button to apply.</p>)
+    }
+    else {
+      return (<p className='pageInstructions detailsInstructions'>Login as a volunteer user to apply.</p>)
+    }
+  }
 
   componentDidMount() {
     const { oppId } = this.props.match.params
@@ -24,11 +34,11 @@ export default class OpportunityBoardPage extends Component {
     const { error } = this.state
     return (
       <div className='opportunityDetails'>
-        <header role="banner" className="detailsBanner">
+        <div className="detailsBanner">
           <h1 className='pageHeader detailsHeader'>Opportunity Details.</h1>
           <img src='/assets/board-rocket.svg' alt='people working on a spaceship' className='detailsImage' />
-          <p className='pageInstructions detailsInstructions'>Login as a volunteer  user to apply.</p>
-        </header>
+          {this.renderInstructions()}
+        </div>
         {error && <ErrorToast errorMessage={error} />}
         <OpportunityDetails history={this.props.history} />
       </div>

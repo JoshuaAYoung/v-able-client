@@ -4,9 +4,8 @@ exports[`OpportunityDetailsPage Component OpportunityDetailsPage Snapshot Test 1
 <div
   className="opportunityDetails"
 >
-  <header
+  <div
     className="detailsBanner"
-    role="banner"
   >
     <h1
       className="pageHeader detailsHeader"
@@ -21,9 +20,9 @@ exports[`OpportunityDetailsPage Component OpportunityDetailsPage Snapshot Test 1
     <p
       className="pageInstructions detailsInstructions"
     >
-      Login as a volunteer  user to apply.
+      Login as a volunteer user to apply.
     </p>
-  </header>
+  </div>
   <OpportunityDetails />
 </div>
 `;

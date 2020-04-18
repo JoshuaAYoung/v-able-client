@@ -109,6 +109,7 @@ export default class OpportunityPostForm extends Component {
                 id='title'
                 className='postInput'
                 placeholder='Position Title'
+                aria-label='Position Title'
                 required
                 onChange={ev => this.addTempValue('title', ev.target.value)}
               />
@@ -121,6 +122,7 @@ export default class OpportunityPostForm extends Component {
                 className='postInput'
                 required
                 placeholder="Contact Person's Email"
+                aria-label="Contact Person's Email"
                 onChange={ev => this.addTempValidation('contact', ev.target.value)}
               />
               {this.generateError() && <ValidationError message={this.generateError()} />}
@@ -133,6 +135,7 @@ export default class OpportunityPostForm extends Component {
                 className='postInput'
                 required
                 placeholder='Start Date'
+                aria-label='Start Date'
                 onChange={ev => this.addTempValue('start_date', ev.target.value)}
               />
             </div>
@@ -144,6 +147,7 @@ export default class OpportunityPostForm extends Component {
                 className='postInput'
                 required
                 placeholder='Volunteer Duration'
+                aria-label='Volunteer Duration'
                 onChange={ev => this.addTempValue('duration', ev.target.value)}
               />
             </div>
@@ -155,6 +159,7 @@ export default class OpportunityPostForm extends Component {
                 className='postInput'
                 required
                 placeholder='Estimated Hours Per Week'
+                aria-label='Estimated Hours Per Week'
                 onChange={ev => this.addTempValue('commitment', ev.target.value)}
               />
             </div>
@@ -163,6 +168,7 @@ export default class OpportunityPostForm extends Component {
                 id='ed_level'
                 name='ed_level'
                 className='postInput postSelect'
+                aria-label='education level'
                 onChange={ev => this.addTempValue('ed_level', ev.target.value)}>
                 <option value='' hidden>Education Level (optional)</option>
                 <option value='none'>None</option>
@@ -180,6 +186,7 @@ export default class OpportunityPostForm extends Component {
                 id='experience'
                 className='postInput'
                 placeholder="Experience (optional)"
+                aria-label="Experience"
                 onChange={ev => this.addTempValue('experience', ev.target.value)}
               />
             </div>
@@ -190,6 +197,7 @@ export default class OpportunityPostForm extends Component {
                 id='license'
                 className='postInput'
                 placeholder="Licensure (optional)"
+                aria-label="Licensure"
                 onChange={ev => this.addTempValue('license', ev.target.value)}
               />
             </div>
@@ -198,6 +206,7 @@ export default class OpportunityPostForm extends Component {
                 id='remote'
                 name='remote'
                 className='postInput postSelect'
+                aria-label='remote option'
                 onChange={ev => this.addTempValue('remote', ev.target.value)}>
                 <option value='' hidden>Option To Work Remotely?</option>
                 <option value='No' defaultValue='No'>No.</option>

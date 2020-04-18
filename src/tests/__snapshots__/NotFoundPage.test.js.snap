@@ -2,9 +2,8 @@
 
 exports[`NotFoundPage Component NotFoundPage Snapshot Test 1`] = `
 <div>
-  <header
+  <div
     className="notFoundBanner"
-    role="banner"
   >
     <h1
       className="pageHeader"
@@ -18,7 +17,7 @@ exports[`NotFoundPage Component NotFoundPage Snapshot Test 1`] = `
     >
       We can’t find the page you’re looking for. Please check the url.
     </p>
-  </header>
+  </div>
   <div
     className="notFoundImageContainer"
   >

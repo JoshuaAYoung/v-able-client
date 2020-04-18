@@ -137,10 +137,10 @@ export default class RegistrationPage extends Component {
     return (
       <div>
         <section className='registrationContainer'>
-          <header role="banner" className="registerBanner">
+          <div className="registerBanner">
             <h1 className='pageHeader'>{this.state.header}</h1>
             <p className='pageInstructions'>All fields are required unless noted otherwise.</p>
-          </header>
+          </div>
           {error && <ErrorToast errorMessage={error} />}
           <form className='signupForm' onSubmit={ev => this.handleSubmit(ev)}>
             {this.formRender()}

@@ -6,12 +6,12 @@ export default class RegistrationCheckpoint extends Component {
   render() {
     return (
       <div className='checkpointContainer'>
-        <header role="banner" className="checkpointBanner">
+        <div className="checkpointBanner">
           <h1 className='pageHeader'>Choose your Path.</h1>
           <p className='pageInstructions'>Registration only takes a minute.
           <br />
           Click on the option that applies to you.</p>
-        </header>
+        </div>
         <div className='userTypeContainer'>
           <div className="userLinkContainer">
             <NavLink className='userTypeLink' to={'/register/organization'}>

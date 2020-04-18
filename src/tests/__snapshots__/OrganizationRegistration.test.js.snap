@@ -13,6 +13,7 @@ exports[`OrganizationRegistration Component OrganizationRegistration Snapshot Te
     className="inputContainer"
   >
     <input
+      aria-label="Organization Name"
       className="registrationInput"
       id="name"
       name="name"
@@ -26,6 +27,7 @@ exports[`OrganizationRegistration Component OrganizationRegistration Snapshot Te
     className="inputContainer"
   >
     <input
+      aria-label="Address"
       className="registrationInput"
       id="address"
       name="address"
@@ -38,6 +40,7 @@ exports[`OrganizationRegistration Component OrganizationRegistration Snapshot Te
     className="inputContainer"
   >
     <input
+      aria-label="City"
       className="registrationInput"
       id="city"
       name="city"
@@ -51,6 +54,7 @@ exports[`OrganizationRegistration Component OrganizationRegistration Snapshot Te
     className="inputContainer"
   >
     <input
+      aria-label="State"
       className="registrationInput"
       id="state"
       name="state"
@@ -64,6 +68,7 @@ exports[`OrganizationRegistration Component OrganizationRegistration Snapshot Te
     className="inputContainer"
   >
     <input
+      aria-label="Zipcode"
       className="registrationInput"
       id="zipcode"
       name="zipcode"
@@ -80,6 +85,7 @@ exports[`OrganizationRegistration Component OrganizationRegistration Snapshot Te
     className="inputContainer"
   >
     <input
+      aria-label="Phone Number"
       className="registrationInput"
       id="phone"
       name="phone"
@@ -92,6 +98,7 @@ exports[`OrganizationRegistration Component OrganizationRegistration Snapshot Te
     className="inputContainer"
   >
     <input
+      aria-label="Website"
       className="registrationInput"
       id="website"
       name="website"

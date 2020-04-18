@@ -6,6 +6,7 @@ exports[`UserFields Component UserFields Snapshot Test 1`] = `
     className="inputContainer"
   >
     <input
+      aria-label="Your Email"
       className="registrationInput"
       id="email"
       name="email"
@@ -22,6 +23,7 @@ exports[`UserFields Component UserFields Snapshot Test 1`] = `
     className="inputContainer"
   >
     <input
+      aria-label="Password"
       className="registrationInput passwordInput"
       id="password"
       name="password"
@@ -31,6 +33,7 @@ exports[`UserFields Component UserFields Snapshot Test 1`] = `
       type="password"
     />
     <button
+      aria-label="show password"
       className="showRegistrationButton"
       onClick={[Function]}
       type="button"
@@ -52,6 +55,7 @@ exports[`UserFields Component UserFields Snapshot Test 1`] = `
     className="inputContainer"
   >
     <input
+      aria-label="Your Full Name"
       className="registrationInput"
       id="full_Name"
       name="full_Name"

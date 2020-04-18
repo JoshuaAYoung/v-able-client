@@ -2,9 +2,8 @@
 
 exports[`LoginForm Component LoginForm Snapshot Test 1`] = `
 <div>
-  <header
+  <div
     className="loginBanner"
-    role="banner"
   >
     <h1
       className="pageHeader"
@@ -16,7 +15,7 @@ exports[`LoginForm Component LoginForm Snapshot Test 1`] = `
     >
       Enter your email and password or choose a demo user.
     </p>
-  </header>
+  </div>
   <div
     className="demoInstructions"
   >
@@ -49,6 +48,7 @@ exports[`LoginForm Component LoginForm Snapshot Test 1`] = `
       className="inputContainer tallerInput"
     >
       <input
+        aria-label="email"
         className="loginInput"
         id="email"
         name="email"
@@ -62,6 +62,7 @@ exports[`LoginForm Component LoginForm Snapshot Test 1`] = `
       className="inputContainer tallerInput"
     >
       <input
+        aria-label="password"
         className="loginInput"
         id="password"
         name="password"
@@ -71,6 +72,7 @@ exports[`LoginForm Component LoginForm Snapshot Test 1`] = `
         type="password"
       />
       <button
+        aria-label="show password"
         className="showLoginButton"
         onClick={[Function]}
         type="button"

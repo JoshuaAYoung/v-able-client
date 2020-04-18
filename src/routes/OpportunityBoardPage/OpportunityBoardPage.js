@@ -65,24 +65,26 @@ export default class OpportunityBoardPage extends Component {
     const { error } = this.state
     return (
       <div className='boardContainer'>
-        <header role="banner" className="oppBoardBanner">
+        <div className="oppBoardBanner">
           <h1 className='pageHeader textCenter'>Opportunity Board.</h1>
           <p className='pageInstructions boardInstructions'>Click an opportunity to see more details or enter a search above.</p>
-          <form className='searchForm' onSubmit={this.handleSubmit}>
+          <form className='searchForm' onSubmit={this.handleSubmit} aria-label='opportunity search'>
             <input
               placeholder='Keyword or Location...'
               type='text'
               name='oppSearch'
               id='oppSearch'
               className='oppSearch'
+              aria-label="opportunity search"
               onChange={ev => this.addTempSearch(ev.target.value)}
             />
             <button
               type='submit'
-              className='searchButton'>
+              className='searchButton'
+              aria-label='search button'>
             </button>
           </form>
-        </header>
+        </div>
         {error && <ErrorToast errorMessage={error} />}
         {this.renderOpportunities()}
       </div >

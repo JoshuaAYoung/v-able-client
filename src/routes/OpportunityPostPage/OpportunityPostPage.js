@@ -6,10 +6,10 @@ export default class OpportunityPostPage extends Component {
   render() {
     return (
       <div className="opportunityPostContainer">
-        <header role="banner" className="oppPostBanner">
+        <div className="oppPostBanner">
           <h1 className='pageHeader'>Opportunity Post.</h1>
           <p className='pageInstructions'>Fields are optional unless noted otherwise.</p>
-        </header>
+        </div>
         <OpportunityPostForm history={this.props.history} />
       </div>
     );

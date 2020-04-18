@@ -27,7 +27,7 @@ export default class App extends Component {
   render() {
     return (
       <div className='app'>
-        <header className='navBar'>
+        <header className='navBar' role="banner">
           <ErrorBoundary>
             <Route
               path={'/'}

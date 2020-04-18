@@ -11,7 +11,7 @@ export default class OpportunityDetails extends Component {
     return (
       <section className='detailsSection'>
         <div className='detailsContainer'>
-          <h3 className='opportunityTitle'>{title}</h3>
+          <h3 className='opportunityTitle detailsTitle'>{title}</h3>
           <LinkName name={name} website={website} />
           <p className='orgAddress'>{address}</p>
           <p className='orgLocation'>{city}, {state} {zipcode}</p>

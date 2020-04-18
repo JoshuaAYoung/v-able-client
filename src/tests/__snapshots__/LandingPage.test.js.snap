@@ -4,9 +4,8 @@ exports[`LandingPage Component LandingPage Snapshot Test 1`] = `
 <div
   className="landingMain"
 >
-  <header
+  <div
     className="landingBanner"
-    role="banner"
   >
     <div
       className="heroTextContainer"
@@ -70,7 +69,7 @@ exports[`LandingPage Component LandingPage Snapshot Test 1`] = `
       className="heroImage"
       src="/assets/landing-hero.svg"
     />
-  </header>
+  </div>
   <section
     className="callToAction textCenter"
   >
@@ -92,7 +91,7 @@ exports[`LandingPage Component LandingPage Snapshot Test 1`] = `
           >
             •
           </span>
-          able makes it easy to find causes that inspire you. And by offering up your experience in addition to your time, you’re increasing the value of every single minute spent volunteering for your favorite non-profit organizations.
+          able makes it easy to find causes that inspire you. And by offering up your experience in addition to your time, you’re increasing the value of every single minute spent volunteering.
         </p>
       </div>
       <div

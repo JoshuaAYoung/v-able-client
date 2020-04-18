@@ -1,9 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SuccessPage Component SuccessPage Snapshot Test 1`] = `
-<header
+<div
   className="successBanner"
-  role="banner"
 >
   <div
     className="successImageContainer"
@@ -14,5 +13,5 @@ exports[`SuccessPage Component SuccessPage Snapshot Test 1`] = `
       src="/assets/success-cloud.svg"
     />
   </div>
-</header>
+</div>
 `;
