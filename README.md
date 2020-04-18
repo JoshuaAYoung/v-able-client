@@ -39,10 +39,10 @@ This fully responsive app was built during my time in Thinkful's full-stack boot
 
 ## Getting Started
 
-Install dependencies `npm install`
-Start the application `npm start`
-Test the application `npm test`
-Build the application for production `npm run build`
+- Install dependencies `npm install`
+- Start the application `npm start`
+- Test the application `npm test`
+- Build the application for production `npm run build`
 
 ## Built With
 
