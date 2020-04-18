@@ -1,8 +1,10 @@
 <img src="http://joshyoung.net/v-able/assets/v-able-logo.svg" width="15%"> 
-# v &#8226; able server
+
+# v • able server
 
 ## Live App
-####[v•able Demo](v.able.joshyoung.net)
+#### [v•able Demo](v.able.joshyoung.net)
+<br />
 <img src="http://joshyoung.net/v-able/mobilescreenshots/landing-screenshot.png" width="20%">  <img src="http://joshyoung.net/v-able/mobilescreenshots/recruit-screenshot.png" width="20%"> <img src="http://joshyoung.net/v-able/mobilescreenshots/texteditor-screenshot.png" width="20%"> <img src="http://joshyoung.net/v-able/mobilescreenshots/oppboard-screenshot.png" width="20%"> <img src="http://joshyoung.net/v-able/mobilescreenshots/details-screenshot.png" width="20%">
 
 ## Description
@@ -42,9 +44,6 @@ Install dependencies `npm install`
 Start the application `npm start`
 Test the application `npm test`
 Build the application for production `npm run build`
-
-
-
 
 ## Built With
 
