@@ -2,12 +2,7 @@
 
 # v • able server
 
-<<<<<<< HEAD
 ## Live App: [v•able](v.able.joshyoung.net)
-=======
-## Live App
-### [v•able Demo](v.able.joshyoung.net)
->>>>>>> 84238dec03c7f14505d3bf84b0e70d8fd700e467
 
 <p float="left"><img src="http://joshyoung.net/v-able/mobilescreenshots/landing-screenshot.png" width="20%">  <img src="http://joshyoung.net/v-able/mobilescreenshots/recruit-screenshot.png" width="20%"> <img src="http://joshyoung.net/v-able/mobilescreenshots/oppboard-screenshot.png" width="20%"> <img src="http://joshyoung.net/v-able/mobilescreenshots/details-screenshot.png" width="20%"></p>
 
