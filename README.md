@@ -13,7 +13,7 @@ v•able is a platform for connecting experienced volunteers to non-profit organ
 ## Author's Notes
 This fully responsive app was built during my time in Thinkful's full-stack bootcamp. This project was built in approximately 4 weeks while I was working full time and taking care of twin toddlers. Talk about multi-tasking.
 
-##### Some notes on the build:
+#### Some notes on the build:
 - The app's design and CSS was scratch built - no templates, no bootstrap
 - The app utilizes JSON Web Tokens and bCrypt hashing for auth & auth. I know that from a security standpoint, this isn't a fool proof system. In terms of a learning experience, however, I couldn't have asked for better.
 - I implemented a number of features that are relatively 'sight unseen' to make the app more user friendly and to push my understanding of real world applications: 
