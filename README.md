@@ -27,7 +27,7 @@ This fully responsive app was built during my time in Thinkful's full-stack boot
 
 ## Features to come
 
-- A way for organizations users to see and edit their profiles and posted opportunities. 
+- A way for organization users to see and edit their profiles and posted opportunities. 
 - A way for volunteer users to see and edit their profiles and the jobs they've applied for.
 - A system for volunteers to save opportunities to a list of favorites.
 - A way for volunteer users to add a profile with resumes and a way for organizations to see a volunteer applicant's information.

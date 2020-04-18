@@ -69,7 +69,7 @@ export default class OpportunityBoardPage extends Component {
         <ScrollToTopOnMount />
         <div className="oppBoardBanner">
           <h1 className='pageHeader textCenter'>Opportunity Board.</h1>
-          <p className='pageInstructions boardInstructions'>Click an opportunity to see more details or enter a search above.</p>
+          <p className='pageInstructions boardInstructions'>Click an opportunity to see more details or enter a search below.</p>
           <form className='searchForm' onSubmit={this.handleSubmit} aria-label='opportunity search'>
             <input
               placeholder='Keyword or Location...'
