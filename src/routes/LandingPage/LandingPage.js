@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './LandingPage.css'
+import ScrollToTopOnMount from '../../utilities/ScrollToTopOnMount'
 
 export default class LandingPage extends Component {
-
-
   render() {
     return (
       <div className="landingMain">
+        <ScrollToTopOnMount />
         <div className="landingBanner">
           <div className='heroTextContainer'>
             <h1 className='pageHeader'>Experience as a Gift.</h1>

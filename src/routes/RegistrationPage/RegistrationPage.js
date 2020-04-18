@@ -4,6 +4,7 @@ import VolunteerRegistration from '../../components/RegistrationForms/VolunteerR
 import './RegistrationPage.css'
 import AuthApiService from '../../services/auth-api-service'
 import ErrorToast from '../../components/ErrorToast/ErrorToast'
+import ScrollToTopOnMount from '../../utilities/ScrollToTopOnMount'
 
 export default class RegistrationPage extends Component {
   state = {
@@ -136,6 +137,7 @@ export default class RegistrationPage extends Component {
     const { error } = this.state
     return (
       <div>
+        <ScrollToTopOnMount />
         <section className='registrationContainer'>
           <div className="registerBanner">
             <h1 className='pageHeader'>{this.state.header}</h1>

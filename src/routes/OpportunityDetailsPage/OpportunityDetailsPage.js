@@ -5,6 +5,7 @@ import VableContext from '../../context/VableContext'
 import './OpportunityDetailsPage.css'
 import ErrorToast from '../../components/ErrorToast/ErrorToast'
 import TokenService from '../../services/token-service'
+import ScrollToTopOnMount from '../../utilities/ScrollToTopOnMount'
 
 export default class OpportunityBoardPage extends Component {
   static contextType = VableContext;
@@ -34,6 +35,7 @@ export default class OpportunityBoardPage extends Component {
     const { error } = this.state
     return (
       <div className='opportunityDetails'>
+        <ScrollToTopOnMount />
         <div className="detailsBanner">
           <h1 className='pageHeader detailsHeader'>Opportunity Details.</h1>
           <img src='/assets/board-rocket.svg' alt='people working on a spaceship' className='detailsImage' />

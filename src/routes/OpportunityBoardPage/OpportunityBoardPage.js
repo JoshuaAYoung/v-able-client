@@ -5,6 +5,7 @@ import VableContext from '../../context/VableContext'
 import './OpportunityBoardPage.css'
 import ErrorBoundary from '../../ErrorBoundary'
 import ErrorToast from '../../components/ErrorToast/ErrorToast'
+import ScrollToTopOnMount from '../../utilities/ScrollToTopOnMount'
 
 export default class OpportunityBoardPage extends Component {
   static contextType = VableContext;
@@ -65,6 +66,7 @@ export default class OpportunityBoardPage extends Component {
     const { error } = this.state
     return (
       <div className='boardContainer'>
+        <ScrollToTopOnMount />
         <div className="oppBoardBanner">
           <h1 className='pageHeader textCenter'>Opportunity Board.</h1>
           <p className='pageInstructions boardInstructions'>Click an opportunity to see more details or enter a search above.</p>
