@@ -2,10 +2,73 @@
 
 exports[`NavBar Component NavBar Snapshot Test 1`] = `
 <div
-  className="navContainer"
+  className="menuContainer"
 >
   <div
-    className="navBar"
+    className="navMenu fadeMenuHidden"
+  >
+    <div
+      className="linkContainer"
+    >
+      <NavLink
+        className="navLink"
+        onClick={[Function]}
+        to="/"
+      >
+        Home
+      </NavLink>
+    </div>
+    <span
+      className="linkBullet"
+    >
+      •
+    </span>
+    <div
+      className="linkContainer"
+    >
+      <NavLink
+        className="navLink"
+        onClick={[Function]}
+        to="/login"
+      >
+        Log In
+      </NavLink>
+    </div>
+    <span
+      className="linkBullet"
+    >
+      •
+    </span>
+    <div
+      className="linkContainer"
+    >
+      <NavLink
+        className="navLink"
+        onClick={[Function]}
+        to="/register"
+      >
+        Sign Up
+      </NavLink>
+    </div>
+    <span
+      className="linkBullet"
+    >
+      •
+    </span>
+    <div
+      className="linkContainer"
+    >
+      <NavLink
+        className="navLink"
+        onClick={[Function]}
+        to="/opportunityboard"
+      >
+        Opportunity Board
+      </NavLink>
+    </div>
+  </div>
+  <div
+    className="navBarContainer"
   >
     <NavLink
       className="logoLink"
@@ -40,43 +103,6 @@ exports[`NavBar Component NavBar Snapshot Test 1`] = `
         <span />
         <span />
       </div>
-    </div>
-  </div>
-  <div
-    className="navMenu fadeMenuHidden"
-  >
-    <div
-      className="linkContainer"
-    >
-      <NavLink
-        className="navLink"
-        onClick={[Function]}
-        to="/login"
-      >
-        Log In.
-      </NavLink>
-    </div>
-    <div
-      className="linkContainer"
-    >
-      <NavLink
-        className="navLink"
-        onClick={[Function]}
-        to="/register"
-      >
-        Sign Up.
-      </NavLink>
-    </div>
-    <div
-      className="linkContainer"
-    >
-      <NavLink
-        className="navLink"
-        onClick={[Function]}
-        to="/opportunityboard"
-      >
-        Opportunity Board.
-      </NavLink>
     </div>
   </div>
 </div>

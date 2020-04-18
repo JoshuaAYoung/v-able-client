@@ -147,6 +147,17 @@ input[type=text], select, input {
   margin: .7rem 0 .7rem 1rem;
 }
 
+@media only screen and (min-width: 768px) {
+  .appMain {
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+
+  .inputContainer {
+    width: 100%
+  }
+}
+
 @media only screen and (min-width: 1024px) {
   .pageHeader {
     font-size: 4.8rem;
@@ -154,8 +165,5 @@ input[type=text], select, input {
   .appMain {
     padding-right: calc(49vw - 42rem);
     padding-left: calc(49vw - 42rem);
-  }
-  .inputContainer {
-    width: 100%;
   }
 }

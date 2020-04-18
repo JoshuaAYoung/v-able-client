@@ -5,7 +5,7 @@ exports[`OpportunityDetailsPage Component OpportunityDetailsPage Snapshot Test 1
   className="opportunityDetails"
 >
   <header
-    className="detailsBanner detailsBanner"
+    className="detailsBanner"
     role="banner"
   >
     <h1
@@ -19,18 +19,11 @@ exports[`OpportunityDetailsPage Component OpportunityDetailsPage Snapshot Test 1
       src="/assets/board-rocket.svg"
     />
     <p
-      className="pageInstructions"
+      className="pageInstructions detailsInstructions"
     >
-      Click 
-      <br />
-      volunteer to send a 
-      <br />
-      message to the organization.
+      Login as a volunteer  user to apply.
     </p>
   </header>
-  <div
-    role="alert"
-  />
   <OpportunityDetails />
 </div>
 `;

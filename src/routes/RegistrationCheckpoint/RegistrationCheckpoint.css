@@ -7,7 +7,7 @@
 }
 
 .userLinkContainer:first-child {
-  margin-right: 5rem;
+  margin-right: 2rem;
   margin-bottom: 4.5rem;
 }
 
@@ -25,31 +25,78 @@
 }
 
 .userTypeContainer {
-  margin: 4.5rem -2.5rem 3rem;
-  padding: 2rem 2.5rem 0;
+  margin: 4.5rem -4rem 3rem;
+  padding: 2rem 8rem 0 2.5rem;
   height: 20rem;
-  background-image: url("/assets/checkpoint-background.svg");
+  background-image: url("/assets/checkpoint-background.png");
   background-repeat: repeat;
   background-position: center;
   background-size: auto 20rem;
 }
 
+@media only screen and (min-width: 375px) {
+  .checkpointContainer {
+    padding-left: 2.5rem;
+  }
+  .userTypeContainer {
+    padding-left: 3.5rem;
+    margin-left: -5rem;
+    margin-right: -2.5rem;
+  }
+
+  .userLinkContainer:first-child {
+    margin-right: 5rem;
+    margin-bottom: 4.5rem;
+}
+}
+
+@media only screen and (min-width: 520px) {
+  .userTypeContainer {
+    padding-top: 7rem;
+    padding-right: 0;
+    padding-left: 5rem;
+  }
+
+  .checkpointBanner {
+    padding-left: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .checkpointBanner {
+    padding-left: 0;
+  }
+
+  .userTypeContainer {
+    margin-left: -6.5rem;
+    margin-right: -4rem;
+  }
+}
+
 @media only screen and (min-width: 1024px) {
+  .checkpointContainer {
+    padding-left: 0;
+  }
+
   .userTypeContainer {
     margin-right: calc(42rem - 49vw);
     margin-left: calc(42rem - 49vw);
     padding-left: calc(49vw - 27rem);
+    padding-right: calc(49vw - 40rem);
     padding-top: 5rem;
     margin-bottom: 7rem;
     margin-top: 6rem;
   }
+
   .userTypeLink {
     font-size: 4rem;
   }
+
   .userLinkContainer {
     margin-right: 1.5rem;
     padding-bottom: 2rem;
   }
+
   .checkpointBanner {
     padding-left: 15rem;
   }
@@ -57,6 +104,7 @@
     margin-right: 8rem;
     margin-left: 0;
   }
+
   .checkpointArrow {
     width: 2.5rem
   }

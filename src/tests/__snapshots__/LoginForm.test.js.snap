@@ -18,9 +18,6 @@ exports[`LoginForm Component LoginForm Snapshot Test 1`] = `
     </p>
   </header>
   <div
-    role="alert"
-  />
-  <div
     className="demoInstructions"
   >
     <p
@@ -49,7 +46,7 @@ exports[`LoginForm Component LoginForm Snapshot Test 1`] = `
     onSubmit={[Function]}
   >
     <div
-      className="inputContainer"
+      className="inputContainer tallerInput"
     >
       <input
         className="loginInput"
@@ -62,7 +59,7 @@ exports[`LoginForm Component LoginForm Snapshot Test 1`] = `
       />
     </div>
     <div
-      className="inputContainer"
+      className="inputContainer tallerInput"
     >
       <input
         className="loginInput"
@@ -98,87 +95,5 @@ exports[`LoginForm Component LoginForm Snapshot Test 1`] = `
        to create one.
     </p>
   </form>
-</div>
-`;
-
-exports[`NavBar Component NavBar Snapshot Test 1`] = `
-<div
-  className="navContainer"
->
-  <div
-    className="navBar"
-  >
-    <NavLink
-      className="logoLink"
-      onClick={[Function]}
-      to="/"
-    >
-      <img
-        alt="v-able logo"
-        className="mainLogo"
-        src="/assets/v-able-logo.svg"
-      />
-      <h1
-        className="navName"
-      >
-        v
-        <span
-          className="inlineBullet"
-        >
-          •
-        </span>
-        able
-      </h1>
-    </NavLink>
-    <div
-      className="hamburgerContainer"
-    >
-      <div
-        className="burgerButton falseBurger"
-        onClick={[Function]}
-      >
-        <span />
-        <span />
-        <span />
-      </div>
-    </div>
-  </div>
-  <div
-    className="navMenu fadeMenuHidden"
-  >
-    <div
-      className="linkContainer"
-    >
-      <NavLink
-        className="navLink"
-        onClick={[Function]}
-        to="/login"
-      >
-        Log In.
-      </NavLink>
-    </div>
-    <div
-      className="linkContainer"
-    >
-      <NavLink
-        className="navLink"
-        onClick={[Function]}
-        to="/register"
-      >
-        Sign Up.
-      </NavLink>
-    </div>
-    <div
-      className="linkContainer"
-    >
-      <NavLink
-        className="navLink"
-        onClick={[Function]}
-        to="/opportunityboard"
-      >
-        Opportunity Board.
-      </NavLink>
-    </div>
-  </div>
 </div>
 `;

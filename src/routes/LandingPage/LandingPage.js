@@ -10,7 +10,7 @@ export default class LandingPage extends Component {
         <header role="banner" className="landingBanner">
           <div className='heroTextContainer'>
             <h1 className='pageHeader'>Experience as a Gift.</h1>
-            <p className='pageInstructions'><span className='defaultMedium'>v<span className='inlineBullet'>&bull;</span>able</span> is a platform for connecting <span className='defaultMedium'><u>viable</u></span>, <span className='defaultMedium'><u>volunteerable</u></span>, <span className='defaultMedium'><u>very able</u></span> people to the causes that they find most <span className='defaultMedium'><u>valuable</u></span>.</p>
+            <p className='pageInstructions landingInstructions'><span className='defaultMedium'>v<span className='inlineBullet'>&bull;</span>able</span> is a platform for connecting <span className='defaultMedium'><u>viable</u></span>, <span className='defaultMedium'><u>volunteerable</u></span>, <span className='defaultMedium'><u>very able</u></span> people to the causes that they find most <span className='defaultMedium'><u>valuable</u></span>.</p>
           </div>
           <img src='/assets/landing-hero.svg' alt='people working on a spaceship' className='heroImage' />
         </header>
@@ -19,7 +19,7 @@ export default class LandingPage extends Component {
             <div className='actionDescriptionContainer'>
               <h2 className='subHeader'>Offer Your Expertise.</h2>
               <p>
-                Are you a volunteer who’s passionate about giving back? v<span className='inlineBullet'>&bull;</span>able makes it easy to find causes that inspire you. And by offering up your experience in addition to your time, you’re increasing the value of every single minute spent volunteering for your favorite non-profits organizations.
+                Are you a volunteer who’s passionate about giving back? v<span className='inlineBullet'>&bull;</span>able makes it easy to find causes that inspire you. And by offering up your experience in addition to your time, you’re increasing the value of every single minute spent volunteering for your favorite non-profit organizations.
             </p>
             </div>
             <div className='actionInstructionsVol'>

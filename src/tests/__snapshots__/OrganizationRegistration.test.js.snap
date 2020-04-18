@@ -72,10 +72,10 @@ exports[`OrganizationRegistration Component OrganizationRegistration Snapshot Te
       required={true}
       type="text"
     />
+    <ValidationError
+      message="Test Error"
+    />
   </div>
-  <ValidationError
-    message="Test Error"
-  />
   <div
     className="inputContainer"
   >

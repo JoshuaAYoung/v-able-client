@@ -11,9 +11,7 @@ exports[`OpportunityCard Component OpportunityCard Snapshot Test 1`] = `
     >
       test title
     </h3>
-    <p
-      className="orgTitle"
-    >
+    <p>
       test name
     </p>
     <p

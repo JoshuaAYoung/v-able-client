@@ -1,6 +1,6 @@
 .detailsHeader {
 margin-right: 25rem;
-margin-bottom: 3rem;
+margin-bottom: 2rem;
 }
 
 .detailsBanner {
@@ -80,7 +80,7 @@ margin-bottom: 3rem;
 
 @media only screen and (max-width: 360px) {
   .detailsInstructions {
-    margin: 0 15rem 0 0;
+    margin: 0 16rem 0 0;
   }
 
   .detailsImage {
@@ -88,36 +88,70 @@ margin-bottom: 3rem;
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 420px) {
   .detailsBanner {
-    margin-right: 20rem;
-    margin-left: 20rem;
-    margin-bottom: 5rem;
+    margin-right: 10%;
+    margin-left: 10%;
   }
-  
-  .detailsHeader {
-    margin-bottom: 4rem;
-    line-height: 6rem;
-  }
+}
 
-  .detailsImage {
-    width: 22rem;
-  }
 
-  .detailsInstructions {
-    margin-right: 26rem;
-  }
 
-  .detailsSection {
-    margin-right: 5rem;
-    margin-left: 5rem;
-  }
-
+@media only screen and (min-width: 575px) {
   .detailsContainer {
     border-top: .2rem solid #F4BD5B;
     border-bottom: .2rem solid #F4BD5B;
     margin-bottom: 7rem;
     padding-bottom: 0;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  
+  .detailsImage {
+    width: 22rem;
+  }
+  
+  .detailsBanner {
+    margin-right: 15%;
+    margin-left: 15%;
+    margin-bottom: 5rem;
+  }
+
+  .detailsInstructions {
+    margin-right: 28rem;
+  }
+
+  .detailsHeader {
+    margin-bottom: 2rem;
+    line-height: 6rem;
+    font-size: 4.8rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .detailsBanner {
+    margin-right: 20%;
+    margin-left: 20%;
+    margin-bottom: 5rem;
+  }
+  
+  .detailsInstructions {
+    margin-right: 26rem;
+  }
+
+  .detailsHeader {
+    margin-bottom: 4rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .detailsInstructions {
+    margin-right: 26rem;
+  }
+
+  .detailsContainer {
+    margin-left: 0;
+    margin-right: 0;
   }
   
   .descriptionContainer {

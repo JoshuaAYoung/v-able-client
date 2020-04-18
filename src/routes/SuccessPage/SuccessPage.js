@@ -6,7 +6,6 @@ export default class SuccessPage extends Component {
   static contextType = VableContext;
 
   state = {
-    message: '',
     redirectPath: ''
   }
 
@@ -47,7 +46,7 @@ export default class SuccessPage extends Component {
       return (
         <>
           <h1 className='pageHeader'>Congrats!</h1>
-          <p className='pageInstructions'>You've successfully registered an account.
+          <p className='pageInstructions successInstructions'>You've successfully registered an account.
           </p>
         </>
       )
@@ -56,7 +55,7 @@ export default class SuccessPage extends Component {
       return (
         <>
           <h1 className='pageHeader'>Congrats!</h1>
-          <p className='pageInstructions'>Your opportunity was submitted successfully.
+          <p className='pageInstructions successInstructions'>Your opportunity was submitted successfully.
           </p>
         </>
       )
@@ -65,7 +64,7 @@ export default class SuccessPage extends Component {
       return (
         <>
           <h1 className='pageHeader'>Login</h1>
-          <p className='pageInstructions'>You must be logged in as a volunteer user to apply.
+          <p className='pageInstructions successInstructions'>Log in as a volunteer user to apply.
           </p>
         </>
       )
@@ -74,7 +73,7 @@ export default class SuccessPage extends Component {
       return (
         <>
           <h1 className='pageHeader'>Congrats!</h1>
-          <p className='pageInstructions'>You've successfully logged in as <span className='defaultMedium'>{this.userMessage()}</span> user.
+          <p className='pageInstructions successInstructions'>You've successfully logged in as <span className='defaultMedium'>{this.userMessage()}</span> user.
           </p>
         </>
       )
@@ -83,7 +82,7 @@ export default class SuccessPage extends Component {
       return (
         <>
           <h1 className='pageHeader'>Congrats!</h1>
-          <p className='pageInstructions'>You've successfully logged out.
+          <p className='pageInstructions successInstructions'>You've successfully logged out.
           </p>
         </>
       )

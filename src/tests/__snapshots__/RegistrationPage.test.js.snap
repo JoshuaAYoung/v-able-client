@@ -2,7 +2,9 @@
 
 exports[`RegistrationPage Component RegistrationPage Snapshot Test 1`] = `
 <div>
-  <section>
+  <section
+    className="registrationContainer"
+  >
     <header
       className="registerBanner"
       role="banner"
@@ -18,9 +20,6 @@ exports[`RegistrationPage Component RegistrationPage Snapshot Test 1`] = `
         All fields are required unless noted otherwise.
       </p>
     </header>
-    <div
-      role="alert"
-    />
     <form
       className="signupForm"
       onSubmit={[Function]}

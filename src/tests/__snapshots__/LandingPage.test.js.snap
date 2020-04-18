@@ -8,59 +8,63 @@ exports[`LandingPage Component LandingPage Snapshot Test 1`] = `
     className="landingBanner"
     role="banner"
   >
-    <h1
-      className="pageHeader"
+    <div
+      className="heroTextContainer"
     >
-      Experience as a Gift.
-    </h1>
-    <p
-      className="pageInstructions"
-    >
-      <span
-        className="defaultMedium"
+      <h1
+        className="pageHeader"
       >
-        v
+        Experience as a Gift.
+      </h1>
+      <p
+        className="pageInstructions landingInstructions"
+      >
         <span
-          className="inlineBullet"
+          className="defaultMedium"
         >
-          •
+          v
+          <span
+            className="inlineBullet"
+          >
+            •
+          </span>
+          able
         </span>
-        able
-      </span>
-       is a platform for connecting 
-      <span
-        className="defaultMedium"
-      >
-        <u>
-          viable
-        </u>
-      </span>
-      , 
-      <span
-        className="defaultMedium"
-      >
-        <u>
-          volunteerable
-        </u>
-      </span>
-      , 
-      <span
-        className="defaultMedium"
-      >
-        <u>
-          very able
-        </u>
-      </span>
-       people to the causes that they find most 
-      <span
-        className="defaultMedium"
-      >
-        <u>
-          valuable
-        </u>
-      </span>
-      .
-    </p>
+         is a platform for connecting 
+        <span
+          className="defaultMedium"
+        >
+          <u>
+            viable
+          </u>
+        </span>
+        , 
+        <span
+          className="defaultMedium"
+        >
+          <u>
+            volunteerable
+          </u>
+        </span>
+        , 
+        <span
+          className="defaultMedium"
+        >
+          <u>
+            very able
+          </u>
+        </span>
+         people to the causes that they find most 
+        <span
+          className="defaultMedium"
+        >
+          <u>
+            valuable
+          </u>
+        </span>
+        .
+      </p>
+    </div>
     <img
       alt="people working on a spaceship"
       className="heroImage"
@@ -70,76 +74,92 @@ exports[`LandingPage Component LandingPage Snapshot Test 1`] = `
   <section
     className="callToAction textCenter"
   >
-    <h2
-      className="subHeader"
-    >
-      Ok. Let's get Giving.
-    </h2>
     <div
-      className="actionContainer"
+      className="actionVolContainer"
     >
-      <a
-        className="actionLink"
-        href="/register"
+      <div
+        className="actionDescriptionContainer"
       >
-        <img
-          alt="a screen showing secure login"
-          className="actionImage"
-          src="/assets/login.svg"
-        />
-        <h4
-          className="smallHeader"
+        <h2
+          className="subHeader"
         >
-          Register
-        </h4>
+          Offer Your Expertise.
+        </h2>
         <p>
-          Whether you’re a volunteer or looking for one, you can click here to create an account. Once you’re registered, you'll be redirected to the login page.
+          Are you a volunteer who’s passionate about giving back? v
+          <span
+            className="inlineBullet"
+          >
+            •
+          </span>
+          able makes it easy to find causes that inspire you. And by offering up your experience in addition to your time, you’re increasing the value of every single minute spent volunteering for your favorite non-profit organizations.
         </p>
-      </a>
-    </div>
-    <div
-      className="actionContainer"
-    >
-      <a
-        className="actionLink"
-        href="/register"
-      >
-        <img
-          alt="a woman connecting with people"
-          className="actionImage"
-          src="/assets/recruit.svg"
-        />
-        <h4
-          className="smallHeader"
-        >
-          Recruit
-        </h4>
-        <p>
-          Looking to find skilled help? Once you have an organization account you can click here to login, then head over to the opportunity post page to recruit volunteers.
-        </p>
-      </a>
-    </div>
-    <div
-      className="actionContainer"
-    >
-      <a
-        className="actionLink"
-        href="/opportunityboard"
+      </div>
+      <div
+        className="actionInstructionsVol"
       >
         <img
           alt="a computer with an application"
           className="actionImage"
           src="/assets/volunteer.svg"
         />
-        <h4
-          className="smallHeader"
+        <p
+          className="actionInstructions"
+        >
+          Click on the “Volunteer” button to be directed to the opportunity board page to see available volunteer positions and to apply.
+        </p>
+        <button
+          className="actionButton"
+          onClick={[Function]}
         >
           Volunteer
-        </h4>
+        </button>
+      </div>
+    </div>
+    <div
+      className="actionSeparator"
+    />
+    <div
+      className="actionOrgContainer"
+    >
+      <div
+        className="actionDescriptionContainer"
+      >
+        <h2
+          className="subHeader"
+        >
+          Find skilled help.
+        </h2>
         <p>
-          Have a special skill that you’d like to contribute? Click here to head over to the opportunity board page to find ways in which you can give back. Anyone can browse available opportunities, but you'll need to be logged in as a volunteer to apply.
+          As a non-profit organization, we know how hard it can be to find passionate volunteers. Looking for a passionate volunteer who can also build you a website or design you a new office? For that you need an extensive network of skilled individuals like v
+          <span
+            className="inlineBullet"
+          >
+            •
+          </span>
+          able.
         </p>
-      </a>
+      </div>
+      <div
+        className="actionInstructionsOrg"
+      >
+        <img
+          alt="a woman connecting with people"
+          className="actionImage"
+          src="/assets/recruit.svg"
+        />
+        <p
+          className="actionInstructions"
+        >
+          Once you’ve logged in as an organization, click the “Recruit Help” button to post  an opportunity and find volunteers.
+        </p>
+        <button
+          className="actionButton"
+          onClick={[Function]}
+        >
+          Recruit Help
+        </button>
+      </div>
     </div>
   </section>
   <section
@@ -157,88 +177,108 @@ exports[`LandingPage Component LandingPage Snapshot Test 1`] = `
     <div
       className="featuresContainer"
     >
-      <h2
-        className="subHeader noTopMargin"
-      >
-        Now this is
-        <br />
-        feature-rich volunteering.
-      </h2>
       <div
-        className="features"
+        className="featureSubHeader"
       >
+        <h2
+          className="subHeader featuresSubHeader"
+        >
+          Now this is
+          <br />
+          feature-rich volunteering.
+        </h2>
         <img
           alt="hands up holding hearts"
           className="handsImage"
           src="/assets/hands-hearts.svg"
         />
-        <img
-          alt="checkmark"
-          className="featureCheck"
-          src="/assets/checkmark.svg"
-        />
+      </div>
+      <div
+        className="features"
+      >
         <div
-          className="feature"
+          className="featureContainer"
         >
-          <h4
-            className="smallHeader"
+          <img
+            alt="checkmark"
+            className="featureCheck"
+            src="/assets/checkmark.svg"
+          />
+          <div
+            className="feature"
           >
-            Opportunity Board
-          </h4>
-          <p>
-            All opportunities in one place. Search by location or keyword.
-          </p>
+            <h4
+              className="smallHeader"
+            >
+              Opportunity Board
+            </h4>
+            <p>
+              All opportunities in one place. Search by location or keyword.
+            </p>
+          </div>
         </div>
-        <img
-          alt="checkmark"
-          className="featureCheck"
-          src="/assets/checkmark.svg"
-        />
         <div
-          className="feature"
+          className="featureContainer"
         >
-          <h4
-            className="smallHeader"
+          <img
+            alt="checkmark"
+            className="featureCheck"
+            src="/assets/checkmark.svg"
+          />
+          <div
+            className="feature"
           >
-            Registration and Login
-          </h4>
-          <p>
-            Real authentication using advanced security techniques.
-          </p>
+            <h4
+              className="smallHeader"
+            >
+              Registration and Login
+            </h4>
+            <p>
+              Real authentication using advanced security techniques.
+            </p>
+          </div>
         </div>
-        <img
-          alt="checkmark"
-          className="featureCheck"
-          src="/assets/checkmark.svg"
-        />
         <div
-          className="feature"
+          className="featureContainer"
         >
-          <h4
-            className="smallHeader"
+          <img
+            alt="checkmark"
+            className="featureCheck"
+            src="/assets/checkmark.svg"
+          />
+          <div
+            className="feature"
           >
-            Opportunity Post
-          </h4>
-          <p>
-            Create an opportunity using the embedded rich text editor.
-          </p>
+            <h4
+              className="smallHeader"
+            >
+              Opportunity Post
+            </h4>
+            <p>
+              Create an opportunity using the embedded rich text editor.
+            </p>
+          </div>
         </div>
-        <img
-          alt="checkmark"
-          className="featureCheck"
-          src="/assets/checkmark.svg"
-        />
         <div
-          className="feature"
+          className="featureContainer"
         >
-          <h4
-            className="smallHeader"
+          <img
+            alt="checkmark"
+            className="featureCheck"
+            src="/assets/checkmark.svg"
+          />
+          <div
+            className="feature"
           >
-            Volunteer Button
-          </h4>
-          <p>
-            Opens the default email client with pre-populated info.
-          </p>
+            <h4
+              className="smallHeader"
+            >
+              Volunteer Button
+            </h4>
+            <p>
+              Opens the default email client with pre-populated info.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -255,33 +295,19 @@ exports[`LandingPage Component LandingPage Snapshot Test 1`] = `
   <section
     className="testimonials textCenter"
   >
+    <img
+      alt="megaphone"
+      className="megaphoneImage"
+      src="/assets/megaphone.svg"
+    />
+    <h2
+      className="subHeader inline"
+    >
+      Testimonials.
+    </h2>
     <div
       className="testimonialsContainer"
     >
-      <img
-        alt="megaphone"
-        className="megaphoneImage"
-        src="/assets/megaphone.svg"
-      />
-      <h2
-        className="subHeader inline"
-      >
-        Testimonials.
-      </h2>
-      <div
-        className="testimonial"
-      >
-        <p
-          className="testimonialQuote"
-        >
-          “We’ve used v•able for years for all of our volunteer needs. It’s a perfect fit for us.”
-        </p>
-        <p
-          className="testimonialAuthor defaultMedium"
-        >
-          - Sadie Giver (Hands For America)
-        </p>
-      </div>
       <div
         className="testimonial"
       >
@@ -299,7 +325,35 @@ exports[`LandingPage Component LandingPage Snapshot Test 1`] = `
         <p
           className="testimonialAuthor defaultMedium"
         >
-          - Rachael Goodman (Food All Around)
+          - Rachael Goodman (Dance for Humanity)
+        </p>
+      </div>
+      <div
+        className="testimonial"
+      >
+        <p
+          className="testimonialQuote"
+        >
+          “We made a lot of calls trying to find a qualified volunteer veterinarian with no luck. A friend told us to check out v•able and the rest is history. Dr. Lolanda has been with us for 4 years now and we couldn’t be happier.”
+        </p>
+        <p
+          className="testimonialAuthor defaultMedium"
+        >
+          - Broderick Hart (All Cats Foundation)
+        </p>
+      </div>
+      <div
+        className="testimonial"
+      >
+        <p
+          className="testimonialQuote"
+        >
+          “We’ve used v•able for years for all of our volunteer needs. It’s a perfect fit for us.”
+        </p>
+        <p
+          className="testimonialAuthor defaultMedium"
+        >
+          - Sadie Giver (The Bunny Sanctuary)
         </p>
       </div>
       <div
@@ -319,7 +373,7 @@ exports[`LandingPage Component LandingPage Snapshot Test 1`] = `
         <p
           className="testimonialAuthor defaultMedium"
         >
-          - Miranda Sainthouse (All Cats Foundation)
+          - Miranda Sainthouse (Burn Awareness Institute)
         </p>
       </div>
     </div>

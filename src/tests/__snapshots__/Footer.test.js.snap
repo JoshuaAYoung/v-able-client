@@ -45,7 +45,7 @@ exports[`Footer Component Footer Snapshot Test 1`] = `
       </a>
       <a
         className="linkedinLink"
-        href="https://www.linkedin.com/in/joshua-young-250a7512"
+        href="https://www.linkedin.com/in/joshua-young-aia-250a7512"
         rel="noopener noreferrer"
         target="_blank"
       >
@@ -73,105 +73,4 @@ exports[`Footer Component Footer Snapshot Test 1`] = `
     </p>
   </div>
 </footer>
-`;
-
-exports[`LoginForm Component LoginForm Snapshot Test 1`] = `
-<div>
-  <header
-    className="loginBanner"
-    role="banner"
-  >
-    <h1
-      className="pageHeader"
-    >
-      Login.
-    </h1>
-    <p
-      className="pageInstructions"
-    >
-      Enter your email and password or choose a demo user.
-    </p>
-  </header>
-  <div
-    role="alert"
-  />
-  <div
-    className="demoInstructions"
-  >
-    <p
-      className="defaultMedium"
-    >
-      Volunteer Demo:
-    </p>
-    <p
-      className="demoLogin"
-    >
-      email@email.com / Joshs4pp
-    </p>
-    <p
-      className="defaultMedium"
-    >
-      Organization Demo:
-    </p>
-    <p
-      className="demoLogin"
-    >
-      j@young.net / P4ssword
-    </p>
-  </div>
-  <form
-    className="loginForm"
-    onSubmit={[Function]}
-  >
-    <div
-      className="inputContainer"
-    >
-      <input
-        className="loginInput"
-        id="email"
-        name="email"
-        onChange={[Function]}
-        placeholder="Email"
-        required={true}
-        type="text"
-      />
-    </div>
-    <div
-      className="inputContainer"
-    >
-      <input
-        className="loginInput"
-        id="password"
-        name="password"
-        onChange={[Function]}
-        placeholder="Password"
-        required={true}
-        type="password"
-      />
-      <button
-        className="showLoginButton"
-        onClick={[Function]}
-        type="button"
-      />
-    </div>
-    <button
-      className="loginButton"
-      type="submit"
-    >
-      Sign In
-    </button>
-    <p
-      className="registerInstructions"
-    >
-      Need an account? 
-      <Link
-        className="registerLink"
-        to="/register"
-      >
-        Click Here
-      </Link>
-       to create one.
-    </p>
-  </form>
-</div>
 `;
