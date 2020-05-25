@@ -1,7 +1,7 @@
 <img src="http://joshyoung.net/v-able/assets/v-able-logo.svg" width="15%"> 
 
 # v • able server
-
+[![CodeFactor](https://www.codefactor.io/repository/github/joshuaayoung/v-able-client/badge)](https://www.codefactor.io/repository/github/joshuaayoung/v-able-client)
 ## Live App: [v•able](http://v.able.joshyoung.net)
 ## Server Repo: [v•able server](https://github.com/JoshuaAYoung/v-able-server)
 
