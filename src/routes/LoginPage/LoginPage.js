@@ -1,15 +1,13 @@
-import React, { Component } from 'react';
-import LoginForm from '../../components/LoginForm/LoginForm'
-import './LoginPage.css'
-import ScrollToTopOnMount from '../../utilities/ScrollToTopOnMount'
+import React from 'react';
+import LoginForm from '../../components/LoginForm/LoginForm';
+import './LoginPage.css';
+import ScrollToTopOnMount from '../../utilities/ScrollToTopOnMount';
 
-export default class LoginPage extends Component {
-  render() {
-    return (
-      <div className="loginFormContainer">
-        <ScrollToTopOnMount />
-        <LoginForm history={this.props.history} />
-      </div>
-    );
-  }
+export default function LoginPage(props) {
+  return (
+    <div className="loginFormContainer">
+      <ScrollToTopOnMount />
+      <LoginForm history={props.history} />
+    </div>
+  );
 }

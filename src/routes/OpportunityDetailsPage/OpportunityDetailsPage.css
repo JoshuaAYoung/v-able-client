@@ -1,12 +1,11 @@
 .detailsHeader {
-margin-right: 25rem;
-margin-bottom: 2rem;
+  margin-right: 25rem;
+  margin-bottom: 2rem;
 }
 
 .detailsBanner {
   position: relative;
   height: 24rem;
-
 }
 
 .detailsInstructions {
@@ -14,7 +13,7 @@ margin-bottom: 2rem;
 }
 
 .orgTitle {
-  font-weight: 600
+  font-weight: 600;
 }
 
 .detailsImage {
@@ -25,7 +24,7 @@ margin-bottom: 2rem;
 }
 
 .detailsContainer {
-  background-color: #FFF0B0;
+  background-color: #fff0b0;
   padding: 2rem 2rem 1rem;
   width: auto;
   font-size: 1.4rem;
@@ -58,26 +57,25 @@ margin-bottom: 2rem;
   display: inline-block;
   height: 3.6rem;
   cursor: pointer;
-  background-color: #F0667B;
+  background-color: #f0667b;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 1.7rem;
   cursor: pointer;
   border-radius: 1.4rem;
-  padding: .7rem 2rem 0;
+  padding: 0.7rem 2rem 0;
   transition: all 0.3s;
   margin-bottom: 2rem;
 }
 
 .volunteerButton:hover {
   color: black;
-  background-color: #F4BD5B;
+  background-color: #f4bd5b;
 }
 
 .opportunityDescription {
   margin-top: 1rem;
 }
-
 
 @media only screen and (max-width: 360px) {
   .detailsInstructions {
@@ -85,7 +83,7 @@ margin-bottom: 2rem;
   }
 
   .detailsImage {
-    right: 0
+    right: 0;
   }
 }
 
@@ -96,22 +94,20 @@ margin-bottom: 2rem;
   }
 }
 
-
-
 @media only screen and (min-width: 575px) {
   .detailsContainer {
-    border-top: .2rem solid #F4BD5B;
-    border-bottom: .2rem solid #F4BD5B;
+    border-top: 0.2rem solid #f4bd5b;
+    border-bottom: 0.2rem solid #f4bd5b;
     margin-bottom: 7rem;
     padding-bottom: 0;
     margin-left: 10%;
     margin-right: 10%;
   }
-  
+
   .detailsImage {
     width: 22rem;
   }
-  
+
   .detailsBanner {
     margin-right: 15%;
     margin-left: 15%;
@@ -135,7 +131,7 @@ margin-bottom: 2rem;
     margin-left: 20%;
     margin-bottom: 5rem;
   }
-  
+
   .detailsInstructions {
     margin-right: 26rem;
   }
@@ -154,10 +150,9 @@ margin-bottom: 2rem;
     margin-left: 0;
     margin-right: 0;
   }
-  
+
   .descriptionContainer {
     margin-left: 0;
     margin-right: 0;
   }
 }
-

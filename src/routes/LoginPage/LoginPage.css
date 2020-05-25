@@ -4,11 +4,11 @@
   font-size: 1.7rem;
   padding-left: 1rem;
   color: black;
-  padding-bottom: .2em;
-  }
+  padding-bottom: 0.2em;
+}
 
 .tallerInput {
-margin-bottom: .6rem;
+  margin-bottom: 0.6rem;
 }
 
 .registerLink {
@@ -30,7 +30,8 @@ margin-bottom: .6rem;
   margin-bottom: 1rem;
 }
 
-.showLoginButton, .hideLoginButton {
+.showLoginButton,
+.hideLoginButton {
   width: 4rem;
   height: 3.5rem;
   border-radius: 0;
@@ -43,15 +44,16 @@ margin-bottom: .6rem;
 }
 
 .showLoginButton {
-  background-image: url("/assets/show-password.svg");
+  background-image: url('/assets/show-password.svg');
 }
 
 .hideLoginButton {
-  background-image: url("/assets/hide-password.svg");
+  background-image: url('/assets/hide-password.svg');
 }
 
-.hideLoginButton:hover, .showLoginButton:hover {
-  background-color: #F0667B
+.hideLoginButton:hover,
+.showLoginButton:hover {
+  background-color: #f0667b;
 }
 
 .loginButton {

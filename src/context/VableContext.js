@@ -1,69 +1,66 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 const VableContext = React.createContext({
   opportunities: [],
   opportunity: {},
   userType: '',
   user: {},
-  addOpportunity: () => { },
-  setOpportunity: () => { },
-  clearOpportunity: () => { },
-  setOppsBoard: () => { },
-  setUserType: () => { },
-  setUser: () => { },
-  setDescription: () => { }
-})
+  addOpportunity: () => {},
+  setOpportunity: () => {},
+  clearOpportunity: () => {},
+  setOppsBoard: () => {},
+  setUserType: () => {},
+  setUser: () => {},
+  setDescription: () => {},
+});
 
-export default VableContext
+export default VableContext;
 
 export class VableProvider extends Component {
   state = {
     opportunities: [],
     opportunity: {},
     userType: localStorage.userType || '',
-    user: {}
+    user: {},
   };
 
-  addOpportunity = opportunity => {
-    this.setOppsBoard([
-      ...this.state.opportunities,
-      opportunity
-    ])
-  }
+  addOpportunity = (opportunity) => {
+    this.setOppsBoard([...this.state.opportunities, opportunity]);
+  };
 
-  setOpportunity = opportunity => {
-    this.setState({ opportunity })
-  }
+  setOpportunity = (opportunity) => {
+    this.setState({ opportunity });
+  };
 
   clearOpportunity = () => {
-    this.setOpportunity([])
-  }
+    this.setOpportunity([]);
+  };
 
-  setOppsBoard = opportunities => {
+  setOppsBoard = (opportunities) => {
     this.setState({
-      opportunities
-    })
-  }
+      opportunities,
+    });
+  };
 
-  setUserType = userType => {
+  setUserType = (userType) => {
     this.setState({
-      userType
-    })
-  }
+      userType,
+    });
+  };
 
-  setUser = user => {
+  setUser = (user) => {
     this.setState({
-      user
-    })
-  }
+      user,
+    });
+  };
 
-  setDescription = description => {
+  setDescription = (description) => {
     this.setState({
       user: {
-        description
-      }
-    })
-  }
+        description,
+      },
+    });
+  };
 
   render() {
     const value = {
@@ -77,12 +74,12 @@ export class VableProvider extends Component {
       setOppsBoard: this.setOppsBoard,
       setUserType: this.setUserType,
       setUser: this.setUser,
-      setDescription: this.setUser
-    }
+      setDescription: this.setUser,
+    };
     return (
       <VableContext.Provider value={value}>
         {this.props.children}
       </VableContext.Provider>
-    )
+    );
   }
 }

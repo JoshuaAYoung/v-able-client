@@ -2,8 +2,8 @@
   margin: -8rem -2.5rem 5rem;
   padding: 8rem 2.5rem 0;
   height: 50rem;
-  border-bottom: .1rem solid black;
-  background: #FFF0B0;
+  border-bottom: 0.1rem solid black;
+  background: #fff0b0;
   position: relative;
 }
 
@@ -73,7 +73,7 @@
 
 .featuresContainer {
   padding: 0 2.5rem;
-  background: #FFF0B0;
+  background: #fff0b0;
 }
 
 .handsImage {
@@ -119,10 +119,9 @@
   margin-top: 2rem;
 }
 
-
 .featuresSubHeader {
   margin-top: 0;
-  }
+}
 
 @media only screen and (max-width: 360px) {
   .heroImage {
@@ -131,13 +130,13 @@
 
   .handsImage {
     width: 12rem;
-    right: calc(50% - 6rem); 
+    right: calc(50% - 6rem);
   }
 
   .featuresSubHeader {
-  margin-top: 3rem;
-  text-align: center;
-  margin-bottom: 4rem;
+    margin-top: 3rem;
+    text-align: center;
+    margin-bottom: 4rem;
   }
 }
 
@@ -153,7 +152,7 @@
     left: 4rem;
     position: absolute;
   }
-  
+
   .landingInstructions {
     width: calc(92vw - 33rem);
   }
@@ -162,7 +161,6 @@
     width: 30rem;
     right: 4rem;
   }
-  
 }
 
 @media only screen and (min-width: 768px) {
@@ -175,7 +173,7 @@
     left: 6rem;
     position: absolute;
   }
-  
+
   .landingInstructions {
     width: calc(92vw - 42rem);
   }
@@ -186,42 +184,42 @@
     margin-left: -4rem;
     margin-right: -4rem;
   }
-  
+
   .actionVolContainer {
     text-align: right;
     margin-right: 6rem;
     flex-basis: 100%;
   }
-  
+
   .actionOrgContainer {
     text-align: left;
     margin-left: 6rem;
     flex-basis: 100%;
   }
-  
+
   .actionSeparator {
-    border-right: .2rem solid #F4BD5B;
+    border-right: 0.2rem solid #f4bd5b;
     height: 50rem;
-    align-self: center
+    align-self: center;
   }
-  
+
   .callToAction {
     display: flex;
     margin-bottom: 4rem;
   }
-  
+
   .actionInstructionsVol {
     padding-left: 5rem;
   }
-  
+
   .actionInstructionsOrg {
     padding-right: 5rem;
   }
-  
+
   .actionInstructions {
     padding: 0;
   }
-  
+
   .handsImage {
     top: -7rem;
   }
@@ -230,31 +228,31 @@
     margin-left: -4rem;
     margin-right: -4rem;
   }
-  
+
   .features {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding-bottom: 3rem;
   }
-  
+
   .featuresContainer {
     padding-right: calc(49vw - 33rem);
     padding-left: calc(49vw - 33rem);
   }
-  
+
   .featureContainer {
-    width: 31rem
+    width: 31rem;
   }
-  
+
   .feature {
     width: 26rem;
   }
-  
+
   .featureCheck {
     vertical-align: 3rem;
   }
-  
+
   .featureSubHeader {
     margin-left: calc(50% - 16rem);
     margin-bottom: 6rem;
@@ -262,23 +260,22 @@
     padding-top: 3rem;
     padding-left: 0;
   }
-  
+
   .testimonialsContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
   }
-  
+
   .testimonial {
     width: 46%;
   }
-  
+
   .testimonials {
     margin: 4rem 3rem 0;
   }
 }
-
 
 @media only screen and (min-width: 1024px) {
   .heroImage {
@@ -290,19 +287,19 @@
     margin-left: calc(42rem - 49vw);
     margin-right: calc(42rem - 49vw);
   }
-  
-  .landingBanner{
+
+  .landingBanner {
     margin-right: calc(42rem - 49vw);
     margin-left: calc(42rem - 49vw);
     margin-top: -8rem;
     padding-top: 19rem;
   }
-  
+
   .heroTextContainer {
     left: calc(49vw - 42rem);
     width: 42rem;
   }
-  
+
   .landingInstructions {
     width: 42rem;
   }

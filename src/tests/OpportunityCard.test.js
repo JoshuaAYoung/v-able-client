@@ -1,9 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
-import { shallow } from 'enzyme'
-import toJson from 'enzyme-to-json'
-import OpportunityCard from '../components/OpportunityCard/OpportunityCard'
-import VableContext from '../context/VableContext'
+import ReactDOM from 'react-dom';
+import { shallow } from 'enzyme';
+import toJson from 'enzyme-to-json';
+import OpportunityCard from '../components/OpportunityCard/OpportunityCard';
+import VableContext from '../context/VableContext';
 
 describe('OpportunityCard Component', () => {
   const props = {
@@ -15,19 +15,19 @@ describe('OpportunityCard Component', () => {
       name: 'test name',
       city: 'test city',
       state: 'test state',
-      zipcode: 90210
-    }
-  }
+      zipcode: 90210,
+    },
+  };
 
   it('OpportunityCard Smoke Test', () => {
-    const div = document.createElement('div')
+    const div = document.createElement('div');
 
-    ReactDOM.render(<OpportunityCard {...props} />, div)
-    ReactDOM.unmountComponentAtNode(div)
-  })
+    ReactDOM.render(<OpportunityCard {...props} />, div);
+    ReactDOM.unmountComponentAtNode(div);
+  });
 
   it('OpportunityCard Snapshot Test', () => {
-    const wrapper = shallow(<OpportunityCard {...props} />)
-    expect(toJson(wrapper)).toMatchSnapshot()
-  })
-})
+    const wrapper = shallow(<OpportunityCard {...props} />);
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+});

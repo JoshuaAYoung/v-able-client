@@ -5,15 +5,15 @@
   left: 50%;
   margin: 0 auto;
   width: auto;
-  border: .1rem solid gray;
-  box-shadow: 1rem 1rem .5rem grey;
+  border: 0.1rem solid gray;
+  box-shadow: 1rem 1rem 0.5rem grey;
   background-image: url('/assets/alert.svg');
   background-repeat: no-repeat;
   background-size: 6rem;
   background-position: left;
   padding-left: 6rem;
   z-index: 998;
-  background-color: #F0667B;
+  background-color: #f0667b;
   font-size: 1.4rem;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
@@ -37,12 +37,12 @@
   height: 100%;
   font-size: 2.5rem;
   background-color: white;
-  z-index: 0
+  z-index: 0;
 }
 
 .toastButton:hover {
   background-color: white;
-  color: #F0667B;
+  color: #f0667b;
 }
 
 .hiddenToast {

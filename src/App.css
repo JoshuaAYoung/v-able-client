@@ -21,10 +21,11 @@ ul {
   margin: 0 auto;
 }
 
-button, input[type="submit"] {
+button,
+input[type='submit'] {
   height: 3.6rem;
   cursor: pointer;
-  background-color: #F4BD5B;
+  background-color: #f4bd5b;
   border: none;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
@@ -33,43 +34,46 @@ button, input[type="submit"] {
   cursor: pointer;
   outline: none;
   border-radius: 1.4rem;
-  padding: 0 2rem .2rem;
-  transition: all 0.1s ease-out .1s;
-  -webkit-transition: all 0.1s ease-out .1s;
-  -moz-transition: all 0.1s ease-out .1s;
-  -o-transition: all 0.1s ease-out .1s;
+  padding: 0 2rem 0.2rem;
+  transition: all 0.1s ease-out 0.1s;
+  -webkit-transition: all 0.1s ease-out 0.1s;
+  -moz-transition: all 0.1s ease-out 0.1s;
+  -o-transition: all 0.1s ease-out 0.1s;
 }
 
 button:hover {
   color: white;
-  background-color: #F0667B;
+  background-color: #f0667b;
 }
 
-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: black;
   opacity: 1; /* Firefox */
   font-weight: 300;
 }
 
-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
   color: black;
   font-weight: 300;
 }
 
-input::-ms-input-placeholder { /* Microsoft Edge */
+input::-ms-input-placeholder {
+  /* Microsoft Edge */
   color: black;
   font-weight: 300;
 }
 
-button:disabled, button[disabled] {
+button:disabled,
+button[disabled] {
   color: black;
 }
-
 
 .smallHeader {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  margin: -.5rem 0 .5rem;
+  margin: -0.5rem 0 0.5rem;
 }
 
 .pageHeader {
@@ -88,7 +92,7 @@ button:disabled, button[disabled] {
   color: black;
   margin-bottom: 3rem;
   line-height: 1.3em;
-} 
+}
 
 .pageInstructions {
   padding: 0;
@@ -100,8 +104,8 @@ button:disabled, button[disabled] {
 }
 
 .inlineBullet {
-  margin: 0 .1em;
-  vertical-align: -.08em;
+  margin: 0 0.1em;
+  vertical-align: -0.08em;
 }
 
 .defaultMedium {
@@ -116,21 +120,23 @@ button:disabled, button[disabled] {
   display: inline-block;
 }
 
-input[type=text], select, input {   
+input[type='text'],
+select,
+input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border:none;
-  border-right: .3rem solid #F4BD5B;
-  background-image:none;
-  background-color: #FFF0B0;
+  border: none;
+  border-right: 0.3rem solid #f4bd5b;
+  background-image: none;
+  background-color: #fff0b0;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  padding-top: .2em;
+  padding-top: 0.2em;
   font-family: 'Montserrat', sans-serif;
 }
-  
+
 .inputContainer {
   width: calc(100% - 4rem);
   height: auto;
@@ -144,7 +150,7 @@ input[type=text], select, input {
   color: red;
   font-size: 1.3rem;
   font-weight: 500;
-  margin: .7rem 0 .7rem 1rem;
+  margin: 0.7rem 0 0.7rem 1rem;
 }
 
 @media only screen and (min-width: 768px) {
@@ -154,7 +160,7 @@ input[type=text], select, input {
   }
 
   .inputContainer {
-    width: 100%
+    width: 100%;
   }
 }
 

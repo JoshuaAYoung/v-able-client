@@ -4,6 +4,7 @@ exports[`OpportunityPostPage Component OpportunityPostPage Snapshot Test 1`] = `
 <div
   className="opportunityPostContainer"
 >
+  <ScrollToTopOnMount />
   <div
     className="oppPostBanner"
   >

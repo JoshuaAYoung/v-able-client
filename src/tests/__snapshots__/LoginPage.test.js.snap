@@ -4,6 +4,7 @@ exports[`LoginPage Component LoginPage Snapshot Test 1`] = `
 <div
   className="loginFormContainer"
 >
+  <ScrollToTopOnMount />
   <LoginForm />
 </div>
 `;

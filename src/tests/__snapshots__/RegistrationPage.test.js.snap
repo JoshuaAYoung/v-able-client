@@ -2,6 +2,7 @@
 
 exports[`RegistrationPage Component RegistrationPage Snapshot Test 1`] = `
 <div>
+  <ScrollToTopOnMount />
   <section
     className="registrationContainer"
   >

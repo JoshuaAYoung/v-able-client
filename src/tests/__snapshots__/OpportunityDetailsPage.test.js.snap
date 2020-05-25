@@ -4,6 +4,7 @@ exports[`OpportunityDetailsPage Component OpportunityDetailsPage Snapshot Test 1
 <div
   className="opportunityDetails"
 >
+  <ScrollToTopOnMount />
   <div
     className="detailsBanner"
   >

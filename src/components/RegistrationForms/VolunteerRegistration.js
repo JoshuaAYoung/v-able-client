@@ -1,16 +1,14 @@
-import React, { Component } from 'react';
-import UserFields from './UserFields'
+import React from 'react';
+import UserFields from './UserFields';
 
-export default class VolunteerRegistration extends Component {
-  render() {
-    return (
-      <div>
-        <UserFields
-          addTempValidation={this.props.addTempValidation}
-          addTempValue={this.props.addTempValue}
-          errorProps={this.props.errorProps}
-        />
-      </div >
-    )
-  }
+export default function VolunteerRegistration(props) {
+  return (
+    <div>
+      <UserFields
+        addTempValidation={props.addTempValidation}
+        addTempValue={props.addTempValue}
+        errorProps={props.errorProps}
+      />
+    </div>
+  );
 }

@@ -4,6 +4,7 @@ exports[`LandingPage Component LandingPage Snapshot Test 1`] = `
 <div
   className="landingMain"
 >
+  <ScrollToTopOnMount />
   <div
     className="landingBanner"
   >
@@ -29,7 +30,9 @@ exports[`LandingPage Component LandingPage Snapshot Test 1`] = `
           </span>
           able
         </span>
-         is a platform for connecting 
+         
+        is a platform for connecting
+         
         <span
           className="defaultMedium"
         >
@@ -37,7 +40,8 @@ exports[`LandingPage Component LandingPage Snapshot Test 1`] = `
             viable
           </u>
         </span>
-        , 
+        ,
+         
         <span
           className="defaultMedium"
         >
@@ -45,7 +49,8 @@ exports[`LandingPage Component LandingPage Snapshot Test 1`] = `
             volunteerable
           </u>
         </span>
-        , 
+        ,
+         
         <span
           className="defaultMedium"
         >
@@ -53,7 +58,9 @@ exports[`LandingPage Component LandingPage Snapshot Test 1`] = `
             very able
           </u>
         </span>
-         people to the causes that they find most 
+         
+        people to the causes that they find most
+         
         <span
           className="defaultMedium"
         >
@@ -110,6 +117,7 @@ exports[`LandingPage Component LandingPage Snapshot Test 1`] = `
         <button
           className="actionButton"
           onClick={[Function]}
+          type="button"
         >
           Volunteer
         </button>
@@ -150,11 +158,12 @@ exports[`LandingPage Component LandingPage Snapshot Test 1`] = `
         <p
           className="actionInstructions"
         >
-          Once you’ve logged in as an organization, click the “Recruit Help” button to post  an opportunity and find volunteers.
+          Once you’ve logged in as an organization, click the “Recruit Help” button to post an opportunity and find volunteers.
         </p>
         <button
           className="actionButton"
           onClick={[Function]}
+          type="button"
         >
           Recruit Help
         </button>
@@ -313,7 +322,7 @@ exports[`LandingPage Component LandingPage Snapshot Test 1`] = `
         <p
           className="testimonialQuote"
         >
-          “We had no problem getting volunteers to pack trucks. But when we needed an architect, we had a difficult time finding one that would work pro-bono.  That is, until we discovered v
+          “We had no problem getting volunteers to pack trucks. But when we needed an architect, we had a difficult time finding one that would work pro-bono. That is, until we discovered v
           <span
             className="inlineBullet"
           >

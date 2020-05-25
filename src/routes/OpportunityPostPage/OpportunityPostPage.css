@@ -3,23 +3,22 @@
   height: 3rem;
   font-size: 1.7rem;
   padding-left: 1rem;
-  }
-  
-  .signupForm {
-    margin-top: 6rem;
-    margin-bottom: 6rem;
-  }
-  
-  .postButton {
-    margin-top: 2rem;
-    margin-right: auto;
-  }
+}
 
-  .editorContainer {
-    margin: 2rem -2.5rem 0;
-  }
+.signupForm {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
 
-  
+.postButton {
+  margin-top: 2rem;
+  margin-right: auto;
+}
+
+.editorContainer {
+  margin: 2rem -2.5rem 0;
+}
+
 .postButtonContainer {
   text-align: center;
 }
@@ -31,7 +30,6 @@
   position: absolute;
   z-index: 1;
   right: 0;
-
 }
 
 .postSelect {
@@ -42,7 +40,7 @@
   background-position: right;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
-  padding-top: .1em;
+  padding-top: 0.1em;
 }
 
 @media only screen and (min-width: 520px) {
@@ -50,7 +48,7 @@
     padding-left: 10%;
     padding-right: 10%;
   }
-  
+
   .oppPostBanner {
     padding-left: 10%;
     padding-right: 10%;
@@ -76,5 +74,3 @@
     padding-left: 15rem;
   }
 }
-
-  

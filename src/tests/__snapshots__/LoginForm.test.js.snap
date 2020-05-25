@@ -87,14 +87,16 @@ exports[`LoginForm Component LoginForm Snapshot Test 1`] = `
     <p
       className="registerInstructions"
     >
-      Need an account? 
+      Need an account?
+       
       <Link
         className="registerLink"
         to="/register"
       >
         Click Here
       </Link>
-       to create one.
+       
+      to create one.
     </p>
   </form>
 </div>

@@ -45,7 +45,7 @@ exports[`Footer Component Footer Snapshot Test 1`] = `
       </a>
       <a
         className="linkedinLink"
-        href="https://www.linkedin.com/in/joshua-young-aia-250a7512"
+        href="https://www.linkedin.com/in/joshuaalexanderyoung"
         rel="noopener noreferrer"
         target="_blank"
       >

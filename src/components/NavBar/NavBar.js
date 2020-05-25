@@ -2,154 +2,172 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import VableContext from '../../context/VableContext';
 import './NavBar.css';
-import TokenService from '../../services/token-service'
-import './Hamburger.css'
+import TokenService from '../../services/token-service';
+import './Hamburger.css';
 
 export default class NavBar extends Component {
   static contextType = VableContext;
 
   state = {
     showBurger: false,
-    animationClass: 'Hidden'
-  }
+    animationClass: 'Hidden',
+  };
 
   hideHamburger = () => {
     this.setState({
       showBurger: false,
-      animationClass: 'Hidden'
+      animationClass: 'Hidden',
     });
-  }
+  };
 
   toggleHamburger = () => {
-    if (this.state.showBurger === false || this.state.animationClass === 'Hidden') {
+    if (
+      this.state.showBurger === false ||
+      this.state.animationClass === 'Hidden'
+    ) {
       this.setState({
         showBurger: true,
-        animationClass: 'Down'
-      })
-    }
-    else {
+        animationClass: 'Down',
+      });
+    } else {
       this.setState({
         showBurger: false,
-        animationClass: 'Up'
-      })
+        animationClass: 'Up',
+      });
     }
-  }
+  };
 
   handleLogout = () => {
     this.hideHamburger();
     TokenService.clearAuthToken();
     this.context.setUserType('');
     this.context.setUser({});
-  }
+  };
 
-  linkSeparator = (<span className='linkBullet'>&bull;</span>)
+  linkSeparator = (<span className="linkBullet">&bull;</span>);
 
   userLinks = () => {
     if (this.context.userType === 'volunteer' && TokenService.hasAuthToken()) {
       return (
         <>
-          <div className='linkContainer'>
+          <div className="linkContainer">
             <NavLink
-              to='/success/logout'
+              to="/success/logout"
               onClick={() => this.handleLogout()}
-              className='navLink'>
+              className="navLink"
+            >
               Log Out
-          </NavLink>
+            </NavLink>
           </div>
         </>
-      )
-    }
-    else if (this.context.userType === 'organization' && TokenService.hasAuthToken()) {
+      );
+    } else if (
+      this.context.userType === 'organization' &&
+      TokenService.hasAuthToken()
+    ) {
       return (
         <>
-          <div className='linkContainer'>
+          <div className="linkContainer">
             <NavLink
-              to='/opportunitypost'
-              className='navLink'
-              onClick={() => this.hideHamburger()}>
+              to="/opportunitypost"
+              className="navLink"
+              onClick={() => this.hideHamburger()}
+            >
               Recruit Help
-          </NavLink>
+            </NavLink>
           </div>
           {this.linkSeparator}
-          <div className='linkContainer'>
+          <div className="linkContainer">
             <NavLink
-              to='/success/logout'
-              className='navLink'
-              onClick={() => this.handleLogout()}>
+              to="/success/logout"
+              className="navLink"
+              onClick={() => this.handleLogout()}
+            >
               Log Out
-          </NavLink>
+            </NavLink>
           </div>
         </>
-      )
-    }
-    else {
+      );
+    } else {
       return (
         <>
-          <div className='linkContainer'>
+          <div className="linkContainer">
             <NavLink
-              to='/login'
-              className='navLink'
-              onClick={() => this.hideHamburger()}>
+              to="/login"
+              className="navLink"
+              onClick={() => this.hideHamburger()}
+            >
               Log In
-          </NavLink>
+            </NavLink>
           </div>
           {this.linkSeparator}
-          <div className='linkContainer'>
+          <div className="linkContainer">
             <NavLink
-              to='/register'
-              className='navLink'
-              onClick={() => this.hideHamburger()}>
+              to="/register"
+              className="navLink"
+              onClick={() => this.hideHamburger()}
+            >
               Sign Up
-          </NavLink>
+            </NavLink>
           </div>
         </>
-      )
+      );
     }
-  }
+  };
 
   render() {
     return (
-      <div className='menuContainer'>
+      <div className="menuContainer">
         <div className={`navMenu fadeMenu${this.state.animationClass}`}>
-          <div className='linkContainer'>
+          <div className="linkContainer">
             <NavLink
-              to='/'
-              className='navLink'
-              onClick={() => this.hideHamburger()}>
+              to="/"
+              className="navLink"
+              onClick={() => this.hideHamburger()}
+            >
               Home
-          </NavLink>
+            </NavLink>
           </div>
           {this.linkSeparator}
           {this.userLinks()}
           {this.linkSeparator}
-          <div className='linkContainer'>
+          <div className="linkContainer">
             <NavLink
-              to='/opportunityboard'
-              className='navLink'
-              onClick={() => this.hideHamburger()}>
+              to="/opportunityboard"
+              className="navLink"
+              onClick={() => this.hideHamburger()}
+            >
               Opportunity Board
-          </NavLink>
+            </NavLink>
           </div>
         </div>
-        <div className='navBarContainer'>
+        <div className="navBarContainer">
           <NavLink
-            to='/'
-            className='logoLink'
-            onClick={() => this.hideHamburger()}>
-            <img src='/assets/v-able-logo.svg' alt='v-able logo' className='mainLogo' />
-            <h1 className='navName'>v<span className='inlineBullet'>&bull;</span>able</h1>
+            to="/"
+            className="logoLink"
+            onClick={() => this.hideHamburger()}
+          >
+            <img
+              src="/assets/v-able-logo.svg"
+              alt="v-able logo"
+              className="mainLogo"
+            />
+            <h1 className="navName">
+              v<span className="inlineBullet">&bull;</span>able
+            </h1>
           </NavLink>
-          <div className='hamburgerContainer'>
+          <div className="hamburgerContainer">
             <div
               className={`burgerButton ${this.state.showBurger}Burger`}
-              onClick={() => this.toggleHamburger()}>
+              onClick={() => this.toggleHamburger()}
+            >
               <span></span>
               <span></span>
               <span></span>
             </div>
           </div>
         </div>
-      </div >
+      </div>
     );
   }
 }

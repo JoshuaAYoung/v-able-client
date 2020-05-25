@@ -1,12 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
-import { shallow } from 'enzyme'
-import toJson from 'enzyme-to-json'
-import OpportunityDetails from '../components/OpportunityDetails/OpportunityDetails'
-import VableContext from '../context/VableContext'
+import ReactDOM from 'react-dom';
+import { shallow } from 'enzyme';
+import toJson from 'enzyme-to-json';
+import OpportunityDetails from '../components/OpportunityDetails/OpportunityDetails';
+import VableContext from '../context/VableContext';
 
 describe('OpportunityDetails Component', () => {
-
   const opportunity = {
     title: 'test title',
     description: 'test description',
@@ -25,25 +24,27 @@ describe('OpportunityDetails Component', () => {
     state: 'test state',
     zipcode: 90210,
     phone: 'test phone',
-    website: 'test website'
-  }
+    website: 'test website',
+  };
 
   it('OpportunityDetails Smoke Test', () => {
-    const div = document.createElement('div')
+    const div = document.createElement('div');
 
     ReactDOM.render(
       <VableContext.Provider value={{ opportunity }}>
         <OpportunityDetails />
-      </VableContext.Provider>, div)
-    ReactDOM.unmountComponentAtNode(div)
-  })
+      </VableContext.Provider>,
+      div
+    );
+    ReactDOM.unmountComponentAtNode(div);
+  });
 
   it('OpportunityDetails Snapshot Test', () => {
     const wrapper = shallow(
       <VableContext.Provider value={{ opportunity }}>
         <OpportunityDetails />
       </VableContext.Provider>
-    )
-    expect(toJson(wrapper)).toMatchSnapshot()
-  })
-})
+    );
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+});

@@ -4,7 +4,8 @@ export default {
   editorCssClass: 'textEditor',
   height: 400,
   theme: 'vable',
-  placeholder: "<span style='font-size: 18px;'><strong>Opportunity Description</strong></span><br><br><strong>Give potential volunteers more information about the position.</strong><br><br>What's expected? Who will they report to? Will they be working with other volunteers or is the work performed solo?<br><br>Format your text however you'd like. Add a heading. Insert a list of tasks. Add your organization's logo. Maybe add a link to your organization's about page. Anything that you think might be helpful to <u>catch the eye</u> of a potential volunteer!",
+  placeholder:
+    "<span style='font-size: 18px;'><strong>Opportunity Description</strong></span><br><br><strong>Give potential volunteers more information about the position.</strong><br><br>What's expected? Who will they report to? Will they be working with other volunteers or is the work performed solo?<br><br>Format your text however you'd like. Add a heading. Insert a list of tasks. Add your organization's logo. Maybe add a link to your organization's about page. Anything that you think might be helpful to <u>catch the eye</u> of a potential volunteer!",
   buttons: [
     'source',
     'fullsize',
@@ -33,9 +34,9 @@ export default {
     'undo',
     'redo',
     '|',
-    'hr'
+    'hr',
   ],
-  //window size < 940 px
+  // window size < 940 px
   buttonsMD: [
     'source',
     'fullsize',
@@ -60,9 +61,9 @@ export default {
     'redo',
     '|',
     'hr',
-    'dots'
+    'dots',
   ],
-  //window size < 740px
+  // window size < 740px
   buttonsSM: [
     'source',
     'fullsize',
@@ -84,9 +85,9 @@ export default {
     'undo',
     'redo',
     '|',
-    'dots'
+    'dots',
   ],
-  //window size < 440px
+  // window size < 440px
   buttonsXS: [
     // 'source',
     'bold',
@@ -101,7 +102,6 @@ export default {
     'undo',
     'redo',
     '|',
-    'dots'
-  ]
-
-}
+    'dots',
+  ],
+};
