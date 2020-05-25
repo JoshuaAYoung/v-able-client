@@ -83,6 +83,22 @@
   margin-bottom: 2rem;
 }
 
+.nothingFound {
+  font-size: 3rem;
+  font-weight: 200;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.nothingLink {
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: black;
+  text-align: center;
+  display: block;
+}
+
 @media only screen and (min-width: 575px) {
   .oppList {
     padding: 0 8%;

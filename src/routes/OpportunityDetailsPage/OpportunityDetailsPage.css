@@ -77,6 +77,27 @@
   margin-top: 1rem;
 }
 
+.loadingTitle {
+  font-size: 4rem;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 50vh;
+}
+
+.loadingOpportunity {
+  text-align: center;
+}
+
+.spinnerContainer {
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.6);
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+}
+
 @media only screen and (max-width: 360px) {
   .detailsInstructions {
     margin: 0 16rem 0 0;

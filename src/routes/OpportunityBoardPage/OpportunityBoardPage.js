@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 import OpportunityCard from '../../components/OpportunityCard/OpportunityCard';
 import OppApiService from '../../services/opp-api-service';
 import VableContext from '../../context/VableContext';
@@ -6,6 +7,7 @@ import './OpportunityBoardPage.css';
 import ErrorBoundary from '../../ErrorBoundary';
 import ErrorToast from '../../components/ErrorToast/ErrorToast';
 import ScrollToTopOnMount from '../../utilities/ScrollToTopOnMount';
+import Spinner from 'react-spinkit';
 
 export default class OpportunityBoardPage extends Component {
   static contextType = VableContext;
@@ -13,6 +15,7 @@ export default class OpportunityBoardPage extends Component {
   state = {
     error: null,
     tempSearchValue: '',
+    isLoading: false,
   };
 
   addTempSearch = (tempSearchValue) => {
@@ -27,6 +30,7 @@ export default class OpportunityBoardPage extends Component {
   };
 
   getOpportunities = (searchTerm) => {
+    this.setState({ isLoading: true });
     OppApiService.getOpps(searchTerm)
       .then(this.setState({ error: null }))
       .then((data) => {
@@ -34,9 +38,11 @@ export default class OpportunityBoardPage extends Component {
           this.setState({ error: 'No opportunities could be found.' });
         }
         this.context.setOppsBoard(data);
+        this.setState({ isLoading: false });
       })
       .catch((res) => {
         this.setState({ error: res.error });
+        this.setState({ isLoading: false });
       });
   };
 
@@ -93,7 +99,27 @@ export default class OpportunityBoardPage extends Component {
           </form>
         </div>
         {error && <ErrorToast errorMessage={error} />}
-        {this.renderOpportunities()}
+        {this.context.opportunities.length === 0 ? (
+          <>
+            <h2 className="nothingFound">No Opportunities found</h2>
+            <NavLink to="/opportunitypost" className="nothingLink">
+              Click here to create one.
+            </NavLink>
+          </>
+        ) : null}
+        {this.state.isLoading ? (
+          <div className="spinnerContainer">
+            <h2 className="loadingTitle">Loading</h2>
+            <Spinner
+              fadeIn="none"
+              name="ball-beat"
+              color="black"
+              className="loadingOpportunity"
+            />
+          </div>
+        ) : (
+          this.renderOpportunities()
+        )}
       </div>
     );
   }

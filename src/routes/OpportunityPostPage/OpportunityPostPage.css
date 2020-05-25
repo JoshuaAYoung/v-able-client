@@ -43,6 +43,16 @@
   padding-top: 0.1em;
 }
 
+.loadingPost {
+  width: 5.9rem;
+  margin-top: 0.2rem;
+}
+
+.loadingPost > div {
+  width: 1rem;
+  height: 1rem;
+}
+
 @media only screen and (min-width: 520px) {
   .postInputs {
     padding-left: 10%;

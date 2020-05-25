@@ -5,6 +5,7 @@ import OppApiService from '../../services/opp-api-service';
 import ValidationError from '../../utilities/ValidationError';
 import TextEditor from '../TextEditor/TextEditor';
 import ErrorToast from '../ErrorToast/ErrorToast';
+import Spinner from 'react-spinkit';
 
 export default class OpportunityPostForm extends Component {
   static contextType = VableContext;
@@ -21,6 +22,7 @@ export default class OpportunityPostForm extends Component {
     licenseTempValue: '',
     remoteTempValue: 'No',
     editorState: null,
+    isLoading: false,
   };
 
   addTempValue = (field, input) => {
@@ -52,6 +54,7 @@ export default class OpportunityPostForm extends Component {
 
   handleSubmit = (ev) => {
     ev.preventDefault();
+    this.setState({ isLoading: true });
     const {
       titleTempValue,
       contactTempValue,
@@ -81,6 +84,7 @@ export default class OpportunityPostForm extends Component {
       .then((res) => this.props.history.push('/success/oppboard'))
       .catch((res) => {
         this.setState({ error: res.error });
+        this.setState({ isLoading: false });
       });
   };
 
@@ -243,7 +247,16 @@ export default class OpportunityPostForm extends Component {
               className="postButton"
               disabled={this.generateError()}
             >
-              Post
+              {this.state.isLoading ? (
+                <Spinner
+                  fadeIn="none"
+                  name="ball-beat"
+                  color="black"
+                  className="loadingPost"
+                />
+              ) : (
+                'Post'
+              )}
             </button>
           </div>
         </form>

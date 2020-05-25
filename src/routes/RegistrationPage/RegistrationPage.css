@@ -41,6 +41,16 @@
   margin-top: 1rem;
 }
 
+.loadingRegistration {
+  width: 5.9rem;
+  margin-top: 0.2rem;
+}
+
+.loadingRegistration > div {
+  width: 1rem;
+  height: 1rem;
+}
+
 @media only screen and (min-width: 520px) {
   .registrationContainer {
     padding: 0 10%;

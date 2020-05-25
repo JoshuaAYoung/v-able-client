@@ -6,11 +6,12 @@ import './OpportunityDetailsPage.css';
 import ErrorToast from '../../components/ErrorToast/ErrorToast';
 import TokenService from '../../services/token-service';
 import ScrollToTopOnMount from '../../utilities/ScrollToTopOnMount';
+import Spinner from 'react-spinkit';
 
 export default class OpportunityBoardPage extends Component {
   static contextType = VableContext;
 
-  state = { error: null };
+  state = { error: null, isLoading: true };
 
   renderInstructions = () => {
     if (this.context.userType === 'volunteer' && TokenService.hasAuthToken()) {
@@ -29,12 +30,15 @@ export default class OpportunityBoardPage extends Component {
   };
 
   componentDidMount() {
+    this.setState({ isLoading: true });
     const { oppId } = this.props.match.params;
     this.setState({ error: null });
     OppApiService.getOppById(oppId)
       .then(this.context.setOpportunity)
+      .then(this.setState({ isLoading: false }))
       .catch((res) => {
         this.setState({ error: res.error });
+        this.setState({ isLoading: false });
       });
   }
 
@@ -53,7 +57,19 @@ export default class OpportunityBoardPage extends Component {
           {this.renderInstructions()}
         </div>
         {error && <ErrorToast errorMessage={error} />}
-        <OpportunityDetails history={this.props.history} />
+        {this.state.isLoading ? (
+          <div className="spinnerContainer">
+            <h2 className="loadingTitle">Loading</h2>
+            <Spinner
+              fadeIn="none"
+              name="ball-beat"
+              color="black"
+              className="loadingOpportunity"
+            />
+          </div>
+        ) : (
+          <OpportunityDetails history={this.props.history} />
+        )}
       </div>
     );
   }

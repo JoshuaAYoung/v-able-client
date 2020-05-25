@@ -5,6 +5,7 @@ import './RegistrationPage.css';
 import AuthApiService from '../../services/auth-api-service';
 import ErrorToast from '../../components/ErrorToast/ErrorToast';
 import ScrollToTopOnMount from '../../utilities/ScrollToTopOnMount';
+import Spinner from 'react-spinkit';
 
 export default class RegistrationPage extends Component {
   state = {
@@ -21,6 +22,7 @@ export default class RegistrationPage extends Component {
     zipcodeTempValue: { value: '', touched: false },
     phoneTempValue: '',
     websiteTempValue: '',
+    isLoading: false,
   };
 
   addTempValue = (field, input) => {
@@ -40,6 +42,7 @@ export default class RegistrationPage extends Component {
 
   handleSubmit = (ev) => {
     ev.preventDefault();
+    this.setState({ isLoading: true });
     let allFields;
     const userType = this.props.match.params.user;
     const userFields = {
@@ -70,6 +73,7 @@ export default class RegistrationPage extends Component {
       })
       .catch((res) => {
         this.setState({ error: res.error });
+        this.setState({ isLoading: false });
       });
   };
 
@@ -168,12 +172,22 @@ export default class RegistrationPage extends Component {
           {error && <ErrorToast errorMessage={error} />}
           <form className="signupForm" onSubmit={(ev) => this.handleSubmit(ev)}>
             {this.formRender()}
+
             <button
               type="submit"
               className="registerButton"
               disabled={Object.keys(this.generateError()).length}
             >
-              Sign Up
+              {this.state.isLoading ? (
+                <Spinner
+                  fadeIn="none"
+                  name="ball-beat"
+                  color="black"
+                  className="loadingRegistration"
+                />
+              ) : (
+                'Sign Up'
+              )}
             </button>
           </form>
         </section>
