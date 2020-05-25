@@ -18,12 +18,12 @@ This fully responsive app was built during my time in Thinkful's full-stack boot
 - The app's design and CSS was scratch built - no templates, no bootstrap
 - The app utilizes JSON Web Tokens and bCrypt hashing for auth & auth. I know that from a security standpoint, this isn't a fool proof system. In terms of a learning experience, however, I couldn't have asked for better.
 - I implemented a number of features that are relatively 'sight unseen' to make the app more user friendly and to push my understanding of real world applications: 
-  - Error "toast" notifications for server errors
-  - Regex validation on zipcode, email and password inputs
-  - Intuitive redirects with a dynamic "success" page to keep things user friendly
-  - Authorization dynamically affects the app depending on whether the user is logged in and, once logged in, the type of user.
+  - Error "toast" notifications for server errors.
+  - Regex validation on zipcode, email and password inputs.
+  - Intuitive redirects with a dynamic "success" page to keep the user informed.
+  - Authorization dynamically affects the app depending on whether the user is logged in as well as the type of user.
   - A 404 page notifies a user when the path is invalid.
-  - A hamburger on mobile devices helps declutter the nav bar.
+  - A hamburger button on mobile devices helps declutter the nav bar.
     
 
 ## Features to come
@@ -78,7 +78,7 @@ This project is licensed under the MIT License
 
 ## Acknowledgments
 
-* [Daniel Eden](https://daneden.github.io/animate.css/) - for some really clean and amazing css animations used for the hamburger menu.
+* [Daniel Eden](https://daneden.github.io/animate.css/) - for some really clean and amazing css animations used for the navigation menu.
 
 * [Jessie Couch](https://codepen.io/designcouch/pen/Atyop) - who's hamburger button animation saved me a lot of work reinventing the 'x' shaped wheel.
 
