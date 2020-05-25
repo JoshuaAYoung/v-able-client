@@ -12,7 +12,7 @@
 v•able is a platform for connecting experienced volunteers to non-profit organizations that have a specific need for skilled labor or professional services and are having a hard time finding them on the open market. 
 
 ## Author's Notes
-This fully responsive app was built during my time in Thinkful's full-stack bootcamp. This project was built in approximately 4 weeks while I was working full time and parenting twin toddlers. Talk about multi-tasking.
+This fully responsive app was built during my time in Thinkful's full-stack bootcamp. This solo project was built in approximately 4 weeks while I was working full time and parenting twin toddlers. Talk about multi-tasking.
 
 #### Some notes on the build:
 - The app's design and CSS was scratch built - no templates, no bootstrap
