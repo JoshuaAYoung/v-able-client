@@ -30,7 +30,7 @@ export default class VolunteerButton extends Component {
       return (
         <div className="volunteerButton">
           <a href="/success/redirect" className="volunteerLink">
-            Login to Volunteer!
+            Log in to Volunteer!
           </a>
         </div>
       );

@@ -51,6 +51,16 @@ export default class OpportunityBoardPage extends Component {
   }
 
   renderOpportunities() {
+    if (this.context.opportunities.length === 0) {
+      return (
+        <>
+          <h2 className="nothingFound">No Opportunities found</h2>
+          <NavLink to="/opportunitypost" className="nothingLink">
+            Click here to create one.
+          </NavLink>
+        </>
+      );
+    }
     return (
       <ul className="oppList">
         {this.context.opportunities.map((opportunity) => (
@@ -99,14 +109,6 @@ export default class OpportunityBoardPage extends Component {
           </form>
         </div>
         {error && <ErrorToast errorMessage={error} />}
-        {this.context.opportunities.length === 0 ? (
-          <>
-            <h2 className="nothingFound">No Opportunities found</h2>
-            <NavLink to="/opportunitypost" className="nothingLink">
-              Click here to create one.
-            </NavLink>
-          </>
-        ) : null}
         {this.state.isLoading ? (
           <div className="spinnerContainer">
             <h2 className="loadingTitle">Loading</h2>

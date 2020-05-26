@@ -23,7 +23,7 @@ export default class OpportunityBoardPage extends Component {
     } else {
       return (
         <p className="pageInstructions detailsInstructions">
-          Login as a volunteer user to apply.
+          Log in as a volunteer user to apply.
         </p>
       );
     }
