@@ -8,7 +8,7 @@
 
 [![CodeFactor](https://www.codefactor.io/repository/github/joshuaayoung/v-able-client/badge)](https://www.codefactor.io/repository/github/joshuaayoung/v-able-client)
 
-<p float="left"><img src="http://vable.dev/assets/MobileScreenshots/landing-screenshot.png" width="20%">  <img src="http://vable.dev/assets/MobileScreenshotsrecruit-screenshot.png" width="20%"> <img src="http://vable.dev/assets/MobileScreenshots/oppboard-screenshot.png" width="20%"> <img src="http://vable.dev/assets/MobileScreenshots/details-screenshot.png" width="20%"></p>
+<p float="left"><img src="http://vable.dev/assets/MobileScreenshots/landing-screenshot.png" width="20%">  <img src="http://vable.dev/assets/MobileScreenshots/recruit-screenshot.png" width="20%"> <img src="http://vable.dev/assets/MobileScreenshots/oppboard-screenshot.png" width="20%"> <img src="http://vable.dev/assets/MobileScreenshots/details-screenshot.png" width="20%"></p>
 
 ## Description
 
