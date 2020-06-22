@@ -84,5 +84,3 @@ This project is licensed under the MIT License
 - [Daniel Eden](https://daneden.github.io/animate.css/) - for some really clean and amazing css animations used for the navigation menu.
 
 - [Jessie Couch](https://codepen.io/designcouch/pen/Atyop) - who's hamburger button animation saved me a lot of work reinventing the 'x' shaped wheel.
-
-* [Jessie Couch](https://codepen.io/designcouch/pen/Atyop) - who's hamburger button animation saved me a lot of work reinventing the 'x' shaped wheel.
