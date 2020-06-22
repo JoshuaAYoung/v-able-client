@@ -1,6 +1,6 @@
 <img src="http://vable.dev/assets/v-able-logo.svg" width="15%">
 
-# v • able server
+# v • able client
 
 ## Live App: [v•able](https://vable.dev)
 
