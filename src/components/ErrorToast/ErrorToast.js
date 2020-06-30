@@ -6,6 +6,7 @@ export default class ErrorToast extends Component {
     errorClass: '',
   };
 
+  // errorClass sets CSS display to none
   handleClose = () => {
     this.setState({
       errorClass: 'hiddenToast',

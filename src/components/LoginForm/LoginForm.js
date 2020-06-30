@@ -120,7 +120,7 @@ export default class LoginForm extends Component {
                 fadeIn="none"
                 name="ball-beat"
                 color="black"
-                className="loadingAnimation"
+                className="loadingLogin"
               />
             ) : (
               'Sign In'
