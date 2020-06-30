@@ -1,6 +1,6 @@
 <img src="http://vable.dev/assets/v-able-logo.svg" width="15%">
 
-# v • able server
+# v • able client
 
 ## Live App: [v•able](https://vable.dev)
 
@@ -8,7 +8,7 @@
 
 [![CodeFactor](https://www.codefactor.io/repository/github/joshuaayoung/v-able-client/badge)](https://www.codefactor.io/repository/github/joshuaayoung/v-able-client)
 
-<p float="left"><img src="http://vable.dev/assets/mobilescreenshots/landing-screenshot.png" width="20%">  <img src="http://vable.dev/assets/mobilescreenshots/recruit-screenshot.png" width="20%"> <img src="http://vable.dev/assets/mobilescreenshots/oppboard-screenshot.png" width="20%"> <img src="http://vable.dev/assets/mobilescreenshots/details-screenshot.png" width="20%"></p>
+<p float="left"><img src="http://vable.dev/assets/MobileScreenshots/landing-screenshot.png" width="20%">  <img src="http://vable.dev/assets/MobileScreenshots/recruit-screenshot.png" width="20%"> <img src="http://vable.dev/assets/MobileScreenshots/oppboard-screenshot.png" width="20%"> <img src="http://vable.dev/assets/MobileScreenshots/details-screenshot.png" width="20%"></p>
 
 ## Description
 
@@ -84,5 +84,3 @@ This project is licensed under the MIT License
 - [Daniel Eden](https://daneden.github.io/animate.css/) - for some really clean and amazing css animations used for the navigation menu.
 
 - [Jessie Couch](https://codepen.io/designcouch/pen/Atyop) - who's hamburger button animation saved me a lot of work reinventing the 'x' shaped wheel.
-
-* [Jessie Couch](https://codepen.io/designcouch/pen/Atyop) - who's hamburger button animation saved me a lot of work reinventing the 'x' shaped wheel.
