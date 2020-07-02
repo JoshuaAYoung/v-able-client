@@ -18,7 +18,7 @@ export default class LoginForm extends Component {
     showHide: 'show',
     isLoading: false,
   };
-
+  // toggles the input type from password to text
   toggleShowPassword = () => {
     if (this.state.showPassword === 'password') {
       this.setState({
