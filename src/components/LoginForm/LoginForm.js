@@ -9,6 +9,7 @@ import Spinner from 'react-spinkit';
 export default class LoginForm extends Component {
   static contextType = VableContext;
 
+  // temp values for controlled form components
   state = {
     error: null,
     emailTempValue: '',

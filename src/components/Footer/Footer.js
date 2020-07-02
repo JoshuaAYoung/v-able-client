@@ -2,6 +2,7 @@ import React from 'react';
 import './Footer.css';
 
 export default function Footer() {
+  // generate current year for copyright
   function generateCopyright() {
     const d = new Date();
     const year = d.getFullYear();
