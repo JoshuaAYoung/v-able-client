@@ -18,6 +18,7 @@ export default class LoginForm extends Component {
     showHide: 'show',
     isLoading: false,
   };
+
   // toggles the input type from password to text
   toggleShowPassword = () => {
     if (this.state.showPassword === 'password') {
@@ -33,6 +34,7 @@ export default class LoginForm extends Component {
     }
   };
 
+  // temp values capture input data for controlled components
   addTempValue = (field, input) => {
     this.setState({
       [field + 'TempValue']: input,
