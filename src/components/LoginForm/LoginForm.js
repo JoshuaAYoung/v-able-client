@@ -41,6 +41,7 @@ export default class LoginForm extends Component {
     });
   };
 
+  // auth request to server
   handleSubmitJwtAuth = (ev) => {
     ev.preventDefault();
     this.setState({ isLoading: true });
