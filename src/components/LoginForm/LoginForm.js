@@ -80,6 +80,7 @@ export default class LoginForm extends Component {
             Enter your email and password or choose a demo user.
           </p>
         </div>
+        {/* displays error notification if a server error exists */}
         {error && <ErrorToast errorMessage={error} />}
         <div className="demoInstructions">
           <p className="defaultMedium">Volunteer Demo:</p>
