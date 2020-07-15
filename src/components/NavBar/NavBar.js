@@ -8,6 +8,7 @@ import './Hamburger.css';
 export default class NavBar extends Component {
   static contextType = VableContext;
 
+  // Animation class has three values, hidden, down and up. Hidden class fixes an issue with animations showing at inopportune times
   state = {
     showBurger: false,
     animationClass: 'Hidden',
