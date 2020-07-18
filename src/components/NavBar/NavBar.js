@@ -14,6 +14,7 @@ export default class NavBar extends Component {
     animationClass: 'Hidden',
   };
 
+  // Hide hamburger on logout and page link clicks
   hideHamburger = () => {
     this.setState({
       showBurger: false,
@@ -38,6 +39,7 @@ export default class NavBar extends Component {
     }
   };
 
+  // Clears auth token from local storage, hides hamburger, and sets the user and usertype back to default blank
   handleLogout = () => {
     this.hideHamburger();
     TokenService.clearAuthToken();
