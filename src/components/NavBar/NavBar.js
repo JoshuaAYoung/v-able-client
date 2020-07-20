@@ -49,6 +49,7 @@ export default class NavBar extends Component {
 
   linkSeparator = (<span className="linkBullet">&bull;</span>);
 
+  // Creates navbar and hamburger menu links based on the usertype and whether or not the user is logged in
   userLinks = () => {
     if (this.context.userType === 'volunteer' && TokenService.hasAuthToken()) {
       return (
