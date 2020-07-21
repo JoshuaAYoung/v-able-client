@@ -165,6 +165,7 @@ export default class NavBar extends Component {
               className={`burgerButton ${this.state.showBurger}Burger`}
               onClick={() => this.toggleHamburger()}
             >
+              {/* Spans manipulated with css to create hamburger */}
               <span></span>
               <span></span>
               <span></span>
