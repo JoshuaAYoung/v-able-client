@@ -6,6 +6,7 @@ export default class OpportunityCard extends Component {
     return str.split(' ').splice(0, num_words).join(' ');
   };
 
+  // Removes html tags from rich text and truncates the string to fit better in the card
   stripString = (descriptionHtml) => {
     let truncatedString = this.truncate(descriptionHtml, 12);
     return truncatedString.replace(/(<([^>]+)>)/gi, '');
