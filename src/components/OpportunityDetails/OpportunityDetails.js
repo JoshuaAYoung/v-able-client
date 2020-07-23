@@ -37,6 +37,7 @@ export default class OpportunityDetails extends Component {
             {city}, {state} {zipcode}
           </p>
           <p className="orgInfo">{phone}</p>
+          {/* Volunteer button renders differently depending on auth */}
           <VolunteerButton
             title={title}
             contact={contact}
