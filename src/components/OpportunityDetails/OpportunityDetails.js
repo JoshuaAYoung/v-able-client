@@ -85,6 +85,7 @@ export default class OpportunityDetails extends Component {
             </p>
           </div>
           <p className="defaultMedium">Description:</p>
+          {/* Actually injects html from the rich text editor into the page */}
           <div className="opportunityDescription">
             <div dangerouslySetInnerHTML={{ __html: description }} />
           </div>
