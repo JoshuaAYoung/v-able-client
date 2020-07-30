@@ -21,10 +21,10 @@ export default class OpportunityPostForm extends Component {
     experienceTempValue: '',
     licenseTempValue: '',
     remoteTempValue: 'No',
-    editorState: null,
     isLoading: false,
   };
 
+  // Temp values for controlled components
   addTempValue = (field, input) => {
     this.setState({
       [field + 'TempValue']: input,
@@ -38,10 +38,6 @@ export default class OpportunityPostForm extends Component {
         touched: true,
       },
     });
-  };
-
-  handleEditorChange = (editorState) => {
-    this.setState({ editorState });
   };
 
   convertBoolean = (value) => {
