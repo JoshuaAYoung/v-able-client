@@ -84,6 +84,7 @@ export default class OpportunityPostForm extends Component {
       });
   };
 
+  // Error generation for weak passwords
   generateError = () => {
     //eslint-disable-next-line
     const emailRegEx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
