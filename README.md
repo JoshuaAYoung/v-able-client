@@ -20,7 +20,7 @@ This fully responsive app was built during my time in Thinkful's full-stack boot
 
 #### Some notes on the build:
 
-- The app's design and CSS was scratch built - no templates, no bootstrap
+- The app's design and CSS were scratch built - no templates, no bootstrap
 - The app utilizes JSON Web Tokens and bCrypt hashing for auth & auth. I know that from a security standpoint, this isn't a fool proof system. In terms of a learning experience, however, I couldn't have asked for better.
 - I implemented a number of features that are relatively 'sight unseen' to make the app more user friendly and to push my understanding of real world applications:
   - Error "toast" notifications for server errors.
