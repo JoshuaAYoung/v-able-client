@@ -6,7 +6,7 @@ import { VableProvider } from './context/VableContext';
 import App from './App';
 import './index.css';
 
-ReactGA.initialize('UA-173566344-1');
+ReactGA.initialize('UA-176941788-1');
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 ReactDOM.render(
