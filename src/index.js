@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ReactGA from 'react-ga';
 import { BrowserRouter } from 'react-router-dom';
 import { VableProvider } from './context/VableContext';
-import ReactGA from 'react-ga';
 import App from './App';
 import './index.css';
 
